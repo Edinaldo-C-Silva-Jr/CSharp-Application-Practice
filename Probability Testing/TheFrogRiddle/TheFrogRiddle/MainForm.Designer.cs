@@ -167,6 +167,7 @@ namespace TheFrogRiddle
 			this.btn_test1.Tag = "1";
 			this.btn_test1.Text = "Test +1";
 			this.btn_test1.UseVisualStyleBackColor = true;
+			this.btn_test1.Click += new System.EventHandler(this.Btn_testFrogsClick);
 			// 
 			// btn_test5
 			// 
@@ -177,6 +178,7 @@ namespace TheFrogRiddle
 			this.btn_test5.Tag = "5";
 			this.btn_test5.Text = "Test +5";
 			this.btn_test5.UseVisualStyleBackColor = true;
+			this.btn_test5.Click += new System.EventHandler(this.Btn_testFrogsClick);
 			// 
 			// btn_test10
 			// 
@@ -187,6 +189,7 @@ namespace TheFrogRiddle
 			this.btn_test10.Tag = "10";
 			this.btn_test10.Text = "Test +10";
 			this.btn_test10.UseVisualStyleBackColor = true;
+			this.btn_test10.Click += new System.EventHandler(this.Btn_testFrogsClick);
 			// 
 			// btn_test50
 			// 
@@ -197,6 +200,7 @@ namespace TheFrogRiddle
 			this.btn_test50.Tag = "50";
 			this.btn_test50.Text = "Test +50";
 			this.btn_test50.UseVisualStyleBackColor = true;
+			this.btn_test50.Click += new System.EventHandler(this.Btn_testFrogsClick);
 			// 
 			// btn_test100
 			// 
@@ -207,6 +211,7 @@ namespace TheFrogRiddle
 			this.btn_test100.Tag = "100";
 			this.btn_test100.Text = "Test +100";
 			this.btn_test100.UseVisualStyleBackColor = true;
+			this.btn_test100.Click += new System.EventHandler(this.Btn_testFrogsClick);
 			// 
 			// btn_test500
 			// 
@@ -217,6 +222,7 @@ namespace TheFrogRiddle
 			this.btn_test500.Tag = "500";
 			this.btn_test500.Text = "Test +500";
 			this.btn_test500.UseVisualStyleBackColor = true;
+			this.btn_test500.Click += new System.EventHandler(this.Btn_testFrogsClick);
 			// 
 			// btn_test1000
 			// 
@@ -227,6 +233,7 @@ namespace TheFrogRiddle
 			this.btn_test1000.Tag = "1000";
 			this.btn_test1000.Text = "Test +1000";
 			this.btn_test1000.UseVisualStyleBackColor = true;
+			this.btn_test1000.Click += new System.EventHandler(this.Btn_testFrogsClick);
 			// 
 			// btn_test5000
 			// 
@@ -237,6 +244,7 @@ namespace TheFrogRiddle
 			this.btn_test5000.Tag = "5000";
 			this.btn_test5000.Text = "Test +5000";
 			this.btn_test5000.UseVisualStyleBackColor = true;
+			this.btn_test5000.Click += new System.EventHandler(this.Btn_testFrogsClick);
 			// 
 			// btn_test10000
 			// 
@@ -247,6 +255,7 @@ namespace TheFrogRiddle
 			this.btn_test10000.Tag = "10000";
 			this.btn_test10000.Text = "Test +10000";
 			this.btn_test10000.UseVisualStyleBackColor = true;
+			this.btn_test10000.Click += new System.EventHandler(this.Btn_testFrogsClick);
 			// 
 			// btn_test50000
 			// 
@@ -257,6 +266,7 @@ namespace TheFrogRiddle
 			this.btn_test50000.Tag = "50000";
 			this.btn_test50000.Text = "Test +50000";
 			this.btn_test50000.UseVisualStyleBackColor = true;
+			this.btn_test50000.Click += new System.EventHandler(this.Btn_testFrogsClick);
 			// 
 			// MainForm
 			// 
