@@ -15,10 +15,13 @@ namespace TheFrogRiddle
 	public partial class MainForm : Form
 	{
 		Random randomNumber = new Random();
-		int global_counter = 0;
-		int frog1_male = 0, frog1_female = 0;
-		int frog2_male = 0, frog2_female = 0;
-		int frog1_croaked = 0, frog2_croaked = 0;
+		int globalCounter = 0;
+		int frog1Male = 0, frog1Female = 0;
+		int frog2Male = 0, frog2Female = 0;
+		int frog1Croaked = 0, frog2Croaked = 0;
+		double frog1MalePercent = 0, frog1FemalePercent = 0;
+		double frog2MalePercent = 0, frog2FemalePercent = 0;
+		double frog1CroakPercent = 0, frog2CroakPercent = 0;
 		
 		public MainForm()
 		{
@@ -29,24 +32,24 @@ namespace TheFrogRiddle
 		{
 			if (f1.getGender())
 			{
-				lst_Frog1_Gender.Items.Add(global_counter + " - Gender: Male");
-				frog1_male++;
+				lst_frog1Gender.Items.Add(globalCounter + " - Gender: Male");
+				frog1Male++;
 			}
 			else
 			{
-				lst_Frog1_Gender.Items.Add(global_counter + " - Gender: Female");
-				frog1_female++;
+				lst_frog1Gender.Items.Add(globalCounter + " - Gender: Female");
+				frog1Female++;
 			}
 			
 			if (f2.getGender())
 			{
-				lst_Frog2_Gender.Items.Add(global_counter + " - Gender: Male");
-				frog2_male++;
+				lst_frog2Gender.Items.Add(globalCounter + " - Gender: Male");
+				frog2Male++;
 			}
 			else
 			{
-				lst_Frog2_Gender.Items.Add(global_counter + " - Gender: Female");
-				frog2_female++;
+				lst_frog2Gender.Items.Add(globalCounter + " - Gender: Female");
+				frog2Female++;
 			}
 		}
 		
@@ -54,38 +57,62 @@ namespace TheFrogRiddle
 		{
 			if (f1.getCroaked())
 			{
-				lst_Frog1_Croaked.Items.Add(global_counter + " - Croaked!");
-				frog1_croaked++;
+				lst_frog1Croaked.Items.Add(globalCounter + " - Frog Croaked!");
+				frog1Croaked++;
 			}
 			else
 			{
-				lst_Frog1_Croaked.Items.Add(global_counter + " - Did not...");
+				lst_frog1Croaked.Items.Add(globalCounter + " - Did not croak...");
 			}
 			
 			if (f2.getCroaked())
 			{
-				lst_Frog2_Croaked.Items.Add(global_counter + " - Croaked!");
-				frog2_croaked++;
+				lst_frog2Croaked.Items.Add(globalCounter + " - Frog Croaked!");
+				frog2Croaked++;
 			}
 			else
 			{
-				lst_Frog2_Croaked.Items.Add(global_counter + " - Did not...");
+				lst_frog2Croaked.Items.Add(globalCounter + " - Did not croak...");
 			}
+		}
+		
+		private void CalculatePercentages()
+		{
+			frog1MalePercent = (double)frog1Male / globalCounter;
+			frog1MalePercent *= 100;
+			frog1FemalePercent = (double)frog1Female / globalCounter;
+			frog1FemalePercent *= 100;
+			frog1CroakPercent = (double)frog1Croaked / globalCounter;
+			frog1CroakPercent *= 100;
+			
+			frog2MalePercent = (double)frog2Male / globalCounter;
+			frog2MalePercent *= 100;
+			frog2FemalePercent = (double)frog2Female / globalCounter;
+			frog2FemalePercent *= 100;
+			frog2CroakPercent = (double)frog2Croaked / globalCounter;
+			frog2CroakPercent *= 100;
 		}
 		
 		private void UpdateCounters()
 		{
-			lbl_Frog1_MaleCounter.Text = "Male: " + frog1_male;
-			lbl_Frog1_FemaleCounter.Text = "Female: " + frog1_female;
-			lbl_Frog2_MaleCounter.Text = "Male: " + frog2_male;
-			lbl_Frog2_FemaleCounter.Text = "Female: " + frog2_female;
-			lbl_frog1_croaked.Text = "Croaks: " + frog1_croaked;
-			lbl_frog2_croaked.Text = "Croaks: " + frog2_croaked;
+			lbl_frog1MaleCount.Text = frog1Male.ToString();
+			lbl_frog1MalePercent.Text = frog1MalePercent.ToString("0.##") + "%";
+			lbl_frog1FemaleCount.Text = frog1Female.ToString();
+			lbl_frog1FemalePercent.Text = frog1FemalePercent.ToString("0.##") + "%";
+			lbl_frog1CroakCount.Text = frog1Croaked.ToString();
+			lbl_frog1CroakPercent.Text = frog1CroakPercent.ToString("0.##") + "%";
+			
+			lbl_frog2MaleCount.Text = frog2Male.ToString();
+			lbl_frog2MalePercent.Text = frog2MalePercent.ToString("0.##") + "%";
+			lbl_frog2FemaleCount.Text = frog2Female.ToString();
+			lbl_frog2FemalePercent.Text = frog2FemalePercent.ToString("0.##") + "%";
+			lbl_frog2CroakCount.Text = frog2Croaked.ToString();
+			lbl_frog2CroakPercent.Text = frog2CroakPercent.ToString("0.##") + "%";
 		}
 		
 		private void TestFrogs()
 		{
-			global_counter++;
+			globalCounter++;
 			int num;
 			
 			num = randomNumber.Next(2);
@@ -112,8 +139,22 @@ namespace TheFrogRiddle
 			
 			for (int i = 0; i < testAmount; i++) {
 				TestFrogs();
-				UpdateCounters();
 			}
+			
+			CalculatePercentages();
+			UpdateCounters();
+		}
+		
+		void Lst_IndexChange(object sender, EventArgs e)
+		{
+			ListBox listClicked = sender as ListBox;
+			
+			int indexSelected = listClicked.SelectedIndex;
+			
+			lst_frog1Gender.SelectedIndex = indexSelected;
+			lst_frog1Croaked.SelectedIndex = indexSelected;
+			lst_frog2Gender.SelectedIndex = indexSelected;
+			lst_frog2Croaked.SelectedIndex = indexSelected;
 		}
 	}
 }
