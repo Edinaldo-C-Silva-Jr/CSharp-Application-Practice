@@ -17,6 +17,8 @@ namespace TheFrogRiddle
 		Random randomNumber = new Random();
 		
 		int globalCounter = 0;
+		int filteredCounter = 0;
+		double filteredPercent = 0;
 		
 		int frog1MaleCount = 0, frog1FemaleCount = 0;
 		int frog2MaleCount = 0, frog2FemaleCount = 0;
@@ -33,6 +35,11 @@ namespace TheFrogRiddle
 		public MainForm()
 		{
 			InitializeComponent();
+		}
+		
+		void MainFormLoad(object sender, EventArgs e)
+		{
+			rdb_allCroaks.Checked = true;
 		}
 		
 		private void CountGender(Frog f1, Frog f2)
@@ -121,38 +128,43 @@ namespace TheFrogRiddle
 		
 		private void CalculatePercentages()
 		{
-			frog1MalePercent = (double)frog1MaleCount / globalCounter;
+			filteredPercent = (double)filteredCounter / globalCounter;
+			filteredPercent *= 100;
+			
+			frog1MalePercent = (double)frog1MaleCount / filteredCounter;
 			frog1MalePercent *= 100;
-			frog1FemalePercent = (double)frog1FemaleCount / globalCounter;
+			frog1FemalePercent = (double)frog1FemaleCount / filteredCounter;
 			frog1FemalePercent *= 100;
-			frog1CroakPercent = (double)frog1CroakedCount / globalCounter;
+			frog1CroakPercent = (double)frog1CroakedCount / filteredCounter;
 			frog1CroakPercent *= 100;
 			
-			frog2MalePercent = (double)frog2MaleCount / globalCounter;
+			frog2MalePercent = (double)frog2MaleCount / filteredCounter;
 			frog2MalePercent *= 100;
-			frog2FemalePercent = (double)frog2FemaleCount / globalCounter;
+			frog2FemalePercent = (double)frog2FemaleCount / filteredCounter;
 			frog2FemalePercent *= 100;
-			frog2CroakPercent = (double)frog2CroakedCount / globalCounter;
+			frog2CroakPercent = (double)frog2CroakedCount / filteredCounter;
 			frog2CroakPercent *= 100;
 			
-			twoMalesPercent = (double)twoMalesCount / globalCounter;
+			twoMalesPercent = (double)twoMalesCount / filteredCounter;
 			twoMalesPercent *= 100;
-			twoFemalesPercent = (double)twoFemalesCount / globalCounter;
+			twoFemalesPercent = (double)twoFemalesCount / filteredCounter;
 			twoFemalesPercent *= 100;
-			maleFemalePercent = (double)maleFemaleCount / globalCounter;
+			maleFemalePercent = (double)maleFemaleCount / filteredCounter;
 			maleFemalePercent *= 100;
 			
-			twoCroaksPercent = (double)twoCroaksCount / globalCounter;
+			twoCroaksPercent = (double)twoCroaksCount / filteredCounter;
 			twoCroaksPercent *= 100;
-			oneCroakPercent = (double)oneCroakCount / globalCounter;
+			oneCroakPercent = (double)oneCroakCount / filteredCounter;
 			oneCroakPercent *= 100;
-			noCroakPercent = (double)noCroakCount / globalCounter;
+			noCroakPercent = (double)noCroakCount / filteredCounter;
 			noCroakPercent *= 100;
 		}
 		
 		private void UpdateCounters()
 		{
 			lbl_globalCounter.Text = "Total: " + globalCounter.ToString();
+			lbl_filteredCounter.Text = "Found: " + filteredCounter.ToString();
+			lbl_filteredPercent.Text = filteredPercent.ToString("0.##") + "%";
 			
 			lbl_frog1MaleCount.Text = frog1MaleCount.ToString();
 			lbl_frog1MalePercent.Text = frog1MalePercent.ToString("0.##") + "%";
@@ -168,19 +180,66 @@ namespace TheFrogRiddle
 			lbl_frog2CroakCount.Text = frog2CroakedCount.ToString();
 			lbl_frog2CroakPercent.Text = frog2CroakPercent.ToString("0.##") + "%";
 			
-			lbl_2MalesCount.Text = twoMalesCount.ToString();
-			lbl_2MalesPercent.Text = twoMalesPercent.ToString("0.##") + "%";
-			lbl_2FemalesCount.Text = twoFemalesCount.ToString();
-			lbl_2FemalesPercent.Text = twoFemalesPercent.ToString("0.##") + "%";
+			lbl_twoMalesCount.Text = twoMalesCount.ToString();
+			lbl_twoMalesPercent.Text = twoMalesPercent.ToString("0.##") + "%";
+			lbl_twoFemalesCount.Text = twoFemalesCount.ToString();
+			lbl_twoFemalesPercent.Text = twoFemalesPercent.ToString("0.##") + "%";
 			lbl_maleFemaleCount.Text = maleFemaleCount.ToString();
 			lbl_maleFemalePercent.Text = maleFemalePercent.ToString("0.##") + "%";
 			
-			lbl_2CroaksCount.Text = twoCroaksCount.ToString();
-			lbl_2CroaksPercent.Text = twoCroaksPercent.ToString("0.##") + "%";
-			lbl_1CroakCount.Text = oneCroakCount.ToString();
-			lbl_1CroakPercent.Text = oneCroakPercent.ToString("0.##") + "%";
+			lbl_twoCroaksCount.Text = twoCroaksCount.ToString();
+			lbl_twoCroaksPercent.Text = twoCroaksPercent.ToString("0.##") + "%";
+			lbl_oneCroakCount.Text = oneCroakCount.ToString();
+			lbl_oneCroakPercent.Text = oneCroakPercent.ToString("0.##") + "%";
 			lbl_noCroakCount.Text = noCroakCount.ToString();
 			lbl_noCroakPercent.Text = noCroakPercent.ToString("0.##") + "%";
+		}
+		
+		private void ResetAll()
+		{
+			globalCounter = 0;
+			filteredCounter = 0;
+			filteredPercent = 0;
+			
+			frog1MaleCount = 0;
+			frog1FemaleCount = 0;
+			frog2MaleCount = 0;
+			frog2FemaleCount = 0;
+			frog1CroakedCount = 0;
+			frog2CroakedCount = 0;
+			frog1MalePercent = 0;
+			frog1FemalePercent = 0;
+			frog2MalePercent = 0;
+			frog2FemalePercent = 0;
+			frog1CroakPercent = 0;
+			frog2CroakPercent = 0;
+			
+			twoMalesCount = 0;
+			twoFemalesCount = 0;
+			maleFemaleCount = 0;
+			noCroakCount = 0;
+			oneCroakCount = 0;
+			twoCroaksCount = 0;
+			twoMalesPercent = 0;
+			twoFemalesPercent = 0;
+			maleFemalePercent = 0;
+			noCroakPercent = 0;
+			oneCroakPercent = 0;
+			twoCroaksPercent = 0;
+			
+			lst_frog1Gender.Items.Clear();
+			lst_frog1Croaked.Items.Clear();
+			lst_frog2Gender.Items.Clear();
+			lst_frog2Croaked.Items.Clear();
+		}
+		
+		private void RunFrogTests(Frog f1, Frog f2)
+		{
+			filteredCounter++;
+				CountGender(f1, f2);
+				CountBothGender(f1, f2);
+				CountCroaks(f1, f2);
+				CountBothCroaks(f1, f2);
 		}
 		
 		private void TestFrogs()
@@ -190,20 +249,42 @@ namespace TheFrogRiddle
 			
 			num = randomNumber.Next(2);
 			Frog f1 = new Frog(num == 1);
-			
 			num = randomNumber.Next(2);
 			Frog f2 = new Frog(num == 1);
 			
 			num = randomNumber.Next(2);
 			f1.croak(num == 1);
-			
 			num = randomNumber.Next(2);
 			f2.croak(num == 1);
 			
-			CountGender(f1, f2);
-			CountBothGender(f1, f2);
-			CountCroaks(f1, f2);
-			CountBothCroaks(f1, f2);
+			if (rdb_allCroaks.Checked == true)
+			{
+				RunFrogTests(f1, f2);
+			}
+			
+			if (rdb_twoCroaks.Checked == true)
+			{
+				if (f1.getCroaked() && f2.getCroaked())
+				{
+					RunFrogTests(f1, f2);
+				}
+			}
+			
+			if (rdb_oneCroak.Checked == true)
+			{
+				if (f1.getCroaked() ^ f2.getCroaked())
+				{
+					RunFrogTests(f1, f2);
+				}
+			}
+			
+			if (rdb_noCroaks.Checked == true)
+			{
+				if (!(f1.getCroaked() || f2.getCroaked()))
+				{
+					RunFrogTests(f1, f2);
+				}
+			}
 		}
 		
 		void Btn_testFrogsClick(object sender, EventArgs e)
@@ -219,7 +300,7 @@ namespace TheFrogRiddle
 			CalculatePercentages();
 			UpdateCounters();
 			
-			lst_frog1Gender.SelectedIndex = globalCounter - 1;
+			lst_frog1Gender.SelectedIndex = filteredCounter - 1;
 		}
 		
 		void Lst_IndexChange(object sender, EventArgs e)
@@ -232,6 +313,12 @@ namespace TheFrogRiddle
 			lst_frog1Croaked.SelectedIndex = indexSelected;
 			lst_frog2Gender.SelectedIndex = indexSelected;
 			lst_frog2Croaked.SelectedIndex = indexSelected;
+		}
+		
+		void Rdb_CheckedChanged(object sender, EventArgs e)
+		{
+			ResetAll();
+			UpdateCounters();
 		}
 	}
 }

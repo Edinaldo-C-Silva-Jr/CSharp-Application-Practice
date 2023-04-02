@@ -70,29 +70,37 @@ namespace TheFrogRiddle
 			this.lbl_frog2Male = new System.Windows.Forms.Label();
 			this.pnl_buttons = new System.Windows.Forms.Panel();
 			this.gpb_groupStats = new System.Windows.Forms.GroupBox();
-			this.lbl_2CroaksPercent = new System.Windows.Forms.Label();
-			this.lbl_2CroaksCount = new System.Windows.Forms.Label();
-			this.lbl_2Croaks = new System.Windows.Forms.Label();
-			this.lbl_2FemalesCount = new System.Windows.Forms.Label();
-			this.lbl_2FemalesPercent = new System.Windows.Forms.Label();
-			this.lbl_2Females = new System.Windows.Forms.Label();
-			this.lbl_1CroakPercent = new System.Windows.Forms.Label();
-			this.lbl_1CroakCount = new System.Windows.Forms.Label();
-			this.lbl_1Croak = new System.Windows.Forms.Label();
+			this.lbl_twoCroaksPercent = new System.Windows.Forms.Label();
+			this.lbl_twoCroaksCount = new System.Windows.Forms.Label();
+			this.lbl_twoCroaks = new System.Windows.Forms.Label();
+			this.lbl_twoFemalesCount = new System.Windows.Forms.Label();
+			this.lbl_twoFemalesPercent = new System.Windows.Forms.Label();
+			this.lbl_twoFemales = new System.Windows.Forms.Label();
+			this.lbl_oneCroakPercent = new System.Windows.Forms.Label();
+			this.lbl_oneCroakCount = new System.Windows.Forms.Label();
+			this.lbl_oneCroak = new System.Windows.Forms.Label();
 			this.lbl_maleFemaleCount = new System.Windows.Forms.Label();
 			this.lbl_maleFemalePercent = new System.Windows.Forms.Label();
 			this.lbl_maleFemale = new System.Windows.Forms.Label();
 			this.lbl_noCroakPercent = new System.Windows.Forms.Label();
 			this.lbl_noCroakCount = new System.Windows.Forms.Label();
 			this.lbl_noCroak = new System.Windows.Forms.Label();
-			this.lbl_2MalesCount = new System.Windows.Forms.Label();
-			this.lbl_2MalesPercent = new System.Windows.Forms.Label();
-			this.lbl_2Males = new System.Windows.Forms.Label();
+			this.lbl_twoMalesCount = new System.Windows.Forms.Label();
+			this.lbl_twoMalesPercent = new System.Windows.Forms.Label();
+			this.lbl_twoMales = new System.Windows.Forms.Label();
 			this.lbl_globalCounter = new System.Windows.Forms.Label();
+			this.pnl_radioCroaks = new System.Windows.Forms.Panel();
+			this.rdb_twoCroaks = new System.Windows.Forms.RadioButton();
+			this.rdb_oneCroak = new System.Windows.Forms.RadioButton();
+			this.rdb_noCroaks = new System.Windows.Forms.RadioButton();
+			this.rdb_allCroaks = new System.Windows.Forms.RadioButton();
+			this.lbl_filteredCounter = new System.Windows.Forms.Label();
+			this.lbl_filteredPercent = new System.Windows.Forms.Label();
 			this.gpb_frog1Stats.SuspendLayout();
 			this.gpb_frog2Stats.SuspendLayout();
 			this.pnl_buttons.SuspendLayout();
 			this.gpb_groupStats.SuspendLayout();
+			this.pnl_radioCroaks.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// lbl_frog1
@@ -464,24 +472,24 @@ namespace TheFrogRiddle
 			// 
 			// gpb_groupStats
 			// 
-			this.gpb_groupStats.Controls.Add(this.lbl_2CroaksPercent);
-			this.gpb_groupStats.Controls.Add(this.lbl_2CroaksCount);
-			this.gpb_groupStats.Controls.Add(this.lbl_2Croaks);
-			this.gpb_groupStats.Controls.Add(this.lbl_2FemalesCount);
-			this.gpb_groupStats.Controls.Add(this.lbl_2FemalesPercent);
-			this.gpb_groupStats.Controls.Add(this.lbl_2Females);
-			this.gpb_groupStats.Controls.Add(this.lbl_1CroakPercent);
-			this.gpb_groupStats.Controls.Add(this.lbl_1CroakCount);
-			this.gpb_groupStats.Controls.Add(this.lbl_1Croak);
+			this.gpb_groupStats.Controls.Add(this.lbl_twoCroaksPercent);
+			this.gpb_groupStats.Controls.Add(this.lbl_twoCroaksCount);
+			this.gpb_groupStats.Controls.Add(this.lbl_twoCroaks);
+			this.gpb_groupStats.Controls.Add(this.lbl_twoFemalesCount);
+			this.gpb_groupStats.Controls.Add(this.lbl_twoFemalesPercent);
+			this.gpb_groupStats.Controls.Add(this.lbl_twoFemales);
+			this.gpb_groupStats.Controls.Add(this.lbl_oneCroakPercent);
+			this.gpb_groupStats.Controls.Add(this.lbl_oneCroakCount);
+			this.gpb_groupStats.Controls.Add(this.lbl_oneCroak);
 			this.gpb_groupStats.Controls.Add(this.lbl_maleFemaleCount);
 			this.gpb_groupStats.Controls.Add(this.lbl_maleFemalePercent);
 			this.gpb_groupStats.Controls.Add(this.lbl_maleFemale);
 			this.gpb_groupStats.Controls.Add(this.lbl_noCroakPercent);
 			this.gpb_groupStats.Controls.Add(this.lbl_noCroakCount);
 			this.gpb_groupStats.Controls.Add(this.lbl_noCroak);
-			this.gpb_groupStats.Controls.Add(this.lbl_2MalesCount);
-			this.gpb_groupStats.Controls.Add(this.lbl_2MalesPercent);
-			this.gpb_groupStats.Controls.Add(this.lbl_2Males);
+			this.gpb_groupStats.Controls.Add(this.lbl_twoMalesCount);
+			this.gpb_groupStats.Controls.Add(this.lbl_twoMalesPercent);
+			this.gpb_groupStats.Controls.Add(this.lbl_twoMales);
 			this.gpb_groupStats.Location = new System.Drawing.Point(10, 295);
 			this.gpb_groupStats.Name = "gpb_groupStats";
 			this.gpb_groupStats.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -490,80 +498,80 @@ namespace TheFrogRiddle
 			this.gpb_groupStats.TabStop = false;
 			this.gpb_groupStats.Text = "Both Frogs Stats";
 			// 
-			// lbl_2CroaksPercent
+			// lbl_twoCroaksPercent
 			// 
-			this.lbl_2CroaksPercent.Location = new System.Drawing.Point(300, 70);
-			this.lbl_2CroaksPercent.Name = "lbl_2CroaksPercent";
-			this.lbl_2CroaksPercent.Size = new System.Drawing.Size(50, 15);
-			this.lbl_2CroaksPercent.TabIndex = 23;
-			this.lbl_2CroaksPercent.Text = "0%";
+			this.lbl_twoCroaksPercent.Location = new System.Drawing.Point(300, 70);
+			this.lbl_twoCroaksPercent.Name = "lbl_twoCroaksPercent";
+			this.lbl_twoCroaksPercent.Size = new System.Drawing.Size(50, 15);
+			this.lbl_twoCroaksPercent.TabIndex = 23;
+			this.lbl_twoCroaksPercent.Text = "0%";
 			// 
-			// lbl_2CroaksCount
+			// lbl_twoCroaksCount
 			// 
-			this.lbl_2CroaksCount.Location = new System.Drawing.Point(245, 70);
-			this.lbl_2CroaksCount.Name = "lbl_2CroaksCount";
-			this.lbl_2CroaksCount.Size = new System.Drawing.Size(50, 15);
-			this.lbl_2CroaksCount.TabIndex = 22;
-			this.lbl_2CroaksCount.Text = "0";
+			this.lbl_twoCroaksCount.Location = new System.Drawing.Point(245, 70);
+			this.lbl_twoCroaksCount.Name = "lbl_twoCroaksCount";
+			this.lbl_twoCroaksCount.Size = new System.Drawing.Size(50, 15);
+			this.lbl_twoCroaksCount.TabIndex = 22;
+			this.lbl_twoCroaksCount.Text = "0";
 			// 
-			// lbl_2Croaks
+			// lbl_twoCroaks
 			// 
-			this.lbl_2Croaks.Location = new System.Drawing.Point(270, 55);
-			this.lbl_2Croaks.Name = "lbl_2Croaks";
-			this.lbl_2Croaks.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.lbl_2Croaks.Size = new System.Drawing.Size(50, 15);
-			this.lbl_2Croaks.TabIndex = 21;
-			this.lbl_2Croaks.Text = "2 Croaks";
+			this.lbl_twoCroaks.Location = new System.Drawing.Point(270, 55);
+			this.lbl_twoCroaks.Name = "lbl_twoCroaks";
+			this.lbl_twoCroaks.RightToLeft = System.Windows.Forms.RightToLeft.No;
+			this.lbl_twoCroaks.Size = new System.Drawing.Size(50, 15);
+			this.lbl_twoCroaks.TabIndex = 21;
+			this.lbl_twoCroaks.Text = "2 Croaks";
 			// 
-			// lbl_2FemalesCount
+			// lbl_twoFemalesCount
 			// 
-			this.lbl_2FemalesCount.Location = new System.Drawing.Point(245, 30);
-			this.lbl_2FemalesCount.Name = "lbl_2FemalesCount";
-			this.lbl_2FemalesCount.Size = new System.Drawing.Size(50, 15);
-			this.lbl_2FemalesCount.TabIndex = 20;
-			this.lbl_2FemalesCount.Text = "0";
+			this.lbl_twoFemalesCount.Location = new System.Drawing.Point(245, 30);
+			this.lbl_twoFemalesCount.Name = "lbl_twoFemalesCount";
+			this.lbl_twoFemalesCount.Size = new System.Drawing.Size(50, 15);
+			this.lbl_twoFemalesCount.TabIndex = 20;
+			this.lbl_twoFemalesCount.Text = "0";
 			// 
-			// lbl_2FemalesPercent
+			// lbl_twoFemalesPercent
 			// 
-			this.lbl_2FemalesPercent.Location = new System.Drawing.Point(300, 30);
-			this.lbl_2FemalesPercent.Name = "lbl_2FemalesPercent";
-			this.lbl_2FemalesPercent.Size = new System.Drawing.Size(50, 15);
-			this.lbl_2FemalesPercent.TabIndex = 19;
-			this.lbl_2FemalesPercent.Text = "0%";
+			this.lbl_twoFemalesPercent.Location = new System.Drawing.Point(300, 30);
+			this.lbl_twoFemalesPercent.Name = "lbl_twoFemalesPercent";
+			this.lbl_twoFemalesPercent.Size = new System.Drawing.Size(50, 15);
+			this.lbl_twoFemalesPercent.TabIndex = 19;
+			this.lbl_twoFemalesPercent.Text = "0%";
 			// 
-			// lbl_2Females
+			// lbl_twoFemales
 			// 
-			this.lbl_2Females.Location = new System.Drawing.Point(265, 15);
-			this.lbl_2Females.Name = "lbl_2Females";
-			this.lbl_2Females.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.lbl_2Females.Size = new System.Drawing.Size(55, 15);
-			this.lbl_2Females.TabIndex = 18;
-			this.lbl_2Females.Text = "2 Females";
+			this.lbl_twoFemales.Location = new System.Drawing.Point(265, 15);
+			this.lbl_twoFemales.Name = "lbl_twoFemales";
+			this.lbl_twoFemales.RightToLeft = System.Windows.Forms.RightToLeft.No;
+			this.lbl_twoFemales.Size = new System.Drawing.Size(55, 15);
+			this.lbl_twoFemales.TabIndex = 18;
+			this.lbl_twoFemales.Text = "2 Females";
 			// 
-			// lbl_1CroakPercent
+			// lbl_oneCroakPercent
 			// 
-			this.lbl_1CroakPercent.Location = new System.Drawing.Point(180, 70);
-			this.lbl_1CroakPercent.Name = "lbl_1CroakPercent";
-			this.lbl_1CroakPercent.Size = new System.Drawing.Size(50, 15);
-			this.lbl_1CroakPercent.TabIndex = 17;
-			this.lbl_1CroakPercent.Text = "0%";
+			this.lbl_oneCroakPercent.Location = new System.Drawing.Point(180, 70);
+			this.lbl_oneCroakPercent.Name = "lbl_oneCroakPercent";
+			this.lbl_oneCroakPercent.Size = new System.Drawing.Size(50, 15);
+			this.lbl_oneCroakPercent.TabIndex = 17;
+			this.lbl_oneCroakPercent.Text = "0%";
 			// 
-			// lbl_1CroakCount
+			// lbl_oneCroakCount
 			// 
-			this.lbl_1CroakCount.Location = new System.Drawing.Point(125, 70);
-			this.lbl_1CroakCount.Name = "lbl_1CroakCount";
-			this.lbl_1CroakCount.Size = new System.Drawing.Size(50, 15);
-			this.lbl_1CroakCount.TabIndex = 16;
-			this.lbl_1CroakCount.Text = "0";
+			this.lbl_oneCroakCount.Location = new System.Drawing.Point(125, 70);
+			this.lbl_oneCroakCount.Name = "lbl_oneCroakCount";
+			this.lbl_oneCroakCount.Size = new System.Drawing.Size(50, 15);
+			this.lbl_oneCroakCount.TabIndex = 16;
+			this.lbl_oneCroakCount.Text = "0";
 			// 
-			// lbl_1Croak
+			// lbl_oneCroak
 			// 
-			this.lbl_1Croak.Location = new System.Drawing.Point(160, 55);
-			this.lbl_1Croak.Name = "lbl_1Croak";
-			this.lbl_1Croak.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.lbl_1Croak.Size = new System.Drawing.Size(45, 15);
-			this.lbl_1Croak.TabIndex = 15;
-			this.lbl_1Croak.Text = "1 Croak";
+			this.lbl_oneCroak.Location = new System.Drawing.Point(160, 55);
+			this.lbl_oneCroak.Name = "lbl_oneCroak";
+			this.lbl_oneCroak.RightToLeft = System.Windows.Forms.RightToLeft.No;
+			this.lbl_oneCroak.Size = new System.Drawing.Size(45, 15);
+			this.lbl_oneCroak.TabIndex = 15;
+			this.lbl_oneCroak.Text = "1 Croak";
 			// 
 			// lbl_maleFemaleCount
 			// 
@@ -615,45 +623,121 @@ namespace TheFrogRiddle
 			this.lbl_noCroak.TabIndex = 9;
 			this.lbl_noCroak.Text = "No Croaks";
 			// 
-			// lbl_2MalesCount
+			// lbl_twoMalesCount
 			// 
-			this.lbl_2MalesCount.Location = new System.Drawing.Point(5, 30);
-			this.lbl_2MalesCount.Name = "lbl_2MalesCount";
-			this.lbl_2MalesCount.Size = new System.Drawing.Size(50, 15);
-			this.lbl_2MalesCount.TabIndex = 8;
-			this.lbl_2MalesCount.Text = "0";
+			this.lbl_twoMalesCount.Location = new System.Drawing.Point(5, 30);
+			this.lbl_twoMalesCount.Name = "lbl_twoMalesCount";
+			this.lbl_twoMalesCount.Size = new System.Drawing.Size(50, 15);
+			this.lbl_twoMalesCount.TabIndex = 8;
+			this.lbl_twoMalesCount.Text = "0";
 			// 
-			// lbl_2MalesPercent
+			// lbl_twoMalesPercent
 			// 
-			this.lbl_2MalesPercent.Location = new System.Drawing.Point(60, 30);
-			this.lbl_2MalesPercent.Name = "lbl_2MalesPercent";
-			this.lbl_2MalesPercent.Size = new System.Drawing.Size(50, 15);
-			this.lbl_2MalesPercent.TabIndex = 7;
-			this.lbl_2MalesPercent.Text = "0%";
+			this.lbl_twoMalesPercent.Location = new System.Drawing.Point(60, 30);
+			this.lbl_twoMalesPercent.Name = "lbl_twoMalesPercent";
+			this.lbl_twoMalesPercent.Size = new System.Drawing.Size(50, 15);
+			this.lbl_twoMalesPercent.TabIndex = 7;
+			this.lbl_twoMalesPercent.Text = "0%";
 			// 
-			// lbl_2Males
+			// lbl_twoMales
 			// 
-			this.lbl_2Males.Location = new System.Drawing.Point(35, 15);
-			this.lbl_2Males.Name = "lbl_2Males";
-			this.lbl_2Males.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.lbl_2Males.Size = new System.Drawing.Size(45, 15);
-			this.lbl_2Males.TabIndex = 6;
-			this.lbl_2Males.Text = "2 Males";
+			this.lbl_twoMales.Location = new System.Drawing.Point(35, 15);
+			this.lbl_twoMales.Name = "lbl_twoMales";
+			this.lbl_twoMales.RightToLeft = System.Windows.Forms.RightToLeft.No;
+			this.lbl_twoMales.Size = new System.Drawing.Size(45, 15);
+			this.lbl_twoMales.TabIndex = 6;
+			this.lbl_twoMales.Text = "2 Males";
 			// 
 			// lbl_globalCounter
 			// 
 			this.lbl_globalCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lbl_globalCounter.Location = new System.Drawing.Point(210, 20);
+			this.lbl_globalCounter.Location = new System.Drawing.Point(210, 5);
 			this.lbl_globalCounter.Name = "lbl_globalCounter";
-			this.lbl_globalCounter.Size = new System.Drawing.Size(100, 20);
+			this.lbl_globalCounter.Size = new System.Drawing.Size(100, 15);
 			this.lbl_globalCounter.TabIndex = 38;
 			this.lbl_globalCounter.Text = "Total: 0";
+			// 
+			// pnl_radioCroaks
+			// 
+			this.pnl_radioCroaks.Controls.Add(this.rdb_twoCroaks);
+			this.pnl_radioCroaks.Controls.Add(this.rdb_oneCroak);
+			this.pnl_radioCroaks.Controls.Add(this.rdb_noCroaks);
+			this.pnl_radioCroaks.Controls.Add(this.rdb_allCroaks);
+			this.pnl_radioCroaks.Location = new System.Drawing.Point(400, 295);
+			this.pnl_radioCroaks.Name = "pnl_radioCroaks";
+			this.pnl_radioCroaks.Size = new System.Drawing.Size(90, 90);
+			this.pnl_radioCroaks.TabIndex = 39;
+			// 
+			// rdb_twoCroaks
+			// 
+			this.rdb_twoCroaks.Location = new System.Drawing.Point(5, 25);
+			this.rdb_twoCroaks.Name = "rdb_twoCroaks";
+			this.rdb_twoCroaks.Size = new System.Drawing.Size(80, 15);
+			this.rdb_twoCroaks.TabIndex = 3;
+			this.rdb_twoCroaks.TabStop = true;
+			this.rdb_twoCroaks.Text = "2 Croaks";
+			this.rdb_twoCroaks.UseVisualStyleBackColor = true;
+			this.rdb_twoCroaks.CheckedChanged += new System.EventHandler(this.Rdb_CheckedChanged);
+			// 
+			// rdb_oneCroak
+			// 
+			this.rdb_oneCroak.Location = new System.Drawing.Point(5, 45);
+			this.rdb_oneCroak.Name = "rdb_oneCroak";
+			this.rdb_oneCroak.Size = new System.Drawing.Size(80, 15);
+			this.rdb_oneCroak.TabIndex = 2;
+			this.rdb_oneCroak.TabStop = true;
+			this.rdb_oneCroak.Text = "1 Croak";
+			this.rdb_oneCroak.UseVisualStyleBackColor = true;
+			this.rdb_oneCroak.CheckedChanged += new System.EventHandler(this.Rdb_CheckedChanged);
+			// 
+			// rdb_noCroaks
+			// 
+			this.rdb_noCroaks.Location = new System.Drawing.Point(5, 65);
+			this.rdb_noCroaks.Name = "rdb_noCroaks";
+			this.rdb_noCroaks.Size = new System.Drawing.Size(80, 15);
+			this.rdb_noCroaks.TabIndex = 1;
+			this.rdb_noCroaks.TabStop = true;
+			this.rdb_noCroaks.Text = "No Croaks";
+			this.rdb_noCroaks.UseVisualStyleBackColor = true;
+			this.rdb_noCroaks.CheckedChanged += new System.EventHandler(this.Rdb_CheckedChanged);
+			// 
+			// rdb_allCroaks
+			// 
+			this.rdb_allCroaks.Location = new System.Drawing.Point(5, 5);
+			this.rdb_allCroaks.Name = "rdb_allCroaks";
+			this.rdb_allCroaks.Size = new System.Drawing.Size(80, 15);
+			this.rdb_allCroaks.TabIndex = 0;
+			this.rdb_allCroaks.TabStop = true;
+			this.rdb_allCroaks.Text = "All Results";
+			this.rdb_allCroaks.UseVisualStyleBackColor = true;
+			this.rdb_allCroaks.CheckedChanged += new System.EventHandler(this.Rdb_CheckedChanged);
+			// 
+			// lbl_filteredCounter
+			// 
+			this.lbl_filteredCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbl_filteredCounter.Location = new System.Drawing.Point(175, 20);
+			this.lbl_filteredCounter.Name = "lbl_filteredCounter";
+			this.lbl_filteredCounter.Size = new System.Drawing.Size(100, 15);
+			this.lbl_filteredCounter.TabIndex = 40;
+			this.lbl_filteredCounter.Text = "Found: 0";
+			// 
+			// lbl_filteredPercent
+			// 
+			this.lbl_filteredPercent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbl_filteredPercent.Location = new System.Drawing.Point(280, 20);
+			this.lbl_filteredPercent.Name = "lbl_filteredPercent";
+			this.lbl_filteredPercent.Size = new System.Drawing.Size(60, 15);
+			this.lbl_filteredPercent.TabIndex = 41;
+			this.lbl_filteredPercent.Text = "0%";
 			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(524, 482);
+			this.Controls.Add(this.lbl_filteredPercent);
+			this.Controls.Add(this.lbl_filteredCounter);
+			this.Controls.Add(this.pnl_radioCroaks);
 			this.Controls.Add(this.lbl_globalCounter);
 			this.Controls.Add(this.gpb_groupStats);
 			this.Controls.Add(this.pnl_buttons);
@@ -667,31 +751,40 @@ namespace TheFrogRiddle
 			this.Controls.Add(this.lbl_frog1);
 			this.Name = "MainForm";
 			this.Text = "TheFrogRiddle";
+			this.Load += new System.EventHandler(this.MainFormLoad);
 			this.gpb_frog1Stats.ResumeLayout(false);
 			this.gpb_frog2Stats.ResumeLayout(false);
 			this.pnl_buttons.ResumeLayout(false);
 			this.gpb_groupStats.ResumeLayout(false);
+			this.pnl_radioCroaks.ResumeLayout(false);
 			this.ResumeLayout(false);
 		}
+		private System.Windows.Forms.Label lbl_filteredPercent;
+		private System.Windows.Forms.Label lbl_filteredCounter;
+		private System.Windows.Forms.RadioButton rdb_allCroaks;
+		private System.Windows.Forms.RadioButton rdb_noCroaks;
+		private System.Windows.Forms.RadioButton rdb_oneCroak;
+		private System.Windows.Forms.RadioButton rdb_twoCroaks;
+		private System.Windows.Forms.Panel pnl_radioCroaks;
 		private System.Windows.Forms.Label lbl_globalCounter;
-		private System.Windows.Forms.Label lbl_2Males;
-		private System.Windows.Forms.Label lbl_2MalesPercent;
-		private System.Windows.Forms.Label lbl_2MalesCount;
+		private System.Windows.Forms.Label lbl_twoMales;
+		private System.Windows.Forms.Label lbl_twoMalesPercent;
+		private System.Windows.Forms.Label lbl_twoMalesCount;
 		private System.Windows.Forms.Label lbl_noCroak;
 		private System.Windows.Forms.Label lbl_noCroakCount;
 		private System.Windows.Forms.Label lbl_noCroakPercent;
 		private System.Windows.Forms.Label lbl_maleFemale;
 		private System.Windows.Forms.Label lbl_maleFemalePercent;
 		private System.Windows.Forms.Label lbl_maleFemaleCount;
-		private System.Windows.Forms.Label lbl_1Croak;
-		private System.Windows.Forms.Label lbl_1CroakCount;
-		private System.Windows.Forms.Label lbl_1CroakPercent;
-		private System.Windows.Forms.Label lbl_2Females;
-		private System.Windows.Forms.Label lbl_2FemalesPercent;
-		private System.Windows.Forms.Label lbl_2FemalesCount;
-		private System.Windows.Forms.Label lbl_2Croaks;
-		private System.Windows.Forms.Label lbl_2CroaksCount;
-		private System.Windows.Forms.Label lbl_2CroaksPercent;
+		private System.Windows.Forms.Label lbl_oneCroak;
+		private System.Windows.Forms.Label lbl_oneCroakCount;
+		private System.Windows.Forms.Label lbl_oneCroakPercent;
+		private System.Windows.Forms.Label lbl_twoFemales;
+		private System.Windows.Forms.Label lbl_twoFemalesPercent;
+		private System.Windows.Forms.Label lbl_twoFemalesCount;
+		private System.Windows.Forms.Label lbl_twoCroaks;
+		private System.Windows.Forms.Label lbl_twoCroaksCount;
+		private System.Windows.Forms.Label lbl_twoCroaksPercent;
 		private System.Windows.Forms.GroupBox gpb_groupStats;
 		private System.Windows.Forms.Panel pnl_buttons;
 		private System.Windows.Forms.Label lbl_frog2Male;
