@@ -40,13 +40,18 @@ namespace ClickableGrid
 			this.rdb_dataGridView = new System.Windows.Forms.RadioButton();
 			this.rdb_tableLayoutPanel = new System.Windows.Forms.RadioButton();
 			this.rdb_pictureBox = new System.Windows.Forms.RadioButton();
+			this.pnl_formGenertor = new System.Windows.Forms.Panel();
+			this.dgv_clickableGrid = new System.Windows.Forms.DataGridView();
+			this.btn_back = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.nmb_height)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nmb_width)).BeginInit();
+			this.pnl_formGenertor.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dgv_clickableGrid)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// btn_generateGrid
 			// 
-			this.btn_generateGrid.Location = new System.Drawing.Point(80, 210);
+			this.btn_generateGrid.Location = new System.Drawing.Point(90, 240);
 			this.btn_generateGrid.Name = "btn_generateGrid";
 			this.btn_generateGrid.Size = new System.Drawing.Size(120, 40);
 			this.btn_generateGrid.TabIndex = 6;
@@ -57,7 +62,7 @@ namespace ClickableGrid
 			// lbl_height
 			// 
 			this.lbl_height.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lbl_height.Location = new System.Drawing.Point(15, 20);
+			this.lbl_height.Location = new System.Drawing.Point(10, 10);
 			this.lbl_height.Name = "lbl_height";
 			this.lbl_height.Size = new System.Drawing.Size(50, 20);
 			this.lbl_height.TabIndex = 0;
@@ -66,7 +71,7 @@ namespace ClickableGrid
 			// lbl_width
 			// 
 			this.lbl_width.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lbl_width.Location = new System.Drawing.Point(15, 50);
+			this.lbl_width.Location = new System.Drawing.Point(10, 40);
 			this.lbl_width.Name = "lbl_width";
 			this.lbl_width.Size = new System.Drawing.Size(50, 20);
 			this.lbl_width.TabIndex = 0;
@@ -74,7 +79,7 @@ namespace ClickableGrid
 			// 
 			// nmb_height
 			// 
-			this.nmb_height.Location = new System.Drawing.Point(70, 20);
+			this.nmb_height.Location = new System.Drawing.Point(70, 10);
 			this.nmb_height.Minimum = new decimal(new int[] {
 									1,
 									0,
@@ -91,7 +96,7 @@ namespace ClickableGrid
 			// 
 			// nmb_width
 			// 
-			this.nmb_width.Location = new System.Drawing.Point(70, 50);
+			this.nmb_width.Location = new System.Drawing.Point(70, 40);
 			this.nmb_width.Minimum = new decimal(new int[] {
 									1,
 									0,
@@ -108,7 +113,7 @@ namespace ClickableGrid
 			// 
 			// rdb_dataGridView
 			// 
-			this.rdb_dataGridView.Location = new System.Drawing.Point(10, 100);
+			this.rdb_dataGridView.Location = new System.Drawing.Point(10, 90);
 			this.rdb_dataGridView.Name = "rdb_dataGridView";
 			this.rdb_dataGridView.Size = new System.Drawing.Size(120, 25);
 			this.rdb_dataGridView.TabIndex = 3;
@@ -118,17 +123,17 @@ namespace ClickableGrid
 			// 
 			// rdb_tableLayoutPanel
 			// 
-			this.rdb_tableLayoutPanel.Location = new System.Drawing.Point(150, 100);
+			this.rdb_tableLayoutPanel.Location = new System.Drawing.Point(160, 90);
 			this.rdb_tableLayoutPanel.Name = "rdb_tableLayoutPanel";
 			this.rdb_tableLayoutPanel.Size = new System.Drawing.Size(120, 25);
 			this.rdb_tableLayoutPanel.TabIndex = 4;
 			this.rdb_tableLayoutPanel.TabStop = true;
-			this.rdb_tableLayoutPanel.Text = "table Layout Panel";
+			this.rdb_tableLayoutPanel.Text = "Table Layout Panel";
 			this.rdb_tableLayoutPanel.UseVisualStyleBackColor = true;
 			// 
 			// rdb_pictureBox
 			// 
-			this.rdb_pictureBox.Location = new System.Drawing.Point(10, 130);
+			this.rdb_pictureBox.Location = new System.Drawing.Point(10, 120);
 			this.rdb_pictureBox.Name = "rdb_pictureBox";
 			this.rdb_pictureBox.Size = new System.Drawing.Size(120, 25);
 			this.rdb_pictureBox.TabIndex = 5;
@@ -136,26 +141,70 @@ namespace ClickableGrid
 			this.rdb_pictureBox.Text = "Picture Box";
 			this.rdb_pictureBox.UseVisualStyleBackColor = true;
 			// 
+			// pnl_formGenertor
+			// 
+			this.pnl_formGenertor.Controls.Add(this.btn_generateGrid);
+			this.pnl_formGenertor.Controls.Add(this.nmb_width);
+			this.pnl_formGenertor.Controls.Add(this.rdb_pictureBox);
+			this.pnl_formGenertor.Controls.Add(this.nmb_height);
+			this.pnl_formGenertor.Controls.Add(this.lbl_height);
+			this.pnl_formGenertor.Controls.Add(this.rdb_tableLayoutPanel);
+			this.pnl_formGenertor.Controls.Add(this.lbl_width);
+			this.pnl_formGenertor.Controls.Add(this.rdb_dataGridView);
+			this.pnl_formGenertor.Location = new System.Drawing.Point(0, 30);
+			this.pnl_formGenertor.Name = "pnl_formGenertor";
+			this.pnl_formGenertor.Size = new System.Drawing.Size(300, 300);
+			this.pnl_formGenertor.TabIndex = 7;
+			// 
+			// dgv_clickableGrid
+			// 
+			this.dgv_clickableGrid.AllowUserToAddRows = false;
+			this.dgv_clickableGrid.AllowUserToDeleteRows = false;
+			this.dgv_clickableGrid.AllowUserToResizeColumns = false;
+			this.dgv_clickableGrid.AllowUserToResizeRows = false;
+			this.dgv_clickableGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgv_clickableGrid.ColumnHeadersVisible = false;
+			this.dgv_clickableGrid.Location = new System.Drawing.Point(70, 5);
+			this.dgv_clickableGrid.MultiSelect = false;
+			this.dgv_clickableGrid.Name = "dgv_clickableGrid";
+			this.dgv_clickableGrid.RowHeadersVisible = false;
+			this.dgv_clickableGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+			this.dgv_clickableGrid.Size = new System.Drawing.Size(20, 20);
+			this.dgv_clickableGrid.TabIndex = 0;
+			this.dgv_clickableGrid.TabStop = false;
+			this.dgv_clickableGrid.Visible = false;
+			// 
+			// btn_back
+			// 
+			this.btn_back.Location = new System.Drawing.Point(10, 5);
+			this.btn_back.Name = "btn_back";
+			this.btn_back.Size = new System.Drawing.Size(50, 20);
+			this.btn_back.TabIndex = 7;
+			this.btn_back.Text = "Back";
+			this.btn_back.UseVisualStyleBackColor = true;
+			this.btn_back.Visible = false;
+			this.btn_back.Click += new System.EventHandler(this.Btn_backClick);
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(284, 262);
-			this.Controls.Add(this.rdb_pictureBox);
-			this.Controls.Add(this.rdb_tableLayoutPanel);
-			this.Controls.Add(this.rdb_dataGridView);
-			this.Controls.Add(this.nmb_width);
-			this.Controls.Add(this.nmb_height);
-			this.Controls.Add(this.lbl_width);
-			this.Controls.Add(this.lbl_height);
-			this.Controls.Add(this.btn_generateGrid);
+			this.ClientSize = new System.Drawing.Size(299, 327);
+			this.Controls.Add(this.btn_back);
+			this.Controls.Add(this.dgv_clickableGrid);
+			this.Controls.Add(this.pnl_formGenertor);
 			this.Name = "MainForm";
 			this.Text = "ClickableGrid";
 			this.Load += new System.EventHandler(this.MainFormLoad);
 			((System.ComponentModel.ISupportInitialize)(this.nmb_height)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.nmb_width)).EndInit();
+			this.pnl_formGenertor.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.dgv_clickableGrid)).EndInit();
 			this.ResumeLayout(false);
 		}
+		private System.Windows.Forms.Button btn_back;
+		private System.Windows.Forms.DataGridView dgv_clickableGrid;
+		private System.Windows.Forms.Panel pnl_formGenertor;
 		private System.Windows.Forms.RadioButton rdb_pictureBox;
 		private System.Windows.Forms.RadioButton rdb_tableLayoutPanel;
 		private System.Windows.Forms.RadioButton rdb_dataGridView;
