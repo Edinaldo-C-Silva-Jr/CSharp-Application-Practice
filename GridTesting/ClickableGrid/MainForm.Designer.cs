@@ -43,10 +43,13 @@ namespace ClickableGrid
 			this.pnl_formGenertor = new System.Windows.Forms.Panel();
 			this.dgv_clickableGrid = new System.Windows.Forms.DataGridView();
 			this.btn_back = new System.Windows.Forms.Button();
+			this.tbl_clickableGrid = new System.Windows.Forms.TableLayoutPanel();
+			this.pbx_clickableGrid = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.nmb_height)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nmb_width)).BeginInit();
 			this.pnl_formGenertor.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgv_clickableGrid)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pbx_clickableGrid)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// btn_generateGrid
@@ -173,6 +176,7 @@ namespace ClickableGrid
 			this.dgv_clickableGrid.TabIndex = 0;
 			this.dgv_clickableGrid.TabStop = false;
 			this.dgv_clickableGrid.Visible = false;
+			this.dgv_clickableGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_clickableGridCellContentClick);
 			// 
 			// btn_back
 			// 
@@ -185,11 +189,32 @@ namespace ClickableGrid
 			this.btn_back.Visible = false;
 			this.btn_back.Click += new System.EventHandler(this.Btn_backClick);
 			// 
+			// tbl_clickableGrid
+			// 
+			this.tbl_clickableGrid.ColumnCount = 1;
+			this.tbl_clickableGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tbl_clickableGrid.Location = new System.Drawing.Point(100, 5);
+			this.tbl_clickableGrid.Name = "tbl_clickableGrid";
+			this.tbl_clickableGrid.RowCount = 1;
+			this.tbl_clickableGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tbl_clickableGrid.Size = new System.Drawing.Size(20, 20);
+			this.tbl_clickableGrid.TabIndex = 0;
+			// 
+			// pbx_clickableGrid
+			// 
+			this.pbx_clickableGrid.Location = new System.Drawing.Point(130, 5);
+			this.pbx_clickableGrid.Name = "pbx_clickableGrid";
+			this.pbx_clickableGrid.Size = new System.Drawing.Size(20, 20);
+			this.pbx_clickableGrid.TabIndex = 9;
+			this.pbx_clickableGrid.TabStop = false;
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(299, 327);
+			this.Controls.Add(this.pbx_clickableGrid);
+			this.Controls.Add(this.tbl_clickableGrid);
 			this.Controls.Add(this.btn_back);
 			this.Controls.Add(this.dgv_clickableGrid);
 			this.Controls.Add(this.pnl_formGenertor);
@@ -200,8 +225,11 @@ namespace ClickableGrid
 			((System.ComponentModel.ISupportInitialize)(this.nmb_width)).EndInit();
 			this.pnl_formGenertor.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dgv_clickableGrid)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pbx_clickableGrid)).EndInit();
 			this.ResumeLayout(false);
 		}
+		private System.Windows.Forms.PictureBox pbx_clickableGrid;
+		private System.Windows.Forms.TableLayoutPanel tbl_clickableGrid;
 		private System.Windows.Forms.Button btn_back;
 		private System.Windows.Forms.DataGridView dgv_clickableGrid;
 		private System.Windows.Forms.Panel pnl_formGenertor;

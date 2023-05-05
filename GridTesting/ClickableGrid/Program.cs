@@ -16,6 +16,5 @@ namespace ClickableGrid
 			Application.SetCompatibleTextRenderingDefault(false);
 			Application.Run(new MainForm());
 		}
-		
 	}
 }
