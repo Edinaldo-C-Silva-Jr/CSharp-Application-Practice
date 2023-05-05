@@ -28,6 +28,7 @@ namespace ClickableGrid
 			dgv_clickableGrid.Rows.Clear();
 			
 			tbl_clickableGrid.Visible = false;
+			tbl_clickableGrid.Controls.Clear();
 			tbl_clickableGrid.ColumnStyles.Clear();
 			tbl_clickableGrid.ColumnCount = 0;
 			tbl_clickableGrid.RowStyles.Clear();
@@ -141,8 +142,8 @@ namespace ClickableGrid
 		
 		private void Btn_generateGridClick(object sender, EventArgs e)
 		{
-			gridColumns = (int)nmb_height.Value;
-			gridRows = (int)nmb_width.Value;
+			gridRows = (int)nmb_height.Value;
+			gridColumns = (int)nmb_width.Value;
 			
 			cellHeight = CalculateCellSize(gridRows);
 			cellWidth = CalculateCellSize(gridColumns);
@@ -171,14 +172,13 @@ namespace ClickableGrid
 			
 			if (rdb_tableLayoutPanel.Checked == true)
 			{
-				tbl_clickableGrid.Size = new Size(5 + gridWidth, 5 + gridHeight);
+				tbl_clickableGrid.Size = new Size(1 + gridWidth, 1 + gridHeight);
 				this.Size = new Size(35 + gridWidth, 75 + gridHeight);
 				
 				tbl_clickableGrid.Visible = true;
 				
-				
-				tbl_clickableGrid.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, cellWidth));
-				tbl_clickableGrid.RowStyles.Add(new RowStyle(SizeType.Absolute, cellHeight));
+				tbl_clickableGrid.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, cellWidth - 1));
+				tbl_clickableGrid.RowStyles.Add(new RowStyle(SizeType.Absolute, cellHeight - 1));
 				tbl_clickableGrid.ColumnCount = gridColumns;
 				tbl_clickableGrid.RowCount = gridRows;
 				tbl_clickableGrid.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
@@ -193,12 +193,14 @@ namespace ClickableGrid
 						panelTemplate.Dock = DockStyle.Fill;
 						panelTemplate.BackColor = Color.White;
 						panelTemplate.Margin = new Padding(0,0,0,0);
-						panelTemplate.Size = new Size(50, 50);
+						panelTemplate.Size = new Size(cellWidth - 1, cellHeight - 1);
 						panelTemplate.Visible = true;
 						
 						tbl_clickableGrid.Controls.Add(panelTemplate, i, j);
 					}
 				}
+				
+				AssignClickEvent();
 			}
 			
 			if (rdb_pictureBox.Checked == false)
@@ -227,6 +229,28 @@ namespace ClickableGrid
 				dgv_clickableGrid[column, row].Style.BackColor = Color.Black;
 			}
 			dgv_clickableGrid.CurrentCell.Selected = false;
+		}
+		
+		void AssignClickEvent ()
+		{
+			foreach (Control cell in tbl_clickableGrid.Controls)
+			{
+				cell.Click += new EventHandler(TableLayoutPanelCellClick);
+			}
+		}
+		
+		void TableLayoutPanelCellClick (object sender, EventArgs e)
+		{
+			Panel cell = sender as Panel;
+			
+			if (cell.BackColor == Color.White)
+			{
+				cell.BackColor = Color.Black;
+			}
+			else
+			{
+				cell.BackColor = Color.White;
+			}
 		}
 	}
 }
