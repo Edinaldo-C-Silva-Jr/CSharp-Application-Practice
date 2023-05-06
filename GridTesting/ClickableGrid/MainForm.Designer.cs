@@ -43,7 +43,7 @@ namespace ClickableGrid
 			this.pnl_formGenertor = new System.Windows.Forms.Panel();
 			this.dgv_clickableGrid = new System.Windows.Forms.DataGridView();
 			this.btn_back = new System.Windows.Forms.Button();
-			this.tbl_clickableGrid = new System.Windows.Forms.TableLayoutPanel();
+			this.tbl_clickableGrid = new ClickableGrid.DBTablePanel();
 			this.pbx_clickableGrid = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.nmb_height)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nmb_width)).BeginInit();
@@ -157,7 +157,7 @@ namespace ClickableGrid
 			this.pnl_formGenertor.Location = new System.Drawing.Point(0, 30);
 			this.pnl_formGenertor.Name = "pnl_formGenertor";
 			this.pnl_formGenertor.Size = new System.Drawing.Size(300, 300);
-			this.pnl_formGenertor.TabIndex = 7;
+			this.pnl_formGenertor.TabIndex = 0;
 			// 
 			// dgv_clickableGrid
 			// 
@@ -229,7 +229,7 @@ namespace ClickableGrid
 			this.ResumeLayout(false);
 		}
 		private System.Windows.Forms.PictureBox pbx_clickableGrid;
-		private System.Windows.Forms.TableLayoutPanel tbl_clickableGrid;
+		private ClickableGrid.DBTablePanel tbl_clickableGrid;
 		private System.Windows.Forms.Button btn_back;
 		private System.Windows.Forms.DataGridView dgv_clickableGrid;
 		private System.Windows.Forms.Panel pnl_formGenertor;

@@ -175,32 +175,35 @@ namespace ClickableGrid
 				tbl_clickableGrid.Size = new Size(1 + gridWidth, 1 + gridHeight);
 				this.Size = new Size(35 + gridWidth, 75 + gridHeight);
 				
-				tbl_clickableGrid.Visible = true;
-				
 				tbl_clickableGrid.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, cellWidth - 1));
 				tbl_clickableGrid.RowStyles.Add(new RowStyle(SizeType.Absolute, cellHeight - 1));
 				tbl_clickableGrid.ColumnCount = gridColumns;
 				tbl_clickableGrid.RowCount = gridRows;
 				tbl_clickableGrid.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
 				
-				Panel panelTemplate;
+				tbl_clickableGrid.SuspendLayout();
+				
+				RectangleCell cellTemplate;
 				
 				for (int i = 0; i < gridColumns; i++)
 				{
 					for (int j = 0; j < gridRows; j++)
 					{
-						panelTemplate = new Panel();
-						panelTemplate.Dock = DockStyle.Fill;
-						panelTemplate.BackColor = Color.White;
-						panelTemplate.Margin = new Padding(0,0,0,0);
-						panelTemplate.Size = new Size(cellWidth - 1, cellHeight - 1);
-						panelTemplate.Visible = true;
+						cellTemplate = new RectangleCell();
+						cellTemplate.Dock = DockStyle.Fill;
+						cellTemplate.BackColor = Color.White;
+						cellTemplate.Margin = new Padding(0,0,0,0);
+						cellTemplate.Size = new Size(cellWidth - 1, cellHeight - 1);
+						cellTemplate.Visible = true;
 						
-						tbl_clickableGrid.Controls.Add(panelTemplate, i, j);
+						tbl_clickableGrid.Controls.Add(cellTemplate, i, j);
 					}
 				}
 				
 				AssignClickEvent();
+				
+				tbl_clickableGrid.ResumeLayout();
+				tbl_clickableGrid.Visible = true;
 			}
 			
 			if (rdb_pictureBox.Checked == false)
@@ -241,7 +244,7 @@ namespace ClickableGrid
 		
 		void TableLayoutPanelCellClick (object sender, EventArgs e)
 		{
-			Panel cell = sender as Panel;
+			RectangleCell cell = sender as RectangleCell;
 			
 			if (cell.BackColor == Color.White)
 			{
