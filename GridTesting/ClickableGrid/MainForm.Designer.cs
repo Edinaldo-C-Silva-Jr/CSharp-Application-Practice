@@ -41,7 +41,7 @@ namespace ClickableGrid
 			this.rdb_tableLayoutPanel = new System.Windows.Forms.RadioButton();
 			this.rdb_pictureBox = new System.Windows.Forms.RadioButton();
 			this.pnl_formGenertor = new System.Windows.Forms.Panel();
-			this.dgv_clickableGrid = new System.Windows.Forms.DataGridView();
+			this.dgv_clickableGrid = new ClickableGrid.DBDataGridView();
 			this.btn_back = new System.Windows.Forms.Button();
 			this.tbl_clickableGrid = new ClickableGrid.DBTablePanel();
 			this.pbx_clickableGrid = new System.Windows.Forms.PictureBox();
@@ -83,6 +83,11 @@ namespace ClickableGrid
 			// nmb_height
 			// 
 			this.nmb_height.Location = new System.Drawing.Point(70, 10);
+			this.nmb_height.Maximum = new decimal(new int[] {
+									80,
+									0,
+									0,
+									0});
 			this.nmb_height.Minimum = new decimal(new int[] {
 									1,
 									0,
@@ -100,6 +105,11 @@ namespace ClickableGrid
 			// nmb_width
 			// 
 			this.nmb_width.Location = new System.Drawing.Point(70, 40);
+			this.nmb_width.Maximum = new decimal(new int[] {
+									80,
+									0,
+									0,
+									0});
 			this.nmb_width.Minimum = new decimal(new int[] {
 									1,
 									0,
@@ -116,6 +126,7 @@ namespace ClickableGrid
 			// 
 			// rdb_dataGridView
 			// 
+			this.rdb_dataGridView.Checked = true;
 			this.rdb_dataGridView.Location = new System.Drawing.Point(10, 90);
 			this.rdb_dataGridView.Name = "rdb_dataGridView";
 			this.rdb_dataGridView.Size = new System.Drawing.Size(120, 25);
@@ -123,6 +134,7 @@ namespace ClickableGrid
 			this.rdb_dataGridView.TabStop = true;
 			this.rdb_dataGridView.Text = "Data Grid View";
 			this.rdb_dataGridView.UseVisualStyleBackColor = true;
+			this.rdb_dataGridView.CheckedChanged += new System.EventHandler(this.RadioButtonChange);
 			// 
 			// rdb_tableLayoutPanel
 			// 
@@ -130,9 +142,9 @@ namespace ClickableGrid
 			this.rdb_tableLayoutPanel.Name = "rdb_tableLayoutPanel";
 			this.rdb_tableLayoutPanel.Size = new System.Drawing.Size(120, 25);
 			this.rdb_tableLayoutPanel.TabIndex = 4;
-			this.rdb_tableLayoutPanel.TabStop = true;
 			this.rdb_tableLayoutPanel.Text = "Table Layout Panel";
 			this.rdb_tableLayoutPanel.UseVisualStyleBackColor = true;
+			this.rdb_tableLayoutPanel.CheckedChanged += new System.EventHandler(this.RadioButtonChange);
 			// 
 			// rdb_pictureBox
 			// 
@@ -140,9 +152,9 @@ namespace ClickableGrid
 			this.rdb_pictureBox.Name = "rdb_pictureBox";
 			this.rdb_pictureBox.Size = new System.Drawing.Size(120, 25);
 			this.rdb_pictureBox.TabIndex = 5;
-			this.rdb_pictureBox.TabStop = true;
 			this.rdb_pictureBox.Text = "Picture Box";
 			this.rdb_pictureBox.UseVisualStyleBackColor = true;
+			this.rdb_pictureBox.CheckedChanged += new System.EventHandler(this.RadioButtonChange);
 			// 
 			// pnl_formGenertor
 			// 
@@ -176,7 +188,7 @@ namespace ClickableGrid
 			this.dgv_clickableGrid.TabIndex = 0;
 			this.dgv_clickableGrid.TabStop = false;
 			this.dgv_clickableGrid.Visible = false;
-			this.dgv_clickableGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_clickableGridCellContentClick);
+			this.dgv_clickableGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_clickableGridCellClick);
 			// 
 			// btn_back
 			// 
@@ -231,7 +243,7 @@ namespace ClickableGrid
 		private System.Windows.Forms.PictureBox pbx_clickableGrid;
 		private ClickableGrid.DBTablePanel tbl_clickableGrid;
 		private System.Windows.Forms.Button btn_back;
-		private System.Windows.Forms.DataGridView dgv_clickableGrid;
+		private ClickableGrid.DBDataGridView dgv_clickableGrid;
 		private System.Windows.Forms.Panel pnl_formGenertor;
 		private System.Windows.Forms.RadioButton rdb_pictureBox;
 		private System.Windows.Forms.RadioButton rdb_tableLayoutPanel;

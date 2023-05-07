@@ -130,7 +130,6 @@ namespace ClickableGrid
 		
 		void MainFormLoad(object sender, EventArgs e)
 		{
-			rdb_dataGridView.Checked = true;
 			pnl_formGenertor.Location = new Point(0,0);
 			
 			dgv_clickableGrid.Location = new Point(10, 30);
@@ -217,7 +216,7 @@ namespace ClickableGrid
 			ResetForm();
 		}
 		
-		void Dgv_clickableGridCellContentClick(object sender, DataGridViewCellEventArgs e)
+		void Dgv_clickableGridCellClick(object sender, DataGridViewCellEventArgs e)
 		{
 			int column, row;
 			column = dgv_clickableGrid.CurrentCell.ColumnIndex;
@@ -253,6 +252,27 @@ namespace ClickableGrid
 			else
 			{
 				cell.BackColor = Color.White;
+			}
+		}
+		
+		void RadioButtonChange(object sender, EventArgs e)
+		{
+			if (rdb_dataGridView.Checked == true)
+			{
+				nmb_height.Maximum = 80;
+				nmb_width.Maximum = 80;
+			}
+			
+			if (rdb_tableLayoutPanel.Checked == true)
+			{
+				nmb_height.Maximum = 70;
+				nmb_width.Maximum = 70;
+			}
+			
+			if (rdb_pictureBox.Checked == true)
+			{
+				nmb_height.Maximum = 100;
+				nmb_width.Maximum = 100;
 			}
 		}
 	}

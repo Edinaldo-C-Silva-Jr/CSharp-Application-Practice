@@ -47,6 +47,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBDataGridView.cs" />
+    <Compile Include="DBDataGridView.Designer.cs">
+      <DependentUpon>DBDataGridView.cs</DependentUpon>
+    </Compile>
     <Compile Include="DBTablePanel.cs" />
     <Compile Include="DBTablePanel.Designer.cs">
       <DependentUpon>DBTablePanel.cs</DependentUpon>
