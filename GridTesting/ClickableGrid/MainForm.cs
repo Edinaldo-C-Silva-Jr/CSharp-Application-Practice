@@ -205,9 +205,26 @@ namespace ClickableGrid
 				tbl_clickableGrid.Visible = true;
 			}
 			
-			if (rdb_pictureBox.Checked == false)
+			if (rdb_pictureBox.Checked == true)
 			{
+				pbx_clickableGrid.Size = new Size (1 + gridWidth, 1 + gridHeight);
+				this.Size = new Size(35 + gridWidth, 75 + gridHeight);
 				
+				pbx_clickableGrid.Visible = true;
+				pbx_clickableGrid.Image = new Bitmap(1 + gridWidth, 1 + gridHeight);
+				
+				Graphics gridImage = Graphics.FromImage(pbx_clickableGrid.Image);
+				gridImage.FillRectangle(Brushes.White, 0, 0, gridWidth, gridHeight);
+				
+				for (int i = 0; i < gridColumns + 1; i++)
+				{
+					gridImage.DrawLine(Pens.Gray, i * cellWidth, 0, i * cellWidth, pbx_clickableGrid.Height);
+				}
+				
+				for (int i = 0; i < gridRows + 1; i++)
+				{
+					gridImage.DrawLine(Pens.Gray, 0, i * cellHeight, pbx_clickableGrid.Width, i * cellHeight);
+				}
 			}
 		}
 		
@@ -274,6 +291,32 @@ namespace ClickableGrid
 				nmb_height.Maximum = 100;
 				nmb_width.Maximum = 100;
 			}
+		}
+		
+		void Pbx_clickableGridClick(object sender, EventArgs e)
+		{
+			int x, y;
+			
+			MouseEventArgs mouseCursor = (MouseEventArgs)e;
+			x = mouseCursor.Location.X;
+			y = mouseCursor.Location.Y;
+			
+			Bitmap gridBitmap = new Bitmap(pbx_clickableGrid.Image);
+			Color cellColor = gridBitmap.GetPixel(x, y);
+			
+			Graphics gridImage = Graphics.FromImage(pbx_clickableGrid.Image);
+			
+			if (cellColor.ToArgb() == Color.White.ToArgb())
+			{
+				gridImage.FillRectangle(Brushes.Black, (x - (x % cellWidth) + 1), (y - (y % cellHeight) + 1), cellWidth - 1, cellHeight - 1);
+			}
+			
+			if (cellColor.ToArgb() == Color.Black.ToArgb())
+			{
+				gridImage.FillRectangle(Brushes.White, (x - (x % cellWidth) + 1), (y - (y % cellHeight) + 1), cellWidth - 1, cellHeight - 1);
+			}
+			
+			pbx_clickableGrid.Refresh();
 		}
 	}
 }

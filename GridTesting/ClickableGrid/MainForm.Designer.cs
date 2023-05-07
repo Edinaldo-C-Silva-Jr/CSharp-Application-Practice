@@ -214,11 +214,13 @@ namespace ClickableGrid
 			// 
 			// pbx_clickableGrid
 			// 
+			this.pbx_clickableGrid.BackColor = System.Drawing.Color.White;
 			this.pbx_clickableGrid.Location = new System.Drawing.Point(130, 5);
 			this.pbx_clickableGrid.Name = "pbx_clickableGrid";
 			this.pbx_clickableGrid.Size = new System.Drawing.Size(20, 20);
 			this.pbx_clickableGrid.TabIndex = 9;
 			this.pbx_clickableGrid.TabStop = false;
+			this.pbx_clickableGrid.Click += new System.EventHandler(this.Pbx_clickableGridClick);
 			// 
 			// MainForm
 			// 
