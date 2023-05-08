@@ -14,265 +14,29 @@ namespace ClickableGrid
 		private int gridColumns, gridRows;
 		private int gridHeight, gridWidth, cellHeight, cellWidth;
 		
+		SizeCalculation calculate;
+		
+		#region Form Initialization
 		public MainForm()
 		{
 			InitializeComponent();
 		}
 		
-		private void ResetForm()
+		private void MainFormLoad(object sender, EventArgs e)
 		{
-			btn_back.Visible = false;
+			calculate = new SizeCalculation();
 			
-			dgv_clickableGrid.Visible = false;
-			dgv_clickableGrid.Columns.Clear();
-			dgv_clickableGrid.Rows.Clear();
-			
-			tbl_clickableGrid.Visible = false;
-			tbl_clickableGrid.Controls.Clear();
-			tbl_clickableGrid.ColumnStyles.Clear();
-			tbl_clickableGrid.ColumnCount = 0;
-			tbl_clickableGrid.RowStyles.Clear();
-			tbl_clickableGrid.RowCount = 0;
-			
-			pbx_clickableGrid.Visible = false;
-			
-			pnl_formGenertor.Visible = true;
-			this.Size = new Size(315, 335);
-		}
-		
-		private int CalculateGridSize(int numberOfCells)
-		{
-			int size;
-			
-			if (numberOfCells < 9)
-			{
-				size = numberOfCells * 50;
-			}
-			else
-			{
-				if (numberOfCells < 21)
-				{
-					size = numberOfCells * (400 / numberOfCells);
-				}
-				else
-				{
-					if (numberOfCells < 36)
-					{
-						size = numberOfCells * (500 / numberOfCells);
-					}
-					else
-					{
-						if (numberOfCells < 51)
-						{
-							size = numberOfCells * (600 / numberOfCells);
-						}
-						else
-						{
-							if (numberOfCells < 66)
-							{
-								size = numberOfCells * (700 / numberOfCells);
-							}
-							else
-							{
-								size = numberOfCells * (800 / numberOfCells);
-							}
-						}
-					}
-				}
-			}
-			
-			return size;
-		}
-		
-		private int CalculateCellSize(int numberOfCells)
-		{
-			int size;
-			
-			if (numberOfCells < 9)
-			{
-				size = 50;
-			}
-			else
-			{
-				if (numberOfCells < 21)
-				{
-					size = 400 / numberOfCells;
-				}
-				else
-				{
-					if (numberOfCells < 36)
-					{
-						size = 500 / numberOfCells;
-					}
-					else
-					{
-						if (numberOfCells < 51)
-						{
-							size = 600 / numberOfCells;
-						}
-						else
-						{
-							if (numberOfCells < 66)
-							{
-								size = 700 / numberOfCells;
-							}
-							else
-							{
-								size = 800 / numberOfCells;
-							}
-						}
-					}
-				}
-			}
-			
-			return size;
-		}
-		
-		void MainFormLoad(object sender, EventArgs e)
-		{
 			pnl_formGenertor.Location = new Point(0,0);
-			
 			dgv_clickableGrid.Location = new Point(10, 30);
 			tbl_clickableGrid.Location = new Point(10, 30);
 			pbx_clickableGrid.Location = new Point(10, 30);
 			
-			ResetForm();
+			this.Size = new Size(315, 335);
 		}
+		#endregion
 		
-		private void Btn_generateGridClick(object sender, EventArgs e)
-		{
-			gridRows = (int)nmb_height.Value;
-			gridColumns = (int)nmb_width.Value;
-			
-			cellHeight = CalculateCellSize(gridRows);
-			cellWidth = CalculateCellSize(gridColumns);
-			gridHeight = CalculateGridSize(gridRows);
-			gridWidth = CalculateGridSize(gridColumns);
-			
-			pnl_formGenertor.Visible = false;
-			btn_back.Visible = true;
-			
-			if (rdb_dataGridView.Checked == true)
-			{
-				dgv_clickableGrid.Size = new Size(3 + gridWidth, 3 + gridHeight);
-				this.Size = new Size(35 + gridWidth, 75 + gridHeight);
-				
-				dgv_clickableGrid.Visible = true;
-				
-				for (int i = 0; i < gridColumns; i++)
-				{
-					dgv_clickableGrid.Columns.Add(new DataGridViewColumn(new DataGridViewButtonCell()));
-					dgv_clickableGrid.Columns[i].Width = cellWidth;
-				}
-				
-				dgv_clickableGrid.RowTemplate.Height = cellHeight;
-				dgv_clickableGrid.Rows.Add(gridRows);
-			}
-			
-			if (rdb_tableLayoutPanel.Checked == true)
-			{
-				tbl_clickableGrid.Size = new Size(1 + gridWidth, 1 + gridHeight);
-				this.Size = new Size(35 + gridWidth, 75 + gridHeight);
-				
-				tbl_clickableGrid.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, cellWidth - 1));
-				tbl_clickableGrid.RowStyles.Add(new RowStyle(SizeType.Absolute, cellHeight - 1));
-				tbl_clickableGrid.ColumnCount = gridColumns;
-				tbl_clickableGrid.RowCount = gridRows;
-				tbl_clickableGrid.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
-				
-				tbl_clickableGrid.SuspendLayout();
-				
-				RectangleCell cellTemplate;
-				
-				for (int i = 0; i < gridColumns; i++)
-				{
-					for (int j = 0; j < gridRows; j++)
-					{
-						cellTemplate = new RectangleCell();
-						cellTemplate.Dock = DockStyle.Fill;
-						cellTemplate.BackColor = Color.White;
-						cellTemplate.Margin = new Padding(0,0,0,0);
-						cellTemplate.Size = new Size(cellWidth - 1, cellHeight - 1);
-						cellTemplate.Visible = true;
-						
-						tbl_clickableGrid.Controls.Add(cellTemplate, i, j);
-					}
-				}
-				
-				AssignClickEvent();
-				
-				tbl_clickableGrid.ResumeLayout();
-				tbl_clickableGrid.Visible = true;
-			}
-			
-			if (rdb_pictureBox.Checked == true)
-			{
-				pbx_clickableGrid.Size = new Size (1 + gridWidth, 1 + gridHeight);
-				this.Size = new Size(35 + gridWidth, 75 + gridHeight);
-				
-				pbx_clickableGrid.Visible = true;
-				pbx_clickableGrid.Image = new Bitmap(1 + gridWidth, 1 + gridHeight);
-				
-				Graphics gridImage = Graphics.FromImage(pbx_clickableGrid.Image);
-				gridImage.FillRectangle(Brushes.White, 0, 0, gridWidth, gridHeight);
-				
-				for (int i = 0; i < gridColumns + 1; i++)
-				{
-					gridImage.DrawLine(Pens.Gray, i * cellWidth, 0, i * cellWidth, pbx_clickableGrid.Height);
-				}
-				
-				for (int i = 0; i < gridRows + 1; i++)
-				{
-					gridImage.DrawLine(Pens.Gray, 0, i * cellHeight, pbx_clickableGrid.Width, i * cellHeight);
-				}
-			}
-		}
-		
-		void Btn_backClick(object sender, EventArgs e)
-		{
-			ResetForm();
-		}
-		
-		void Dgv_clickableGridCellClick(object sender, DataGridViewCellEventArgs e)
-		{
-			int column, row;
-			column = dgv_clickableGrid.CurrentCell.ColumnIndex;
-			row = dgv_clickableGrid.CurrentCell.RowIndex;
-			
-			if (dgv_clickableGrid[column, row].Style.BackColor == Color.Black)
-			{
-				dgv_clickableGrid[column, row].Style.BackColor = Color.White;
-			}
-			else
-			{
-				dgv_clickableGrid[column, row].Style.BackColor = Color.Black;
-			}
-			dgv_clickableGrid.CurrentCell.Selected = false;
-		}
-		
-		void AssignClickEvent ()
-		{
-			foreach (Control cell in tbl_clickableGrid.Controls)
-			{
-				cell.Click += new EventHandler(TableLayoutPanelCellClick);
-			}
-		}
-		
-		void TableLayoutPanelCellClick (object sender, EventArgs e)
-		{
-			RectangleCell cell = sender as RectangleCell;
-			
-			if (cell.BackColor == Color.White)
-			{
-				cell.BackColor = Color.Black;
-			}
-			else
-			{
-				cell.BackColor = Color.White;
-			}
-		}
-		
-		void RadioButtonChange(object sender, EventArgs e)
+		#region Changing Grid Options
+		private void RadioButtonChange(object sender, EventArgs e)
 		{
 			if (rdb_dataGridView.Checked == true)
 			{
@@ -293,30 +57,83 @@ namespace ClickableGrid
 			}
 		}
 		
-		void Pbx_clickableGridClick(object sender, EventArgs e)
+		private void Btn_backClick(object sender, EventArgs e)
 		{
-			int x, y;
+			btn_back.Visible = false;
 			
-			MouseEventArgs mouseCursor = (MouseEventArgs)e;
-			x = mouseCursor.Location.X;
-			y = mouseCursor.Location.Y;
+			dgv_clickableGrid.ClearGrid();
 			
-			Bitmap gridBitmap = new Bitmap(pbx_clickableGrid.Image);
-			Color cellColor = gridBitmap.GetPixel(x, y);
+			tbl_clickableGrid.ClearGrid();
 			
-			Graphics gridImage = Graphics.FromImage(pbx_clickableGrid.Image);
+			pbx_clickableGrid.ClearGrid();
 			
-			if (cellColor.ToArgb() == Color.White.ToArgb())
-			{
-				gridImage.FillRectangle(Brushes.Black, (x - (x % cellWidth) + 1), (y - (y % cellHeight) + 1), cellWidth - 1, cellHeight - 1);
-			}
-			
-			if (cellColor.ToArgb() == Color.Black.ToArgb())
-			{
-				gridImage.FillRectangle(Brushes.White, (x - (x % cellWidth) + 1), (y - (y % cellHeight) + 1), cellWidth - 1, cellHeight - 1);
-			}
-			
-			pbx_clickableGrid.Refresh();
+			pnl_formGenertor.Visible = true;
+			this.Size = new Size(315, 335);
 		}
+		#endregion
+		
+		#region Grid Generation
+		private void Btn_generateGridClick(object sender, EventArgs e)
+		{
+			gridRows = (int)nmb_height.Value;
+			gridColumns = (int)nmb_width.Value;
+			
+			cellHeight = calculate.CellSize(gridRows);
+			cellWidth = calculate.CellSize(gridColumns);
+			gridHeight = calculate.GridSize(gridRows);
+			gridWidth = calculate.GridSize(gridColumns);
+			
+			pnl_formGenertor.Visible = false;
+			btn_back.Visible = true;
+			this.Size = new Size(35 + gridWidth, 75 + gridHeight);
+			
+			if (rdb_dataGridView.Checked == true)
+			{
+				dgv_clickableGrid.ResizeGrid(gridWidth, gridHeight);
+				dgv_clickableGrid.GenerateGrid(gridColumns, gridRows, cellWidth, cellHeight);
+			}
+			
+			if (rdb_tableLayoutPanel.Checked == true)
+			{
+				tbl_clickableGrid.ResizeGrid(gridWidth, gridHeight);
+				tbl_clickableGrid.GenerateGrid(gridColumns, gridRows, cellWidth, cellHeight);
+				
+				AssignClickEvent();
+			}
+			
+			if (rdb_pictureBox.Checked == true)
+			{
+				pbx_clickableGrid.ResizeGrid(gridWidth, gridHeight);
+				pbx_clickableGrid.GenerateGrid(gridWidth, gridHeight, gridColumns, gridRows, cellWidth, cellHeight);
+			}
+		}
+		
+		private void AssignClickEvent()
+		{
+			foreach (Control cell in tbl_clickableGrid.Controls)
+			{
+				cell.Click += new EventHandler(tbl_ClickableGridCellClick);
+			}
+		}
+		#endregion
+		
+		#region Cell Click Events
+		private void Dgv_clickableGridCellClick(object sender, DataGridViewCellEventArgs e)
+		{
+			dgv_clickableGrid.CellClicked();
+		}
+		
+		private void tbl_ClickableGridCellClick(object sender, EventArgs e)
+		{
+			RectangleCell cell = sender as RectangleCell;
+			tbl_clickableGrid.CellClicked(cell);
+		}
+		
+		private void Pbx_clickableGridClick(object sender, EventArgs e)
+		{
+			MouseEventArgs mouseCursor = (MouseEventArgs)e;
+			pbx_clickableGrid.CellClicked(mouseCursor.Location.X, mouseCursor.Location.Y, cellWidth, cellHeight);
+		}
+		#endregion
 	}
 }

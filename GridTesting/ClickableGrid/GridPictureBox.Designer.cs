@@ -1,10 +1,10 @@
 ﻿/*
- * Date: 06/05/2023
- * Time: 00:36
+ * Date: 08/05/2023
+ * Time: 19:33
 */
 namespace ClickableGrid
 {
-	partial class DBTablePanel
+	partial class GridPictureBox
 	{
 		/// <summary>
 		/// Designer variable used to keep track of non-visual components.
@@ -33,9 +33,9 @@ namespace ClickableGrid
 		private void InitializeComponent()
 		{
 			// 
-			// DBTablePanel
+			// GridPictureBox
 			// 
-			this.Name = "DBTablePanel";
+			this.Name = "GridPictureBox";
 		}
 	}
 }

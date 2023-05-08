@@ -41,10 +41,10 @@ namespace ClickableGrid
 			this.rdb_tableLayoutPanel = new System.Windows.Forms.RadioButton();
 			this.rdb_pictureBox = new System.Windows.Forms.RadioButton();
 			this.pnl_formGenertor = new System.Windows.Forms.Panel();
-			this.dgv_clickableGrid = new ClickableGrid.DBDataGridView();
+			this.dgv_clickableGrid = new ClickableGrid.GridDataGridView();
 			this.btn_back = new System.Windows.Forms.Button();
-			this.tbl_clickableGrid = new ClickableGrid.DBTablePanel();
-			this.pbx_clickableGrid = new System.Windows.Forms.PictureBox();
+			this.tbl_clickableGrid = new ClickableGrid.GridTableLayoutPanel();
+			this.pbx_clickableGrid = new ClickableGrid.GridPictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.nmb_height)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nmb_width)).BeginInit();
 			this.pnl_formGenertor.SuspendLayout();
@@ -97,7 +97,7 @@ namespace ClickableGrid
 			this.nmb_height.Size = new System.Drawing.Size(80, 20);
 			this.nmb_height.TabIndex = 1;
 			this.nmb_height.Value = new decimal(new int[] {
-									1,
+									10,
 									0,
 									0,
 									0});
@@ -119,7 +119,7 @@ namespace ClickableGrid
 			this.nmb_width.Size = new System.Drawing.Size(80, 20);
 			this.nmb_width.TabIndex = 2;
 			this.nmb_width.Value = new decimal(new int[] {
-									1,
+									10,
 									0,
 									0,
 									0});
@@ -211,6 +211,7 @@ namespace ClickableGrid
 			this.tbl_clickableGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
 			this.tbl_clickableGrid.Size = new System.Drawing.Size(20, 20);
 			this.tbl_clickableGrid.TabIndex = 0;
+			this.tbl_clickableGrid.Visible = false;
 			// 
 			// pbx_clickableGrid
 			// 
@@ -220,6 +221,7 @@ namespace ClickableGrid
 			this.pbx_clickableGrid.Size = new System.Drawing.Size(20, 20);
 			this.pbx_clickableGrid.TabIndex = 9;
 			this.pbx_clickableGrid.TabStop = false;
+			this.pbx_clickableGrid.Visible = false;
 			this.pbx_clickableGrid.Click += new System.EventHandler(this.Pbx_clickableGridClick);
 			// 
 			// MainForm
@@ -242,10 +244,10 @@ namespace ClickableGrid
 			((System.ComponentModel.ISupportInitialize)(this.pbx_clickableGrid)).EndInit();
 			this.ResumeLayout(false);
 		}
-		private System.Windows.Forms.PictureBox pbx_clickableGrid;
-		private ClickableGrid.DBTablePanel tbl_clickableGrid;
+		private ClickableGrid.GridPictureBox pbx_clickableGrid;
+		private ClickableGrid.GridTableLayoutPanel tbl_clickableGrid;
 		private System.Windows.Forms.Button btn_back;
-		private ClickableGrid.DBDataGridView dgv_clickableGrid;
+		private ClickableGrid.GridDataGridView dgv_clickableGrid;
 		private System.Windows.Forms.Panel pnl_formGenertor;
 		private System.Windows.Forms.RadioButton rdb_pictureBox;
 		private System.Windows.Forms.RadioButton rdb_tableLayoutPanel;

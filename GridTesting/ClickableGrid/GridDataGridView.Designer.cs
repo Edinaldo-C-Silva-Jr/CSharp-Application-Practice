@@ -1,10 +1,10 @@
 ﻿/*
- * Date: 07/05/2023
- * Time: 01:11
+ * Date: 08/05/2023
+ * Time: 17:23
 */
 namespace ClickableGrid
 {
-	partial class DBDataGridView
+	partial class GridDataGridView
 	{
 		/// <summary>
 		/// Designer variable used to keep track of non-visual components.
@@ -33,9 +33,9 @@ namespace ClickableGrid
 		private void InitializeComponent()
 		{
 			// 
-			// DBDataGridView
+			// GridDataGridView
 			// 
-			this.Name = "DBDataGridView";
+			this.Name = "GridDataGridView";
 		}
 	}
 }

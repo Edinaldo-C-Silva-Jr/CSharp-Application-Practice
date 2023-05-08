@@ -47,13 +47,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DBDataGridView.cs" />
-    <Compile Include="DBDataGridView.Designer.cs">
-      <DependentUpon>DBDataGridView.cs</DependentUpon>
+    <Compile Include="GridDataGridView.cs" />
+    <Compile Include="GridDataGridView.Designer.cs">
+      <DependentUpon>GridDataGridView.cs</DependentUpon>
     </Compile>
-    <Compile Include="DBTablePanel.cs" />
-    <Compile Include="DBTablePanel.Designer.cs">
-      <DependentUpon>DBTablePanel.cs</DependentUpon>
+    <Compile Include="GridPictureBox.cs" />
+    <Compile Include="GridPictureBox.Designer.cs">
+      <DependentUpon>GridPictureBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridTableLayoutPanel.cs" />
+    <Compile Include="GridTableLayoutPanel.Designer.cs">
+      <DependentUpon>GridTableLayoutPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs" />
     <Compile Include="MainForm.Designer.cs">
@@ -65,6 +69,7 @@
     <Compile Include="RectangleCell.Designer.cs">
       <DependentUpon>RectangleCell.cs</DependentUpon>
     </Compile>
+    <Compile Include="SizeCalculation.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainForm.resx">
