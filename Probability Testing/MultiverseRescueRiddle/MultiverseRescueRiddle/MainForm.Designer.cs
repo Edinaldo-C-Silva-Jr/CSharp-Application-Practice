@@ -1,0 +1,729 @@
+﻿/*
+ * Date: 17/07/2023
+ * Time: 17:19
+*/
+namespace MultiverseRescueRiddle
+{
+	partial class MainForm
+	{
+		/// <summary>
+		/// Designer variable used to keep track of non-visual components.
+		/// </summary>
+		private System.ComponentModel.IContainer components = null;
+		
+		/// <summary>
+		/// Disposes resources used by the form.
+		/// </summary>
+		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+		protected override void Dispose(bool disposing)
+		{
+			if (disposing) {
+				if (components != null) {
+					components.Dispose();
+				}
+			}
+			base.Dispose(disposing);
+		}
+		
+		/// <summary>
+		/// This method is required for Windows Forms designer support.
+		/// Do not change the method contents inside the source code editor. The Forms designer might
+		/// not be able to load this method if it was changed manually.
+		/// </summary>
+		private void InitializeComponent()
+		{
+			this.gpb_dimension1 = new System.Windows.Forms.GroupBox();
+			this.lbl_d1Robot = new System.Windows.Forms.Label();
+			this.lbl_d1TurnSaved = new System.Windows.Forms.Label();
+			this.lbl_d1TimesVisited = new System.Windows.Forms.Label();
+			this.lbl_d1Saved = new System.Windows.Forms.Label();
+			this.gpb_dimension2 = new System.Windows.Forms.GroupBox();
+			this.lbl_d2Robot = new System.Windows.Forms.Label();
+			this.lbl_d2TurnSaved = new System.Windows.Forms.Label();
+			this.lbl_d2TimesVisited = new System.Windows.Forms.Label();
+			this.lbl_d2Saved = new System.Windows.Forms.Label();
+			this.gpb_dimension4 = new System.Windows.Forms.GroupBox();
+			this.lbl_d4Robot = new System.Windows.Forms.Label();
+			this.lbl_d4TurnSaved = new System.Windows.Forms.Label();
+			this.lbl_d4_TimesVisited = new System.Windows.Forms.Label();
+			this.lbl_d4Saved = new System.Windows.Forms.Label();
+			this.gpb_dimension5 = new System.Windows.Forms.GroupBox();
+			this.lbl_d5Robot = new System.Windows.Forms.Label();
+			this.lbl_d5TurnSaved = new System.Windows.Forms.Label();
+			this.lbl_d5TimesVisited = new System.Windows.Forms.Label();
+			this.lbl_d5Saved = new System.Windows.Forms.Label();
+			this.gpb_dimension6 = new System.Windows.Forms.GroupBox();
+			this.lbl_d6Robot = new System.Windows.Forms.Label();
+			this.lbl_d6TurnSaved = new System.Windows.Forms.Label();
+			this.lbl_d6TimesVisited = new System.Windows.Forms.Label();
+			this.lbl_d6Saved = new System.Windows.Forms.Label();
+			this.gpb_dimension3 = new System.Windows.Forms.GroupBox();
+			this.lbl_d3Robot = new System.Windows.Forms.Label();
+			this.lbl_d3TurnSaved = new System.Windows.Forms.Label();
+			this.lbl_d3TimesVitised = new System.Windows.Forms.Label();
+			this.lbl_d3Saved = new System.Windows.Forms.Label();
+			this.gpb_dimension7 = new System.Windows.Forms.GroupBox();
+			this.lbl_d7Robot = new System.Windows.Forms.Label();
+			this.lbl_d7TurnSaved = new System.Windows.Forms.Label();
+			this.lbl_d7TimesVisited = new System.Windows.Forms.Label();
+			this.lbl_d7Saved = new System.Windows.Forms.Label();
+			this.gpb_dimension8 = new System.Windows.Forms.GroupBox();
+			this.lbl_d8Robot = new System.Windows.Forms.Label();
+			this.lbl_d8TurnSaved = new System.Windows.Forms.Label();
+			this.lbl_d8TimesVisited = new System.Windows.Forms.Label();
+			this.lbl_d8Saved = new System.Windows.Forms.Label();
+			this.gpb_dimension9 = new System.Windows.Forms.GroupBox();
+			this.gpb_dimension10 = new System.Windows.Forms.GroupBox();
+			this.gpb_dimension11 = new System.Windows.Forms.GroupBox();
+			this.lbl_d9Robot = new System.Windows.Forms.Label();
+			this.lbl_d9TurnSaved = new System.Windows.Forms.Label();
+			this.lbl_d9TimesVisited = new System.Windows.Forms.Label();
+			this.lbl_d9Saved = new System.Windows.Forms.Label();
+			this.lbl_d10Robot = new System.Windows.Forms.Label();
+			this.lbl_d10TurnSaved = new System.Windows.Forms.Label();
+			this.lbl_d10TimesVisited = new System.Windows.Forms.Label();
+			this.lbl_d10Saved = new System.Windows.Forms.Label();
+			this.lbl_d11Robot = new System.Windows.Forms.Label();
+			this.lbl_d11TurnSaved = new System.Windows.Forms.Label();
+			this.lbl_d11TimesVisited = new System.Windows.Forms.Label();
+			this.lbl_d11Saved = new System.Windows.Forms.Label();
+			this.gpb_dimension1.SuspendLayout();
+			this.gpb_dimension2.SuspendLayout();
+			this.gpb_dimension4.SuspendLayout();
+			this.gpb_dimension5.SuspendLayout();
+			this.gpb_dimension6.SuspendLayout();
+			this.gpb_dimension3.SuspendLayout();
+			this.gpb_dimension7.SuspendLayout();
+			this.gpb_dimension8.SuspendLayout();
+			this.gpb_dimension9.SuspendLayout();
+			this.gpb_dimension10.SuspendLayout();
+			this.gpb_dimension11.SuspendLayout();
+			this.SuspendLayout();
+			// 
+			// gpb_dimension1
+			// 
+			this.gpb_dimension1.Controls.Add(this.lbl_d1Robot);
+			this.gpb_dimension1.Controls.Add(this.lbl_d1TurnSaved);
+			this.gpb_dimension1.Controls.Add(this.lbl_d1TimesVisited);
+			this.gpb_dimension1.Controls.Add(this.lbl_d1Saved);
+			this.gpb_dimension1.Location = new System.Drawing.Point(10, 10);
+			this.gpb_dimension1.Name = "gpb_dimension1";
+			this.gpb_dimension1.Size = new System.Drawing.Size(160, 120);
+			this.gpb_dimension1.TabIndex = 11;
+			this.gpb_dimension1.TabStop = false;
+			this.gpb_dimension1.Text = "Dimension 1";
+			// 
+			// lbl_d1Robot
+			// 
+			this.lbl_d1Robot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbl_d1Robot.ForeColor = System.Drawing.Color.Blue;
+			this.lbl_d1Robot.Location = new System.Drawing.Point(30, 70);
+			this.lbl_d1Robot.Name = "lbl_d1Robot";
+			this.lbl_d1Robot.Size = new System.Drawing.Size(120, 30);
+			this.lbl_d1Robot.TabIndex = 8;
+			this.lbl_d1Robot.Text = "Robot is Here";
+			this.lbl_d1Robot.Visible = false;
+			// 
+			// lbl_d1TurnSaved
+			// 
+			this.lbl_d1TurnSaved.Location = new System.Drawing.Point(80, 20);
+			this.lbl_d1TurnSaved.Name = "lbl_d1TurnSaved";
+			this.lbl_d1TurnSaved.Size = new System.Drawing.Size(70, 20);
+			this.lbl_d1TurnSaved.TabIndex = 7;
+			this.lbl_d1TurnSaved.Text = "On Turn: 0";
+			// 
+			// lbl_d1TimesVisited
+			// 
+			this.lbl_d1TimesVisited.Location = new System.Drawing.Point(10, 40);
+			this.lbl_d1TimesVisited.Name = "lbl_d1TimesVisited";
+			this.lbl_d1TimesVisited.Size = new System.Drawing.Size(120, 20);
+			this.lbl_d1TimesVisited.TabIndex = 6;
+			this.lbl_d1TimesVisited.Text = "Times Visited: 0";
+			// 
+			// lbl_d1Saved
+			// 
+			this.lbl_d1Saved.ForeColor = System.Drawing.Color.Red;
+			this.lbl_d1Saved.Location = new System.Drawing.Point(10, 20);
+			this.lbl_d1Saved.Name = "lbl_d1Saved";
+			this.lbl_d1Saved.Size = new System.Drawing.Size(65, 20);
+			this.lbl_d1Saved.TabIndex = 5;
+			this.lbl_d1Saved.Text = "Saved: No";
+			// 
+			// gpb_dimension2
+			// 
+			this.gpb_dimension2.Controls.Add(this.lbl_d2Robot);
+			this.gpb_dimension2.Controls.Add(this.lbl_d2TurnSaved);
+			this.gpb_dimension2.Controls.Add(this.lbl_d2TimesVisited);
+			this.gpb_dimension2.Controls.Add(this.lbl_d2Saved);
+			this.gpb_dimension2.Location = new System.Drawing.Point(10, 150);
+			this.gpb_dimension2.Name = "gpb_dimension2";
+			this.gpb_dimension2.Size = new System.Drawing.Size(160, 120);
+			this.gpb_dimension2.TabIndex = 12;
+			this.gpb_dimension2.TabStop = false;
+			this.gpb_dimension2.Text = "Dimension 2";
+			// 
+			// lbl_d2Robot
+			// 
+			this.lbl_d2Robot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbl_d2Robot.ForeColor = System.Drawing.Color.Blue;
+			this.lbl_d2Robot.Location = new System.Drawing.Point(30, 70);
+			this.lbl_d2Robot.Name = "lbl_d2Robot";
+			this.lbl_d2Robot.Size = new System.Drawing.Size(120, 30);
+			this.lbl_d2Robot.TabIndex = 8;
+			this.lbl_d2Robot.Text = "Robot is Here";
+			this.lbl_d2Robot.Visible = false;
+			// 
+			// lbl_d2TurnSaved
+			// 
+			this.lbl_d2TurnSaved.Location = new System.Drawing.Point(80, 20);
+			this.lbl_d2TurnSaved.Name = "lbl_d2TurnSaved";
+			this.lbl_d2TurnSaved.Size = new System.Drawing.Size(70, 20);
+			this.lbl_d2TurnSaved.TabIndex = 7;
+			this.lbl_d2TurnSaved.Text = "On Turn: 0";
+			// 
+			// lbl_d2TimesVisited
+			// 
+			this.lbl_d2TimesVisited.Location = new System.Drawing.Point(10, 40);
+			this.lbl_d2TimesVisited.Name = "lbl_d2TimesVisited";
+			this.lbl_d2TimesVisited.Size = new System.Drawing.Size(120, 20);
+			this.lbl_d2TimesVisited.TabIndex = 6;
+			this.lbl_d2TimesVisited.Text = "Times Visited: 0";
+			// 
+			// lbl_d2Saved
+			// 
+			this.lbl_d2Saved.ForeColor = System.Drawing.Color.Red;
+			this.lbl_d2Saved.Location = new System.Drawing.Point(10, 20);
+			this.lbl_d2Saved.Name = "lbl_d2Saved";
+			this.lbl_d2Saved.Size = new System.Drawing.Size(65, 20);
+			this.lbl_d2Saved.TabIndex = 5;
+			this.lbl_d2Saved.Text = "Saved: No";
+			// 
+			// gpb_dimension4
+			// 
+			this.gpb_dimension4.Controls.Add(this.lbl_d4Robot);
+			this.gpb_dimension4.Controls.Add(this.lbl_d4TurnSaved);
+			this.gpb_dimension4.Controls.Add(this.lbl_d4_TimesVisited);
+			this.gpb_dimension4.Controls.Add(this.lbl_d4Saved);
+			this.gpb_dimension4.Location = new System.Drawing.Point(350, 150);
+			this.gpb_dimension4.Name = "gpb_dimension4";
+			this.gpb_dimension4.Size = new System.Drawing.Size(160, 120);
+			this.gpb_dimension4.TabIndex = 13;
+			this.gpb_dimension4.TabStop = false;
+			this.gpb_dimension4.Text = "Dimension 4";
+			// 
+			// lbl_d4Robot
+			// 
+			this.lbl_d4Robot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbl_d4Robot.ForeColor = System.Drawing.Color.Blue;
+			this.lbl_d4Robot.Location = new System.Drawing.Point(30, 70);
+			this.lbl_d4Robot.Name = "lbl_d4Robot";
+			this.lbl_d4Robot.Size = new System.Drawing.Size(120, 30);
+			this.lbl_d4Robot.TabIndex = 8;
+			this.lbl_d4Robot.Text = "Robot is Here";
+			this.lbl_d4Robot.Visible = false;
+			// 
+			// lbl_d4TurnSaved
+			// 
+			this.lbl_d4TurnSaved.Location = new System.Drawing.Point(80, 20);
+			this.lbl_d4TurnSaved.Name = "lbl_d4TurnSaved";
+			this.lbl_d4TurnSaved.Size = new System.Drawing.Size(70, 20);
+			this.lbl_d4TurnSaved.TabIndex = 7;
+			this.lbl_d4TurnSaved.Text = "On Turn: 0";
+			// 
+			// lbl_d4_TimesVisited
+			// 
+			this.lbl_d4_TimesVisited.Location = new System.Drawing.Point(10, 40);
+			this.lbl_d4_TimesVisited.Name = "lbl_d4_TimesVisited";
+			this.lbl_d4_TimesVisited.Size = new System.Drawing.Size(120, 20);
+			this.lbl_d4_TimesVisited.TabIndex = 6;
+			this.lbl_d4_TimesVisited.Text = "Times Visited: 0";
+			// 
+			// lbl_d4Saved
+			// 
+			this.lbl_d4Saved.ForeColor = System.Drawing.Color.Red;
+			this.lbl_d4Saved.Location = new System.Drawing.Point(10, 20);
+			this.lbl_d4Saved.Name = "lbl_d4Saved";
+			this.lbl_d4Saved.Size = new System.Drawing.Size(65, 20);
+			this.lbl_d4Saved.TabIndex = 5;
+			this.lbl_d4Saved.Text = "Saved: No";
+			// 
+			// gpb_dimension5
+			// 
+			this.gpb_dimension5.Controls.Add(this.lbl_d5Robot);
+			this.gpb_dimension5.Controls.Add(this.lbl_d5TurnSaved);
+			this.gpb_dimension5.Controls.Add(this.lbl_d5TimesVisited);
+			this.gpb_dimension5.Controls.Add(this.lbl_d5Saved);
+			this.gpb_dimension5.Location = new System.Drawing.Point(520, 150);
+			this.gpb_dimension5.Name = "gpb_dimension5";
+			this.gpb_dimension5.Size = new System.Drawing.Size(160, 120);
+			this.gpb_dimension5.TabIndex = 14;
+			this.gpb_dimension5.TabStop = false;
+			this.gpb_dimension5.Text = "Dimension 5";
+			// 
+			// lbl_d5Robot
+			// 
+			this.lbl_d5Robot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbl_d5Robot.ForeColor = System.Drawing.Color.Blue;
+			this.lbl_d5Robot.Location = new System.Drawing.Point(30, 70);
+			this.lbl_d5Robot.Name = "lbl_d5Robot";
+			this.lbl_d5Robot.Size = new System.Drawing.Size(120, 30);
+			this.lbl_d5Robot.TabIndex = 8;
+			this.lbl_d5Robot.Text = "Robot is Here";
+			this.lbl_d5Robot.Visible = false;
+			// 
+			// lbl_d5TurnSaved
+			// 
+			this.lbl_d5TurnSaved.Location = new System.Drawing.Point(80, 20);
+			this.lbl_d5TurnSaved.Name = "lbl_d5TurnSaved";
+			this.lbl_d5TurnSaved.Size = new System.Drawing.Size(70, 20);
+			this.lbl_d5TurnSaved.TabIndex = 7;
+			this.lbl_d5TurnSaved.Text = "On Turn: 0";
+			// 
+			// lbl_d5TimesVisited
+			// 
+			this.lbl_d5TimesVisited.Location = new System.Drawing.Point(10, 40);
+			this.lbl_d5TimesVisited.Name = "lbl_d5TimesVisited";
+			this.lbl_d5TimesVisited.Size = new System.Drawing.Size(120, 20);
+			this.lbl_d5TimesVisited.TabIndex = 6;
+			this.lbl_d5TimesVisited.Text = "Times Visited: 0";
+			// 
+			// lbl_d5Saved
+			// 
+			this.lbl_d5Saved.ForeColor = System.Drawing.Color.Red;
+			this.lbl_d5Saved.Location = new System.Drawing.Point(10, 20);
+			this.lbl_d5Saved.Name = "lbl_d5Saved";
+			this.lbl_d5Saved.Size = new System.Drawing.Size(65, 20);
+			this.lbl_d5Saved.TabIndex = 5;
+			this.lbl_d5Saved.Text = "Saved: No";
+			// 
+			// gpb_dimension6
+			// 
+			this.gpb_dimension6.Controls.Add(this.lbl_d6Robot);
+			this.gpb_dimension6.Controls.Add(this.lbl_d6TurnSaved);
+			this.gpb_dimension6.Controls.Add(this.lbl_d6TimesVisited);
+			this.gpb_dimension6.Controls.Add(this.lbl_d6Saved);
+			this.gpb_dimension6.Location = new System.Drawing.Point(690, 150);
+			this.gpb_dimension6.Name = "gpb_dimension6";
+			this.gpb_dimension6.Size = new System.Drawing.Size(160, 120);
+			this.gpb_dimension6.TabIndex = 15;
+			this.gpb_dimension6.TabStop = false;
+			this.gpb_dimension6.Text = "Dimension 6";
+			// 
+			// lbl_d6Robot
+			// 
+			this.lbl_d6Robot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbl_d6Robot.ForeColor = System.Drawing.Color.Blue;
+			this.lbl_d6Robot.Location = new System.Drawing.Point(30, 70);
+			this.lbl_d6Robot.Name = "lbl_d6Robot";
+			this.lbl_d6Robot.Size = new System.Drawing.Size(120, 30);
+			this.lbl_d6Robot.TabIndex = 8;
+			this.lbl_d6Robot.Text = "Robot is Here";
+			this.lbl_d6Robot.Visible = false;
+			// 
+			// lbl_d6TurnSaved
+			// 
+			this.lbl_d6TurnSaved.Location = new System.Drawing.Point(80, 20);
+			this.lbl_d6TurnSaved.Name = "lbl_d6TurnSaved";
+			this.lbl_d6TurnSaved.Size = new System.Drawing.Size(70, 20);
+			this.lbl_d6TurnSaved.TabIndex = 7;
+			this.lbl_d6TurnSaved.Text = "On Turn: 0";
+			// 
+			// lbl_d6TimesVisited
+			// 
+			this.lbl_d6TimesVisited.Location = new System.Drawing.Point(10, 40);
+			this.lbl_d6TimesVisited.Name = "lbl_d6TimesVisited";
+			this.lbl_d6TimesVisited.Size = new System.Drawing.Size(120, 20);
+			this.lbl_d6TimesVisited.TabIndex = 6;
+			this.lbl_d6TimesVisited.Text = "Times Visited: 0";
+			// 
+			// lbl_d6Saved
+			// 
+			this.lbl_d6Saved.ForeColor = System.Drawing.Color.Red;
+			this.lbl_d6Saved.Location = new System.Drawing.Point(10, 20);
+			this.lbl_d6Saved.Name = "lbl_d6Saved";
+			this.lbl_d6Saved.Size = new System.Drawing.Size(65, 20);
+			this.lbl_d6Saved.TabIndex = 5;
+			this.lbl_d6Saved.Text = "Saved: No";
+			// 
+			// gpb_dimension3
+			// 
+			this.gpb_dimension3.Controls.Add(this.lbl_d3Robot);
+			this.gpb_dimension3.Controls.Add(this.lbl_d3TurnSaved);
+			this.gpb_dimension3.Controls.Add(this.lbl_d3TimesVitised);
+			this.gpb_dimension3.Controls.Add(this.lbl_d3Saved);
+			this.gpb_dimension3.Location = new System.Drawing.Point(180, 150);
+			this.gpb_dimension3.Name = "gpb_dimension3";
+			this.gpb_dimension3.Size = new System.Drawing.Size(160, 120);
+			this.gpb_dimension3.TabIndex = 16;
+			this.gpb_dimension3.TabStop = false;
+			this.gpb_dimension3.Text = "Dimension 3";
+			// 
+			// lbl_d3Robot
+			// 
+			this.lbl_d3Robot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbl_d3Robot.ForeColor = System.Drawing.Color.Blue;
+			this.lbl_d3Robot.Location = new System.Drawing.Point(30, 70);
+			this.lbl_d3Robot.Name = "lbl_d3Robot";
+			this.lbl_d3Robot.Size = new System.Drawing.Size(120, 30);
+			this.lbl_d3Robot.TabIndex = 8;
+			this.lbl_d3Robot.Text = "Robot is Here";
+			this.lbl_d3Robot.Visible = false;
+			// 
+			// lbl_d3TurnSaved
+			// 
+			this.lbl_d3TurnSaved.Location = new System.Drawing.Point(80, 20);
+			this.lbl_d3TurnSaved.Name = "lbl_d3TurnSaved";
+			this.lbl_d3TurnSaved.Size = new System.Drawing.Size(70, 20);
+			this.lbl_d3TurnSaved.TabIndex = 7;
+			this.lbl_d3TurnSaved.Text = "On Turn: 0";
+			// 
+			// lbl_d3TimesVitised
+			// 
+			this.lbl_d3TimesVitised.Location = new System.Drawing.Point(10, 40);
+			this.lbl_d3TimesVitised.Name = "lbl_d3TimesVitised";
+			this.lbl_d3TimesVitised.Size = new System.Drawing.Size(120, 20);
+			this.lbl_d3TimesVitised.TabIndex = 6;
+			this.lbl_d3TimesVitised.Text = "Times Visited: 0";
+			// 
+			// lbl_d3Saved
+			// 
+			this.lbl_d3Saved.ForeColor = System.Drawing.Color.Red;
+			this.lbl_d3Saved.Location = new System.Drawing.Point(10, 20);
+			this.lbl_d3Saved.Name = "lbl_d3Saved";
+			this.lbl_d3Saved.Size = new System.Drawing.Size(65, 20);
+			this.lbl_d3Saved.TabIndex = 5;
+			this.lbl_d3Saved.Text = "Saved: No";
+			// 
+			// gpb_dimension7
+			// 
+			this.gpb_dimension7.Controls.Add(this.lbl_d7Robot);
+			this.gpb_dimension7.Controls.Add(this.lbl_d7TurnSaved);
+			this.gpb_dimension7.Controls.Add(this.lbl_d7TimesVisited);
+			this.gpb_dimension7.Controls.Add(this.lbl_d7Saved);
+			this.gpb_dimension7.Location = new System.Drawing.Point(10, 280);
+			this.gpb_dimension7.Name = "gpb_dimension7";
+			this.gpb_dimension7.Size = new System.Drawing.Size(160, 120);
+			this.gpb_dimension7.TabIndex = 16;
+			this.gpb_dimension7.TabStop = false;
+			this.gpb_dimension7.Text = "Dimension 7";
+			// 
+			// lbl_d7Robot
+			// 
+			this.lbl_d7Robot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbl_d7Robot.ForeColor = System.Drawing.Color.Blue;
+			this.lbl_d7Robot.Location = new System.Drawing.Point(30, 70);
+			this.lbl_d7Robot.Name = "lbl_d7Robot";
+			this.lbl_d7Robot.Size = new System.Drawing.Size(120, 30);
+			this.lbl_d7Robot.TabIndex = 8;
+			this.lbl_d7Robot.Text = "Robot is Here";
+			this.lbl_d7Robot.Visible = false;
+			// 
+			// lbl_d7TurnSaved
+			// 
+			this.lbl_d7TurnSaved.Location = new System.Drawing.Point(80, 20);
+			this.lbl_d7TurnSaved.Name = "lbl_d7TurnSaved";
+			this.lbl_d7TurnSaved.Size = new System.Drawing.Size(70, 20);
+			this.lbl_d7TurnSaved.TabIndex = 7;
+			this.lbl_d7TurnSaved.Text = "On Turn: 0";
+			// 
+			// lbl_d7TimesVisited
+			// 
+			this.lbl_d7TimesVisited.Location = new System.Drawing.Point(10, 40);
+			this.lbl_d7TimesVisited.Name = "lbl_d7TimesVisited";
+			this.lbl_d7TimesVisited.Size = new System.Drawing.Size(120, 20);
+			this.lbl_d7TimesVisited.TabIndex = 6;
+			this.lbl_d7TimesVisited.Text = "Times Visited: 0";
+			// 
+			// lbl_d7Saved
+			// 
+			this.lbl_d7Saved.ForeColor = System.Drawing.Color.Red;
+			this.lbl_d7Saved.Location = new System.Drawing.Point(10, 20);
+			this.lbl_d7Saved.Name = "lbl_d7Saved";
+			this.lbl_d7Saved.Size = new System.Drawing.Size(65, 20);
+			this.lbl_d7Saved.TabIndex = 5;
+			this.lbl_d7Saved.Text = "Saved: No";
+			// 
+			// gpb_dimension8
+			// 
+			this.gpb_dimension8.Controls.Add(this.lbl_d8Robot);
+			this.gpb_dimension8.Controls.Add(this.lbl_d8TurnSaved);
+			this.gpb_dimension8.Controls.Add(this.lbl_d8TimesVisited);
+			this.gpb_dimension8.Controls.Add(this.lbl_d8Saved);
+			this.gpb_dimension8.Location = new System.Drawing.Point(180, 280);
+			this.gpb_dimension8.Name = "gpb_dimension8";
+			this.gpb_dimension8.Size = new System.Drawing.Size(160, 120);
+			this.gpb_dimension8.TabIndex = 17;
+			this.gpb_dimension8.TabStop = false;
+			this.gpb_dimension8.Text = "Dimension 8";
+			// 
+			// lbl_d8Robot
+			// 
+			this.lbl_d8Robot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbl_d8Robot.ForeColor = System.Drawing.Color.Blue;
+			this.lbl_d8Robot.Location = new System.Drawing.Point(30, 70);
+			this.lbl_d8Robot.Name = "lbl_d8Robot";
+			this.lbl_d8Robot.Size = new System.Drawing.Size(120, 30);
+			this.lbl_d8Robot.TabIndex = 8;
+			this.lbl_d8Robot.Text = "Robot is Here";
+			this.lbl_d8Robot.Visible = false;
+			// 
+			// lbl_d8TurnSaved
+			// 
+			this.lbl_d8TurnSaved.Location = new System.Drawing.Point(80, 20);
+			this.lbl_d8TurnSaved.Name = "lbl_d8TurnSaved";
+			this.lbl_d8TurnSaved.Size = new System.Drawing.Size(70, 20);
+			this.lbl_d8TurnSaved.TabIndex = 7;
+			this.lbl_d8TurnSaved.Text = "On Turn: 0";
+			// 
+			// lbl_d8TimesVisited
+			// 
+			this.lbl_d8TimesVisited.Location = new System.Drawing.Point(10, 40);
+			this.lbl_d8TimesVisited.Name = "lbl_d8TimesVisited";
+			this.lbl_d8TimesVisited.Size = new System.Drawing.Size(120, 20);
+			this.lbl_d8TimesVisited.TabIndex = 6;
+			this.lbl_d8TimesVisited.Text = "Times Visited: 0";
+			// 
+			// lbl_d8Saved
+			// 
+			this.lbl_d8Saved.ForeColor = System.Drawing.Color.Red;
+			this.lbl_d8Saved.Location = new System.Drawing.Point(10, 20);
+			this.lbl_d8Saved.Name = "lbl_d8Saved";
+			this.lbl_d8Saved.Size = new System.Drawing.Size(65, 20);
+			this.lbl_d8Saved.TabIndex = 5;
+			this.lbl_d8Saved.Text = "Saved: No";
+			// 
+			// gpb_dimension9
+			// 
+			this.gpb_dimension9.Controls.Add(this.lbl_d9Robot);
+			this.gpb_dimension9.Controls.Add(this.lbl_d9TurnSaved);
+			this.gpb_dimension9.Controls.Add(this.lbl_d9TimesVisited);
+			this.gpb_dimension9.Controls.Add(this.lbl_d9Saved);
+			this.gpb_dimension9.Location = new System.Drawing.Point(350, 280);
+			this.gpb_dimension9.Name = "gpb_dimension9";
+			this.gpb_dimension9.Size = new System.Drawing.Size(160, 120);
+			this.gpb_dimension9.TabIndex = 18;
+			this.gpb_dimension9.TabStop = false;
+			this.gpb_dimension9.Text = "Dimension 9";
+			// 
+			// gpb_dimension10
+			// 
+			this.gpb_dimension10.Controls.Add(this.lbl_d10Robot);
+			this.gpb_dimension10.Controls.Add(this.lbl_d10TurnSaved);
+			this.gpb_dimension10.Controls.Add(this.lbl_d10TimesVisited);
+			this.gpb_dimension10.Controls.Add(this.lbl_d10Saved);
+			this.gpb_dimension10.Location = new System.Drawing.Point(520, 280);
+			this.gpb_dimension10.Name = "gpb_dimension10";
+			this.gpb_dimension10.Size = new System.Drawing.Size(160, 120);
+			this.gpb_dimension10.TabIndex = 19;
+			this.gpb_dimension10.TabStop = false;
+			this.gpb_dimension10.Text = "Dimension 10";
+			// 
+			// gpb_dimension11
+			// 
+			this.gpb_dimension11.Controls.Add(this.lbl_d11Robot);
+			this.gpb_dimension11.Controls.Add(this.lbl_d11TurnSaved);
+			this.gpb_dimension11.Controls.Add(this.lbl_d11TimesVisited);
+			this.gpb_dimension11.Controls.Add(this.lbl_d11Saved);
+			this.gpb_dimension11.Location = new System.Drawing.Point(690, 280);
+			this.gpb_dimension11.Name = "gpb_dimension11";
+			this.gpb_dimension11.Size = new System.Drawing.Size(160, 120);
+			this.gpb_dimension11.TabIndex = 20;
+			this.gpb_dimension11.TabStop = false;
+			this.gpb_dimension11.Text = "Dimension 11";
+			// 
+			// lbl_d9Robot
+			// 
+			this.lbl_d9Robot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbl_d9Robot.ForeColor = System.Drawing.Color.Blue;
+			this.lbl_d9Robot.Location = new System.Drawing.Point(30, 70);
+			this.lbl_d9Robot.Name = "lbl_d9Robot";
+			this.lbl_d9Robot.Size = new System.Drawing.Size(120, 30);
+			this.lbl_d9Robot.TabIndex = 8;
+			this.lbl_d9Robot.Text = "Robot is Here";
+			this.lbl_d9Robot.Visible = false;
+			// 
+			// lbl_d9TurnSaved
+			// 
+			this.lbl_d9TurnSaved.Location = new System.Drawing.Point(80, 20);
+			this.lbl_d9TurnSaved.Name = "lbl_d9TurnSaved";
+			this.lbl_d9TurnSaved.Size = new System.Drawing.Size(70, 20);
+			this.lbl_d9TurnSaved.TabIndex = 7;
+			this.lbl_d9TurnSaved.Text = "On Turn: 0";
+			// 
+			// lbl_d9TimesVisited
+			// 
+			this.lbl_d9TimesVisited.Location = new System.Drawing.Point(10, 40);
+			this.lbl_d9TimesVisited.Name = "lbl_d9TimesVisited";
+			this.lbl_d9TimesVisited.Size = new System.Drawing.Size(120, 20);
+			this.lbl_d9TimesVisited.TabIndex = 6;
+			this.lbl_d9TimesVisited.Text = "Times Visited: 0";
+			// 
+			// lbl_d9Saved
+			// 
+			this.lbl_d9Saved.ForeColor = System.Drawing.Color.Red;
+			this.lbl_d9Saved.Location = new System.Drawing.Point(10, 20);
+			this.lbl_d9Saved.Name = "lbl_d9Saved";
+			this.lbl_d9Saved.Size = new System.Drawing.Size(65, 20);
+			this.lbl_d9Saved.TabIndex = 5;
+			this.lbl_d9Saved.Text = "Saved: No";
+			// 
+			// lbl_d10Robot
+			// 
+			this.lbl_d10Robot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbl_d10Robot.ForeColor = System.Drawing.Color.Blue;
+			this.lbl_d10Robot.Location = new System.Drawing.Point(30, 70);
+			this.lbl_d10Robot.Name = "lbl_d10Robot";
+			this.lbl_d10Robot.Size = new System.Drawing.Size(120, 30);
+			this.lbl_d10Robot.TabIndex = 8;
+			this.lbl_d10Robot.Text = "Robot is Here";
+			this.lbl_d10Robot.Visible = false;
+			// 
+			// lbl_d10TurnSaved
+			// 
+			this.lbl_d10TurnSaved.Location = new System.Drawing.Point(80, 20);
+			this.lbl_d10TurnSaved.Name = "lbl_d10TurnSaved";
+			this.lbl_d10TurnSaved.Size = new System.Drawing.Size(70, 20);
+			this.lbl_d10TurnSaved.TabIndex = 7;
+			this.lbl_d10TurnSaved.Text = "On Turn: 0";
+			// 
+			// lbl_d10TimesVisited
+			// 
+			this.lbl_d10TimesVisited.Location = new System.Drawing.Point(10, 40);
+			this.lbl_d10TimesVisited.Name = "lbl_d10TimesVisited";
+			this.lbl_d10TimesVisited.Size = new System.Drawing.Size(120, 20);
+			this.lbl_d10TimesVisited.TabIndex = 6;
+			this.lbl_d10TimesVisited.Text = "Times Visited: 0";
+			// 
+			// lbl_d10Saved
+			// 
+			this.lbl_d10Saved.ForeColor = System.Drawing.Color.Red;
+			this.lbl_d10Saved.Location = new System.Drawing.Point(10, 20);
+			this.lbl_d10Saved.Name = "lbl_d10Saved";
+			this.lbl_d10Saved.Size = new System.Drawing.Size(65, 20);
+			this.lbl_d10Saved.TabIndex = 5;
+			this.lbl_d10Saved.Text = "Saved: No";
+			// 
+			// lbl_d11Robot
+			// 
+			this.lbl_d11Robot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbl_d11Robot.ForeColor = System.Drawing.Color.Blue;
+			this.lbl_d11Robot.Location = new System.Drawing.Point(30, 70);
+			this.lbl_d11Robot.Name = "lbl_d11Robot";
+			this.lbl_d11Robot.Size = new System.Drawing.Size(120, 30);
+			this.lbl_d11Robot.TabIndex = 8;
+			this.lbl_d11Robot.Text = "Robot is Here";
+			this.lbl_d11Robot.Visible = false;
+			// 
+			// lbl_d11TurnSaved
+			// 
+			this.lbl_d11TurnSaved.Location = new System.Drawing.Point(80, 20);
+			this.lbl_d11TurnSaved.Name = "lbl_d11TurnSaved";
+			this.lbl_d11TurnSaved.Size = new System.Drawing.Size(70, 20);
+			this.lbl_d11TurnSaved.TabIndex = 7;
+			this.lbl_d11TurnSaved.Text = "On Turn: 0";
+			// 
+			// lbl_d11TimesVisited
+			// 
+			this.lbl_d11TimesVisited.Location = new System.Drawing.Point(10, 40);
+			this.lbl_d11TimesVisited.Name = "lbl_d11TimesVisited";
+			this.lbl_d11TimesVisited.Size = new System.Drawing.Size(120, 20);
+			this.lbl_d11TimesVisited.TabIndex = 6;
+			this.lbl_d11TimesVisited.Text = "Times Visited: 0";
+			// 
+			// lbl_d11Saved
+			// 
+			this.lbl_d11Saved.ForeColor = System.Drawing.Color.Red;
+			this.lbl_d11Saved.Location = new System.Drawing.Point(10, 20);
+			this.lbl_d11Saved.Name = "lbl_d11Saved";
+			this.lbl_d11Saved.Size = new System.Drawing.Size(65, 20);
+			this.lbl_d11Saved.TabIndex = 5;
+			this.lbl_d11Saved.Text = "Saved: No";
+			// 
+			// MainForm
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.ClientSize = new System.Drawing.Size(859, 412);
+			this.Controls.Add(this.gpb_dimension11);
+			this.Controls.Add(this.gpb_dimension10);
+			this.Controls.Add(this.gpb_dimension9);
+			this.Controls.Add(this.gpb_dimension8);
+			this.Controls.Add(this.gpb_dimension7);
+			this.Controls.Add(this.gpb_dimension3);
+			this.Controls.Add(this.gpb_dimension6);
+			this.Controls.Add(this.gpb_dimension5);
+			this.Controls.Add(this.gpb_dimension4);
+			this.Controls.Add(this.gpb_dimension2);
+			this.Controls.Add(this.gpb_dimension1);
+			this.Name = "MainForm";
+			this.Text = "MultiverseRescueRiddle";
+			this.gpb_dimension1.ResumeLayout(false);
+			this.gpb_dimension2.ResumeLayout(false);
+			this.gpb_dimension4.ResumeLayout(false);
+			this.gpb_dimension5.ResumeLayout(false);
+			this.gpb_dimension6.ResumeLayout(false);
+			this.gpb_dimension3.ResumeLayout(false);
+			this.gpb_dimension7.ResumeLayout(false);
+			this.gpb_dimension8.ResumeLayout(false);
+			this.gpb_dimension9.ResumeLayout(false);
+			this.gpb_dimension10.ResumeLayout(false);
+			this.gpb_dimension11.ResumeLayout(false);
+			this.ResumeLayout(false);
+		}
+		private System.Windows.Forms.GroupBox gpb_dimension11;
+		private System.Windows.Forms.GroupBox gpb_dimension10;
+		private System.Windows.Forms.GroupBox gpb_dimension9;
+		private System.Windows.Forms.GroupBox gpb_dimension8;
+		private System.Windows.Forms.GroupBox gpb_dimension7;
+		private System.Windows.Forms.GroupBox gpb_dimension3;
+		private System.Windows.Forms.GroupBox gpb_dimension6;
+		private System.Windows.Forms.GroupBox gpb_dimension5;
+		private System.Windows.Forms.GroupBox gpb_dimension4;
+		private System.Windows.Forms.GroupBox gpb_dimension2;
+		private System.Windows.Forms.GroupBox gpb_dimension1;
+		private System.Windows.Forms.Label lbl_d11Saved;
+		private System.Windows.Forms.Label lbl_d11TimesVisited;
+		private System.Windows.Forms.Label lbl_d11TurnSaved;
+		private System.Windows.Forms.Label lbl_d11Robot;
+		private System.Windows.Forms.Label lbl_d10Saved;
+		private System.Windows.Forms.Label lbl_d10TimesVisited;
+		private System.Windows.Forms.Label lbl_d10TurnSaved;
+		private System.Windows.Forms.Label lbl_d10Robot;
+		private System.Windows.Forms.Label lbl_d9Saved;
+		private System.Windows.Forms.Label lbl_d9TimesVisited;
+		private System.Windows.Forms.Label lbl_d9TurnSaved;
+		private System.Windows.Forms.Label lbl_d9Robot;
+		private System.Windows.Forms.Label lbl_d8Saved;
+		private System.Windows.Forms.Label lbl_d8TimesVisited;
+		private System.Windows.Forms.Label lbl_d8TurnSaved;
+		private System.Windows.Forms.Label lbl_d8Robot;
+		private System.Windows.Forms.Label lbl_d7Saved;
+		private System.Windows.Forms.Label lbl_d7TimesVisited;
+		private System.Windows.Forms.Label lbl_d7TurnSaved;
+		private System.Windows.Forms.Label lbl_d7Robot;
+		private System.Windows.Forms.Label lbl_d6Saved;
+		private System.Windows.Forms.Label lbl_d6TimesVisited;
+		private System.Windows.Forms.Label lbl_d6TurnSaved;
+		private System.Windows.Forms.Label lbl_d6Robot;
+		private System.Windows.Forms.Label lbl_d5Saved;
+		private System.Windows.Forms.Label lbl_d5TimesVisited;
+		private System.Windows.Forms.Label lbl_d5TurnSaved;
+		private System.Windows.Forms.Label lbl_d5Robot;
+		private System.Windows.Forms.Label lbl_d4Saved;
+		private System.Windows.Forms.Label lbl_d4_TimesVisited;
+		private System.Windows.Forms.Label lbl_d4TurnSaved;
+		private System.Windows.Forms.Label lbl_d4Robot;
+		private System.Windows.Forms.Label lbl_d3Saved;
+		private System.Windows.Forms.Label lbl_d3TimesVitised;
+		private System.Windows.Forms.Label lbl_d3TurnSaved;
+		private System.Windows.Forms.Label lbl_d3Robot;
+		private System.Windows.Forms.Label lbl_d2Saved;
+		private System.Windows.Forms.Label lbl_d2TimesVisited;
+		private System.Windows.Forms.Label lbl_d2TurnSaved;
+		private System.Windows.Forms.Label lbl_d2Robot;
+		private System.Windows.Forms.Label lbl_d1Saved;
+		private System.Windows.Forms.Label lbl_d1TimesVisited;
+		private System.Windows.Forms.Label lbl_d1TurnSaved;
+		private System.Windows.Forms.Label lbl_d1Robot;
+	}
+}
