@@ -765,7 +765,7 @@ namespace MultiverseRescueRiddle
 			// 
 			this.lbl_peopleCounted.Location = new System.Drawing.Point(10, 60);
 			this.lbl_peopleCounted.Name = "lbl_peopleCounted";
-			this.lbl_peopleCounted.Size = new System.Drawing.Size(100, 20);
+			this.lbl_peopleCounted.Size = new System.Drawing.Size(105, 20);
 			this.lbl_peopleCounted.TabIndex = 2;
 			this.lbl_peopleCounted.Text = "People Counted: 0";
 			// 
@@ -801,7 +801,7 @@ namespace MultiverseRescueRiddle
 			// 
 			// lbl_interval
 			// 
-			this.lbl_interval.Location = new System.Drawing.Point(10, 58);
+			this.lbl_interval.Location = new System.Drawing.Point(50, 58);
 			this.lbl_interval.Name = "lbl_interval";
 			this.lbl_interval.Size = new System.Drawing.Size(70, 15);
 			this.lbl_interval.TabIndex = 4;
@@ -809,7 +809,7 @@ namespace MultiverseRescueRiddle
 			// 
 			// chk_pauseCount
 			// 
-			this.chk_pauseCount.Location = new System.Drawing.Point(120, 85);
+			this.chk_pauseCount.Location = new System.Drawing.Point(130, 85);
 			this.chk_pauseCount.Name = "chk_pauseCount";
 			this.chk_pauseCount.Size = new System.Drawing.Size(104, 24);
 			this.chk_pauseCount.TabIndex = 3;
@@ -818,7 +818,7 @@ namespace MultiverseRescueRiddle
 			// 
 			// chk_pauseSave
 			// 
-			this.chk_pauseSave.Location = new System.Drawing.Point(10, 85);
+			this.chk_pauseSave.Location = new System.Drawing.Point(20, 85);
 			this.chk_pauseSave.Name = "chk_pauseSave";
 			this.chk_pauseSave.Size = new System.Drawing.Size(104, 24);
 			this.chk_pauseSave.TabIndex = 2;
@@ -827,6 +827,7 @@ namespace MultiverseRescueRiddle
 			// 
 			// cbb_delay
 			// 
+			this.cbb_delay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cbb_delay.FormattingEnabled = true;
 			this.cbb_delay.Items.AddRange(new object[] {
 									"0",
@@ -837,7 +838,7 @@ namespace MultiverseRescueRiddle
 									"1",
 									"1,5",
 									"2"});
-			this.cbb_delay.Location = new System.Drawing.Point(80, 55);
+			this.cbb_delay.Location = new System.Drawing.Point(120, 55);
 			this.cbb_delay.Name = "cbb_delay";
 			this.cbb_delay.Size = new System.Drawing.Size(80, 21);
 			this.cbb_delay.TabIndex = 1;
@@ -850,6 +851,7 @@ namespace MultiverseRescueRiddle
 			this.btn_start.TabIndex = 0;
 			this.btn_start.Text = "Start Simulation";
 			this.btn_start.UseVisualStyleBackColor = true;
+			this.btn_start.Click += new System.EventHandler(this.Btn_startClick);
 			// 
 			// btn_riddle
 			// 
@@ -882,6 +884,7 @@ namespace MultiverseRescueRiddle
 			this.Controls.Add(this.gpb_dimension1);
 			this.Name = "MainForm";
 			this.Text = "MultiverseRescueRiddle";
+			this.Load += new System.EventHandler(this.MainFormLoad);
 			this.gpb_dimension1.ResumeLayout(false);
 			this.gpb_dimension2.ResumeLayout(false);
 			this.gpb_dimension4.ResumeLayout(false);
