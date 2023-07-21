@@ -45,7 +45,7 @@ namespace MultiverseRescueRiddle
 			this.gpb_dimension4 = new System.Windows.Forms.GroupBox();
 			this.lbl_d4Robot = new System.Windows.Forms.Label();
 			this.lbl_d4TurnSaved = new System.Windows.Forms.Label();
-			this.lbl_d4_TimesVisited = new System.Windows.Forms.Label();
+			this.lbl_d4TimesVisited = new System.Windows.Forms.Label();
 			this.lbl_d4Saved = new System.Windows.Forms.Label();
 			this.gpb_dimension5 = new System.Windows.Forms.GroupBox();
 			this.lbl_d5Robot = new System.Windows.Forms.Label();
@@ -60,7 +60,7 @@ namespace MultiverseRescueRiddle
 			this.gpb_dimension3 = new System.Windows.Forms.GroupBox();
 			this.lbl_d3Robot = new System.Windows.Forms.Label();
 			this.lbl_d3TurnSaved = new System.Windows.Forms.Label();
-			this.lbl_d3TimesVitised = new System.Windows.Forms.Label();
+			this.lbl_d3TimesVisited = new System.Windows.Forms.Label();
 			this.lbl_d3Saved = new System.Windows.Forms.Label();
 			this.gpb_dimension7 = new System.Windows.Forms.GroupBox();
 			this.lbl_d7Robot = new System.Windows.Forms.Label();
@@ -106,6 +106,7 @@ namespace MultiverseRescueRiddle
 			this.cbb_delay = new System.Windows.Forms.ComboBox();
 			this.btn_start = new System.Windows.Forms.Button();
 			this.btn_riddle = new System.Windows.Forms.Button();
+			this.btn_reset = new System.Windows.Forms.Button();
 			this.gpb_dimension1.SuspendLayout();
 			this.gpb_dimension2.SuspendLayout();
 			this.gpb_dimension4.SuspendLayout();
@@ -226,7 +227,7 @@ namespace MultiverseRescueRiddle
 			// 
 			this.gpb_dimension4.Controls.Add(this.lbl_d4Robot);
 			this.gpb_dimension4.Controls.Add(this.lbl_d4TurnSaved);
-			this.gpb_dimension4.Controls.Add(this.lbl_d4_TimesVisited);
+			this.gpb_dimension4.Controls.Add(this.lbl_d4TimesVisited);
 			this.gpb_dimension4.Controls.Add(this.lbl_d4Saved);
 			this.gpb_dimension4.Location = new System.Drawing.Point(350, 150);
 			this.gpb_dimension4.Name = "gpb_dimension4";
@@ -254,13 +255,13 @@ namespace MultiverseRescueRiddle
 			this.lbl_d4TurnSaved.TabIndex = 7;
 			this.lbl_d4TurnSaved.Text = "On Turn: 0";
 			// 
-			// lbl_d4_TimesVisited
+			// lbl_d4TimesVisited
 			// 
-			this.lbl_d4_TimesVisited.Location = new System.Drawing.Point(10, 40);
-			this.lbl_d4_TimesVisited.Name = "lbl_d4_TimesVisited";
-			this.lbl_d4_TimesVisited.Size = new System.Drawing.Size(120, 20);
-			this.lbl_d4_TimesVisited.TabIndex = 6;
-			this.lbl_d4_TimesVisited.Text = "Times Visited: 0";
+			this.lbl_d4TimesVisited.Location = new System.Drawing.Point(10, 40);
+			this.lbl_d4TimesVisited.Name = "lbl_d4TimesVisited";
+			this.lbl_d4TimesVisited.Size = new System.Drawing.Size(120, 20);
+			this.lbl_d4TimesVisited.TabIndex = 6;
+			this.lbl_d4TimesVisited.Text = "Times Visited: 0";
 			// 
 			// lbl_d4Saved
 			// 
@@ -373,7 +374,7 @@ namespace MultiverseRescueRiddle
 			// 
 			this.gpb_dimension3.Controls.Add(this.lbl_d3Robot);
 			this.gpb_dimension3.Controls.Add(this.lbl_d3TurnSaved);
-			this.gpb_dimension3.Controls.Add(this.lbl_d3TimesVitised);
+			this.gpb_dimension3.Controls.Add(this.lbl_d3TimesVisited);
 			this.gpb_dimension3.Controls.Add(this.lbl_d3Saved);
 			this.gpb_dimension3.Location = new System.Drawing.Point(180, 150);
 			this.gpb_dimension3.Name = "gpb_dimension3";
@@ -401,13 +402,13 @@ namespace MultiverseRescueRiddle
 			this.lbl_d3TurnSaved.TabIndex = 7;
 			this.lbl_d3TurnSaved.Text = "On Turn: 0";
 			// 
-			// lbl_d3TimesVitised
+			// lbl_d3TimesVisited
 			// 
-			this.lbl_d3TimesVitised.Location = new System.Drawing.Point(10, 40);
-			this.lbl_d3TimesVitised.Name = "lbl_d3TimesVitised";
-			this.lbl_d3TimesVitised.Size = new System.Drawing.Size(120, 20);
-			this.lbl_d3TimesVitised.TabIndex = 6;
-			this.lbl_d3TimesVitised.Text = "Times Visited: 0";
+			this.lbl_d3TimesVisited.Location = new System.Drawing.Point(10, 40);
+			this.lbl_d3TimesVisited.Name = "lbl_d3TimesVisited";
+			this.lbl_d3TimesVisited.Size = new System.Drawing.Size(120, 20);
+			this.lbl_d3TimesVisited.TabIndex = 6;
+			this.lbl_d3TimesVisited.Text = "Times Visited: 0";
 			// 
 			// lbl_d3Saved
 			// 
@@ -685,7 +686,7 @@ namespace MultiverseRescueRiddle
 			this.lbl_buttonFinish.ForeColor = System.Drawing.Color.Red;
 			this.lbl_buttonFinish.Location = new System.Drawing.Point(15, 20);
 			this.lbl_buttonFinish.Name = "lbl_buttonFinish";
-			this.lbl_buttonFinish.Size = new System.Drawing.Size(90, 25);
+			this.lbl_buttonFinish.Size = new System.Drawing.Size(100, 25);
 			this.lbl_buttonFinish.TabIndex = 6;
 			this.lbl_buttonFinish.Text = "Home: No";
 			// 
@@ -727,6 +728,7 @@ namespace MultiverseRescueRiddle
 			// 
 			// tbr_leftLever
 			// 
+			this.tbr_leftLever.Enabled = false;
 			this.tbr_leftLever.LargeChange = 1;
 			this.tbr_leftLever.Location = new System.Drawing.Point(15, 50);
 			this.tbr_leftLever.Maximum = 1;
@@ -736,10 +738,10 @@ namespace MultiverseRescueRiddle
 			this.tbr_leftLever.Size = new System.Drawing.Size(45, 50);
 			this.tbr_leftLever.TabIndex = 1;
 			this.tbr_leftLever.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
-			this.tbr_leftLever.Value = 1;
 			// 
 			// tbr_rightLever
 			// 
+			this.tbr_rightLever.Enabled = false;
 			this.tbr_rightLever.LargeChange = 1;
 			this.tbr_rightLever.Location = new System.Drawing.Point(65, 50);
 			this.tbr_rightLever.Maximum = 1;
@@ -747,7 +749,6 @@ namespace MultiverseRescueRiddle
 			this.tbr_rightLever.Orientation = System.Windows.Forms.Orientation.Vertical;
 			this.tbr_rightLever.Size = new System.Drawing.Size(45, 50);
 			this.tbr_rightLever.TabIndex = 0;
-			this.tbr_rightLever.Value = 1;
 			// 
 			// gpb_stats
 			// 
@@ -787,6 +788,7 @@ namespace MultiverseRescueRiddle
 			// 
 			// gpb_settings
 			// 
+			this.gpb_settings.Controls.Add(this.btn_reset);
 			this.gpb_settings.Controls.Add(this.lbl_interval);
 			this.gpb_settings.Controls.Add(this.chk_pauseCount);
 			this.gpb_settings.Controls.Add(this.chk_pauseSave);
@@ -845,9 +847,9 @@ namespace MultiverseRescueRiddle
 			// 
 			// btn_start
 			// 
-			this.btn_start.Location = new System.Drawing.Point(10, 20);
+			this.btn_start.Location = new System.Drawing.Point(25, 20);
 			this.btn_start.Name = "btn_start";
-			this.btn_start.Size = new System.Drawing.Size(90, 25);
+			this.btn_start.Size = new System.Drawing.Size(95, 25);
 			this.btn_start.TabIndex = 0;
 			this.btn_start.Text = "Start Simulation";
 			this.btn_start.UseVisualStyleBackColor = true;
@@ -861,6 +863,15 @@ namespace MultiverseRescueRiddle
 			this.btn_riddle.TabIndex = 24;
 			this.btn_riddle.Text = "?";
 			this.btn_riddle.UseVisualStyleBackColor = true;
+			// 
+			// btn_reset
+			// 
+			this.btn_reset.Location = new System.Drawing.Point(130, 20);
+			this.btn_reset.Name = "btn_reset";
+			this.btn_reset.Size = new System.Drawing.Size(95, 25);
+			this.btn_reset.TabIndex = 5;
+			this.btn_reset.Text = "Reset Simulation";
+			this.btn_reset.UseVisualStyleBackColor = true;
 			// 
 			// MainForm
 			// 
@@ -904,6 +915,7 @@ namespace MultiverseRescueRiddle
 			this.gpb_settings.ResumeLayout(false);
 			this.ResumeLayout(false);
 		}
+		private System.Windows.Forms.Button btn_reset;
 		private System.Windows.Forms.Button btn_riddle;
 		private System.Windows.Forms.Button btn_start;
 		private System.Windows.Forms.ComboBox cbb_delay;
@@ -963,11 +975,11 @@ namespace MultiverseRescueRiddle
 		private System.Windows.Forms.Label lbl_d5TurnSaved;
 		private System.Windows.Forms.Label lbl_d5Robot;
 		private System.Windows.Forms.Label lbl_d4Saved;
-		private System.Windows.Forms.Label lbl_d4_TimesVisited;
+		private System.Windows.Forms.Label lbl_d4TimesVisited;
 		private System.Windows.Forms.Label lbl_d4TurnSaved;
 		private System.Windows.Forms.Label lbl_d4Robot;
 		private System.Windows.Forms.Label lbl_d3Saved;
-		private System.Windows.Forms.Label lbl_d3TimesVitised;
+		private System.Windows.Forms.Label lbl_d3TimesVisited;
 		private System.Windows.Forms.Label lbl_d3TurnSaved;
 		private System.Windows.Forms.Label lbl_d3Robot;
 		private System.Windows.Forms.Label lbl_d2Saved;
