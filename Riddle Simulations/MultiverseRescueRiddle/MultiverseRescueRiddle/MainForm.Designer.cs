@@ -100,13 +100,13 @@ namespace MultiverseRescueRiddle
 			this.lbl_peopleSaved = new System.Windows.Forms.Label();
 			this.lbl_turns = new System.Windows.Forms.Label();
 			this.gpb_settings = new System.Windows.Forms.GroupBox();
+			this.btn_reset = new System.Windows.Forms.Button();
 			this.lbl_interval = new System.Windows.Forms.Label();
 			this.chk_pauseCount = new System.Windows.Forms.CheckBox();
 			this.chk_pauseSave = new System.Windows.Forms.CheckBox();
 			this.cbb_delay = new System.Windows.Forms.ComboBox();
 			this.btn_start = new System.Windows.Forms.Button();
 			this.btn_riddle = new System.Windows.Forms.Button();
-			this.btn_reset = new System.Windows.Forms.Button();
 			this.gpb_dimension1.SuspendLayout();
 			this.gpb_dimension2.SuspendLayout();
 			this.gpb_dimension4.SuspendLayout();
@@ -801,6 +801,16 @@ namespace MultiverseRescueRiddle
 			this.gpb_settings.TabStop = false;
 			this.gpb_settings.Text = "Settings";
 			// 
+			// btn_reset
+			// 
+			this.btn_reset.Location = new System.Drawing.Point(130, 20);
+			this.btn_reset.Name = "btn_reset";
+			this.btn_reset.Size = new System.Drawing.Size(95, 25);
+			this.btn_reset.TabIndex = 5;
+			this.btn_reset.Text = "Reset Simulation";
+			this.btn_reset.UseVisualStyleBackColor = true;
+			this.btn_reset.Click += new System.EventHandler(this.Btn_resetClick);
+			// 
 			// lbl_interval
 			// 
 			this.lbl_interval.Location = new System.Drawing.Point(50, 58);
@@ -837,9 +847,7 @@ namespace MultiverseRescueRiddle
 									"0,25",
 									"0,5",
 									"0,75",
-									"1",
-									"1,5",
-									"2"});
+									"1"});
 			this.cbb_delay.Location = new System.Drawing.Point(120, 55);
 			this.cbb_delay.Name = "cbb_delay";
 			this.cbb_delay.Size = new System.Drawing.Size(80, 21);
@@ -863,15 +871,6 @@ namespace MultiverseRescueRiddle
 			this.btn_riddle.TabIndex = 24;
 			this.btn_riddle.Text = "?";
 			this.btn_riddle.UseVisualStyleBackColor = true;
-			// 
-			// btn_reset
-			// 
-			this.btn_reset.Location = new System.Drawing.Point(130, 20);
-			this.btn_reset.Name = "btn_reset";
-			this.btn_reset.Size = new System.Drawing.Size(95, 25);
-			this.btn_reset.TabIndex = 5;
-			this.btn_reset.Text = "Reset Simulation";
-			this.btn_reset.UseVisualStyleBackColor = true;
 			// 
 			// MainForm
 			// 
