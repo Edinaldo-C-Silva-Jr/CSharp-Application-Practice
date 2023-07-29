@@ -103,14 +103,12 @@ namespace MultiverseRescueRiddle
 			this.gpb_settings = new System.Windows.Forms.GroupBox();
 			this.btn_reset = new System.Windows.Forms.Button();
 			this.lbl_interval = new System.Windows.Forms.Label();
-			this.chk_pauseCount = new System.Windows.Forms.CheckBox();
-			this.chk_pauseSave = new System.Windows.Forms.CheckBox();
 			this.cbb_delay = new System.Windows.Forms.ComboBox();
 			this.btn_start = new System.Windows.Forms.Button();
 			this.btn_riddle = new System.Windows.Forms.Button();
 			this.btn_answer = new System.Windows.Forms.Button();
-			this.label1 = new System.Windows.Forms.Label();
 			this.tmr_interval = new System.Windows.Forms.Timer(this.components);
+			this.gpb_Explanations = new System.Windows.Forms.GroupBox();
 			this.gpb_dimension1.SuspendLayout();
 			this.gpb_dimension2.SuspendLayout();
 			this.gpb_dimension4.SuspendLayout();
@@ -127,6 +125,7 @@ namespace MultiverseRescueRiddle
 			((System.ComponentModel.ISupportInitialize)(this.tbr_rightLever)).BeginInit();
 			this.gpb_stats.SuspendLayout();
 			this.gpb_settings.SuspendLayout();
+			this.gpb_Explanations.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// gpb_dimension1
@@ -677,7 +676,7 @@ namespace MultiverseRescueRiddle
 			this.gpb_Robot.Controls.Add(this.lbl_leftA);
 			this.gpb_Robot.Controls.Add(this.tbr_leftLever);
 			this.gpb_Robot.Controls.Add(this.tbr_rightLever);
-			this.gpb_Robot.Location = new System.Drawing.Point(230, 10);
+			this.gpb_Robot.Location = new System.Drawing.Point(280, 10);
 			this.gpb_Robot.Name = "gpb_Robot";
 			this.gpb_Robot.Size = new System.Drawing.Size(120, 120);
 			this.gpb_Robot.TabIndex = 21;
@@ -759,7 +758,7 @@ namespace MultiverseRescueRiddle
 			this.gpb_stats.Controls.Add(this.lbl_peopleCounted);
 			this.gpb_stats.Controls.Add(this.lbl_peopleSaved);
 			this.gpb_stats.Controls.Add(this.lbl_turns);
-			this.gpb_stats.Location = new System.Drawing.Point(370, 10);
+			this.gpb_stats.Location = new System.Drawing.Point(405, 10);
 			this.gpb_stats.Name = "gpb_stats";
 			this.gpb_stats.Size = new System.Drawing.Size(150, 120);
 			this.gpb_stats.TabIndex = 22;
@@ -794,22 +793,20 @@ namespace MultiverseRescueRiddle
 			// 
 			this.gpb_settings.Controls.Add(this.btn_reset);
 			this.gpb_settings.Controls.Add(this.lbl_interval);
-			this.gpb_settings.Controls.Add(this.chk_pauseCount);
-			this.gpb_settings.Controls.Add(this.chk_pauseSave);
 			this.gpb_settings.Controls.Add(this.cbb_delay);
 			this.gpb_settings.Controls.Add(this.btn_start);
-			this.gpb_settings.Location = new System.Drawing.Point(540, 10);
+			this.gpb_settings.Location = new System.Drawing.Point(570, 10);
 			this.gpb_settings.Name = "gpb_settings";
-			this.gpb_settings.Size = new System.Drawing.Size(230, 120);
+			this.gpb_settings.Size = new System.Drawing.Size(160, 120);
 			this.gpb_settings.TabIndex = 23;
 			this.gpb_settings.TabStop = false;
 			this.gpb_settings.Text = "Settings";
 			// 
 			// btn_reset
 			// 
-			this.btn_reset.Location = new System.Drawing.Point(120, 20);
+			this.btn_reset.Location = new System.Drawing.Point(85, 20);
 			this.btn_reset.Name = "btn_reset";
-			this.btn_reset.Size = new System.Drawing.Size(95, 25);
+			this.btn_reset.Size = new System.Drawing.Size(65, 40);
 			this.btn_reset.TabIndex = 5;
 			this.btn_reset.Text = "Reset Simulation";
 			this.btn_reset.UseVisualStyleBackColor = true;
@@ -817,29 +814,11 @@ namespace MultiverseRescueRiddle
 			// 
 			// lbl_interval
 			// 
-			this.lbl_interval.Location = new System.Drawing.Point(40, 58);
+			this.lbl_interval.Location = new System.Drawing.Point(20, 70);
 			this.lbl_interval.Name = "lbl_interval";
-			this.lbl_interval.Size = new System.Drawing.Size(70, 15);
+			this.lbl_interval.Size = new System.Drawing.Size(120, 15);
 			this.lbl_interval.TabIndex = 4;
-			this.lbl_interval.Text = "Time Interval";
-			// 
-			// chk_pauseCount
-			// 
-			this.chk_pauseCount.Location = new System.Drawing.Point(120, 85);
-			this.chk_pauseCount.Name = "chk_pauseCount";
-			this.chk_pauseCount.Size = new System.Drawing.Size(104, 24);
-			this.chk_pauseCount.TabIndex = 3;
-			this.chk_pauseCount.Text = "Pause on Count";
-			this.chk_pauseCount.UseVisualStyleBackColor = true;
-			// 
-			// chk_pauseSave
-			// 
-			this.chk_pauseSave.Location = new System.Drawing.Point(10, 85);
-			this.chk_pauseSave.Name = "chk_pauseSave";
-			this.chk_pauseSave.Size = new System.Drawing.Size(104, 24);
-			this.chk_pauseSave.TabIndex = 2;
-			this.chk_pauseSave.Text = "Pause on Save";
-			this.chk_pauseSave.UseVisualStyleBackColor = true;
+			this.lbl_interval.Text = "Time Interval (Seconds)";
 			// 
 			// cbb_delay
 			// 
@@ -852,7 +831,7 @@ namespace MultiverseRescueRiddle
 									"0,5",
 									"0,75",
 									"1"});
-			this.cbb_delay.Location = new System.Drawing.Point(110, 55);
+			this.cbb_delay.Location = new System.Drawing.Point(40, 90);
 			this.cbb_delay.Name = "cbb_delay";
 			this.cbb_delay.Size = new System.Drawing.Size(80, 21);
 			this.cbb_delay.TabIndex = 1;
@@ -860,9 +839,9 @@ namespace MultiverseRescueRiddle
 			// 
 			// btn_start
 			// 
-			this.btn_start.Location = new System.Drawing.Point(15, 20);
+			this.btn_start.Location = new System.Drawing.Point(10, 20);
 			this.btn_start.Name = "btn_start";
-			this.btn_start.Size = new System.Drawing.Size(95, 25);
+			this.btn_start.Size = new System.Drawing.Size(65, 40);
 			this.btn_start.TabIndex = 0;
 			this.btn_start.Text = "Start Simulation";
 			this.btn_start.UseVisualStyleBackColor = true;
@@ -870,7 +849,7 @@ namespace MultiverseRescueRiddle
 			// 
 			// btn_riddle
 			// 
-			this.btn_riddle.Location = new System.Drawing.Point(780, 30);
+			this.btn_riddle.Location = new System.Drawing.Point(15, 30);
 			this.btn_riddle.Name = "btn_riddle";
 			this.btn_riddle.Size = new System.Drawing.Size(60, 30);
 			this.btn_riddle.TabIndex = 24;
@@ -880,7 +859,7 @@ namespace MultiverseRescueRiddle
 			// 
 			// btn_answer
 			// 
-			this.btn_answer.Location = new System.Drawing.Point(780, 65);
+			this.btn_answer.Location = new System.Drawing.Point(15, 70);
 			this.btn_answer.Name = "btn_answer";
 			this.btn_answer.Size = new System.Drawing.Size(60, 30);
 			this.btn_answer.TabIndex = 25;
@@ -888,27 +867,28 @@ namespace MultiverseRescueRiddle
 			this.btn_answer.UseVisualStyleBackColor = true;
 			this.btn_answer.Click += new System.EventHandler(this.Btn_answerClick);
 			// 
-			// label1
-			// 
-			this.label1.Location = new System.Drawing.Point(775, 10);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(70, 20);
-			this.label1.TabIndex = 26;
-			this.label1.Text = "Explanations";
-			// 
 			// tmr_interval
 			// 
 			this.tmr_interval.Interval = 1;
 			this.tmr_interval.Tick += new System.EventHandler(this.Tmr_intervalTick);
+			// 
+			// gpb_Explanations
+			// 
+			this.gpb_Explanations.Controls.Add(this.btn_answer);
+			this.gpb_Explanations.Controls.Add(this.btn_riddle);
+			this.gpb_Explanations.Location = new System.Drawing.Point(735, 10);
+			this.gpb_Explanations.Name = "gpb_Explanations";
+			this.gpb_Explanations.Size = new System.Drawing.Size(90, 120);
+			this.gpb_Explanations.TabIndex = 27;
+			this.gpb_Explanations.TabStop = false;
+			this.gpb_Explanations.Text = "Explanations";
 			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(859, 412);
-			this.Controls.Add(this.label1);
-			this.Controls.Add(this.btn_answer);
-			this.Controls.Add(this.btn_riddle);
+			this.Controls.Add(this.gpb_Explanations);
 			this.Controls.Add(this.gpb_settings);
 			this.Controls.Add(this.gpb_stats);
 			this.Controls.Add(this.gpb_Robot);
@@ -943,17 +923,16 @@ namespace MultiverseRescueRiddle
 			((System.ComponentModel.ISupportInitialize)(this.tbr_rightLever)).EndInit();
 			this.gpb_stats.ResumeLayout(false);
 			this.gpb_settings.ResumeLayout(false);
+			this.gpb_Explanations.ResumeLayout(false);
 			this.ResumeLayout(false);
 		}
+		private System.Windows.Forms.GroupBox gpb_Explanations;
 		private System.Windows.Forms.Timer tmr_interval;
-		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Button btn_answer;
 		private System.Windows.Forms.Button btn_reset;
 		private System.Windows.Forms.Button btn_riddle;
 		private System.Windows.Forms.Button btn_start;
 		private System.Windows.Forms.ComboBox cbb_delay;
-		private System.Windows.Forms.CheckBox chk_pauseSave;
-		private System.Windows.Forms.CheckBox chk_pauseCount;
 		private System.Windows.Forms.Label lbl_interval;
 		private System.Windows.Forms.Label lbl_turns;
 		private System.Windows.Forms.Label lbl_peopleSaved;

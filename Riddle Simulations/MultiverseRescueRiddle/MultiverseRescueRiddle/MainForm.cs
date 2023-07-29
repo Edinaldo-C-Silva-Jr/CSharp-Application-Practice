@@ -6,21 +6,23 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
-using System.Threading;
 
 namespace MultiverseRescueRiddle
 {
+	// A class that simulates the solution of a riddle known as "Multiverse Rescue Riddle".
+	// An explanation for the riddle can be found within the program in the "Riddle" and "Answer" buttons
 	public partial class MainForm : Form
 	{
-		private bool[] personIsSaved = new bool[11];
+		private bool[] personIsSaved = new bool[11]; // Arrays for individual dimension states
 		private int[] timesVisited = new int[11];
+		
+		private int turnsTaken = 0, peopleSaved = 0, peopleCounted = 0, robotPosition = 0; // Control variables for the simulation
 		private float delay;
 		
-		private int turnsTaken = 0, peopleSaved = 0, peopleCounted = 0, robotPosition = 0;
-		
-		private bool rightLever = false, leftLever = false, buttonPressed = false;
-		private string groupBoxName = "", labelName = "";
+		private bool rightLever = false, leftLever = false, buttonPressed = false; // Robot related variables
 		Random robotTeleport;
+		
+		private string groupBoxName = "", labelName = ""; // Variables for building the control names (used to change the controls' properties based on the result of the RNG)
 		
 		public MainForm()
 		{
@@ -29,25 +31,106 @@ namespace MultiverseRescueRiddle
 		
 		private void MainFormLoad(object sender, EventArgs e)
 		{
-			robotTeleport = new Random();
+			robotTeleport = new Random(); 
 			
-			cbb_delay.SelectedIndex = 2;
+			cbb_delay.SelectedIndex = 2; // Starts the execution delay of steps on 0.25s
 			delay = 1000 * float.Parse(cbb_delay.SelectedItem.ToString());
 			tmr_interval.Interval = (int)delay;
 		}
 		
-		private void Btn_startClick(object sender, EventArgs e)
+		// Saves the current person, if they haven't already been saved
+		// Also changes the labels related to that dimension by building their names with the number of the robot position
+		private void SaveCurrentPerson()
 		{
-			if (buttonPressed)
-			{
-				MessageBox.Show("The simulation has been finished, and must be reset first.");
-				return;
-			}
+			personIsSaved[robotPosition - 1] = true; // Marks person as saved
+			peopleSaved++;
 			
-			tmr_interval.Enabled = true;
+			labelName = "lbl_d" + robotPosition + "Saved";
+			this.Controls[groupBoxName].Controls[labelName].Text = "Saved: Yes";
+			this.Controls[groupBoxName].Controls[labelName].ForeColor = Color.Green; // Changes the label "saved" to Yes
+			
+			labelName = "lbl_d" + robotPosition + "TurnSaved";
+			this.Controls[groupBoxName].Controls[labelName].Text = "On Turn: " + turnsTaken; // Records the turn the person was saved
 		}
 		
-		void Btn_resetClick(object sender, EventArgs e)
+		// Updates all counters used by the form
+		// This includes counter labels, state labels and robot levers
+		private void UpdateCounters()
+		{
+			tbr_leftLever.Value = Convert.ToInt32(leftLever);
+			tbr_rightLever.Value = Convert.ToInt32(rightLever);
+			
+			lbl_peopleSaved.Text = "People Saved: " + peopleSaved.ToString();
+			lbl_peopleCounted.Text = "People Counted: " + peopleCounted.ToString();
+			lbl_turns.Text = "Turns Taken: " + turnsTaken.ToString();
+			
+			labelName = "lbl_d" + robotPosition + "TimesVisited";
+			this.Controls[groupBoxName].Controls[labelName].Text = "Times Visited: " + timesVisited[robotPosition - 1];
+			
+			labelName = "lbl_d" + robotPosition + "Robot";
+			this.Controls[groupBoxName].Controls[labelName].Visible = true;
+			
+			this.Refresh();
+		}
+		
+		// Runs 1 iteration of the teleportation process on every tick of the timer
+		private void Tmr_intervalTick(object sender, EventArgs e)
+		{
+			if (turnsTaken > 0) // If this is not the first turn
+			{
+				labelName = "lbl_d" + robotPosition + "Robot";
+				this.Controls[groupBoxName].Controls[labelName].Visible = false; // Removes the Robot from the dimension picked in the previous turn
+			}
+			
+			turnsTaken++;
+			robotPosition = robotTeleport.Next(1, 12); // Choses the position (dimension) Robot will teleport to
+			timesVisited[robotPosition - 1]++;
+			groupBoxName = "gpb_dimension" + robotPosition; // Gets which GroupBox represents the dimension chosen by the robot
+			
+			if (robotPosition == 1) // If the Robot goes to dimension 1 (where the group "leader" is)
+			{
+				if (!personIsSaved[robotPosition - 1])
+				{
+					SaveCurrentPerson();
+				}
+				
+				if (leftLever) // If the left lever is flipped
+				{
+					leftLever = false;
+					peopleCounted++; // Leader counts +1 person saved, and unflips the lever
+				}
+				else
+				{
+					rightLever = !rightLever; // Otherwise, leader just sends the Robot onwards
+				}
+				
+				if (peopleCounted == 10) // If there have been 10 people counted
+				{
+					buttonPressed = true;
+					tmr_interval.Enabled = false;
+					lbl_buttonFinish.Text = "Home: Yes!";
+					lbl_buttonFinish.ForeColor = Color.Green; // Leder presses the button and the simulation ends
+					btn_start.Text = "Restart Simulation";
+				}
+			}
+			else // If not in the dimension of the leader
+			{
+				if (!leftLever && !personIsSaved[robotPosition - 1]) // If the person is not saved AND the left lever is unflipped
+				{
+					leftLever = true; 
+					SaveCurrentPerson(); // Flip left lever and saves the person
+				}
+				else
+				{
+					rightLever = !rightLever; // Otherwise,. just send Robot onwards
+				}
+			}
+			
+			UpdateCounters();
+		}
+		
+		// Resets all variables and all counters and states used by the form
+		private void ResetSimulation()
 		{
 			turnsTaken = peopleCounted = peopleSaved = robotPosition = 0;
 			rightLever = leftLever = buttonPressed = false;
@@ -84,6 +167,53 @@ namespace MultiverseRescueRiddle
 			}
 		}
 		
+		// Changes the delay of the time it takes for each iteration of the teleportation process
+		private void Cbb_delaySelectedIndexChanged(object sender, EventArgs e)
+		{
+			delay = 1000 * float.Parse(cbb_delay.SelectedItem.ToString());
+			
+			if (delay == 0) // If the delay picked is 0, set the delay to the minimum value (since timer interval can't be 0)
+			{
+				tmr_interval.Interval = 1;
+			}
+			else // Otherwise, use the actual chosen delay in seconds
+			{
+				tmr_interval.Interval = (int)delay;
+			}
+		}
+		
+		// Sets the timer to start the simulation. Will also pause and resume it
+		private void Btn_startClick(object sender, EventArgs e)
+		{
+			if (buttonPressed) // If simulation has already been finished, resets it
+			{
+				ResetSimulation();
+				btn_start.Text = "Pause Simulation";
+				return;
+			}
+			
+			if (tmr_interval.Enabled) // If simulation is running, pause it
+			{
+				tmr_interval.Enabled = false;
+				btn_start.Text = "Resume Simulation";
+			}
+			else // Otherwise, resume it
+			{
+				tmr_interval.Enabled = true;
+				btn_start.Text = "Pause Simulation";
+			}
+		}
+		
+		// Resets and stops the simulation
+		void Btn_resetClick(object sender, EventArgs e)
+		{
+			tmr_interval.Enabled = false;
+			ResetSimulation();
+			btn_start.Text = "Start Simulation";
+		}
+		
+		#region Explanations
+		// Explains the riddle this simulation is based on
 		void Btn_riddleClick(object sender, EventArgs e)
 		{
 			string explanation;
@@ -98,6 +228,7 @@ namespace MultiverseRescueRiddle
 			MessageBox.Show(explanation, "The Riddle", MessageBoxButtons.OK);
 		}
 		
+		// Explains the answer to the riddle
 		void Btn_answerClick(object sender, EventArgs e)
 		{
 			string explanation;
@@ -109,101 +240,6 @@ namespace MultiverseRescueRiddle
 				+ "For the sake of this simulation, the leader is always the person in dimension 1. So everytime someone is saved, the robot needs to visit dimension 1 before saving a new person. After 10 people have been counted (the leader doesn't need to count themselves), the simulation ends.";
 			MessageBox.Show(explanation, "The Answer", MessageBoxButtons.OK);
 		}
-		
-		void Tmr_intervalTick(object sender, EventArgs e)
-		{
-			if (turnsTaken > 0)
-			{
-				labelName = "lbl_d" + robotPosition + "Robot";
-				this.Controls[groupBoxName].Controls[labelName].Visible = false;
-			}
-			
-			turnsTaken++;
-			robotPosition = robotTeleport.Next(1, 12);
-			timesVisited[robotPosition - 1]++;
-			groupBoxName = "gpb_dimension" + robotPosition;
-			
-			if (robotPosition == 1)
-			{
-				if (!personIsSaved[robotPosition - 1])
-				{
-					personIsSaved[robotPosition - 1] = true;
-					peopleSaved++;
-					
-					labelName = "lbl_d" + robotPosition + "Saved";
-					this.Controls[groupBoxName].Controls[labelName].Text = "Saved: Yes";
-					this.Controls[groupBoxName].Controls[labelName].ForeColor = Color.Green;
-					
-					labelName = "lbl_d" + robotPosition + "TurnSaved";
-					this.Controls[groupBoxName].Controls[labelName].Text = "On Turn: " + turnsTaken;
-				}
-				
-				if (leftLever)
-				{
-					leftLever = false;
-					peopleCounted++;
-				}
-				else
-				{
-					rightLever = !rightLever;
-				}
-				
-				if (peopleCounted == 10)
-				{
-					buttonPressed = true;
-					tmr_interval.Enabled = false;
-					lbl_buttonFinish.Text = "Home: Yes!";
-					lbl_buttonFinish.ForeColor = Color.Green;
-				}
-			}
-			else
-			{
-				if (!leftLever && !personIsSaved[robotPosition - 1])
-				{
-					personIsSaved[robotPosition - 1] = true;
-					peopleSaved++;
-					leftLever = true;
-					
-					labelName = "lbl_d" + robotPosition + "Saved";
-					this.Controls[groupBoxName].Controls[labelName].Text = "Saved: Yes";
-					this.Controls[groupBoxName].Controls[labelName].ForeColor = Color.Green;
-					
-					labelName = "lbl_d" + robotPosition + "TurnSaved";
-					this.Controls[groupBoxName].Controls[labelName].Text = "On Turn: " + turnsTaken;
-				}
-				else
-				{
-					rightLever = !rightLever;
-				}
-			}
-			
-			tbr_leftLever.Value = Convert.ToInt32(leftLever);
-			tbr_rightLever.Value = Convert.ToInt32(rightLever);
-			
-			lbl_peopleSaved.Text = "People Saved: " + peopleSaved.ToString();
-			lbl_peopleCounted.Text = "People Counted: " + peopleCounted.ToString();
-			lbl_turns.Text = "Turns Taken: " + turnsTaken.ToString();
-			
-			labelName = "lbl_d" + robotPosition + "TimesVisited";
-			this.Controls[groupBoxName].Controls[labelName].Text = "Times Visited: " + timesVisited[robotPosition - 1];
-			
-			labelName = "lbl_d" + robotPosition + "Robot";
-			this.Controls[groupBoxName].Controls[labelName].Visible = true;
-			
-			this.Refresh();
-		}
-		
-		void Cbb_delaySelectedIndexChanged(object sender, EventArgs e)
-		{
-			delay = 1000 * float.Parse(cbb_delay.SelectedItem.ToString());
-			if (delay == 0)
-			{
-				tmr_interval.Interval = 1;
-			}
-			else
-			{
-				tmr_interval.Interval = (int)delay;
-			}
-		}
+		#endregion
 	}
 }
