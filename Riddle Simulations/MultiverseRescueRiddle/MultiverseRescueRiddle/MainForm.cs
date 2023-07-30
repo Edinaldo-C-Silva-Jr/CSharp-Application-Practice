@@ -31,13 +31,14 @@ namespace MultiverseRescueRiddle
 		
 		private void MainFormLoad(object sender, EventArgs e)
 		{
-			robotTeleport = new Random(); 
+			robotTeleport = new Random();
 			
 			cbb_delay.SelectedIndex = 2; // Starts the execution delay of steps on 0.25s
 			delay = 1000 * float.Parse(cbb_delay.SelectedItem.ToString());
 			tmr_interval.Interval = (int)delay;
 		}
 		
+		#region Simulation Methods
 		// Saves the current person, if they haven't already been saved
 		// Also changes the labels related to that dimension by building their names with the number of the robot position
 		private void SaveCurrentPerson()
@@ -73,20 +74,9 @@ namespace MultiverseRescueRiddle
 			this.Refresh();
 		}
 		
-		// Runs 1 iteration of the teleportation process on every tick of the timer
-		private void Tmr_intervalTick(object sender, EventArgs e)
+		// Method that handles the Robot's visit to the chosen dimension, as well as his interaction with the person trapped in that dimension
+		private void RobotVisitsDimension()
 		{
-			if (turnsTaken > 0) // If this is not the first turn
-			{
-				labelName = "lbl_d" + robotPosition + "Robot";
-				this.Controls[groupBoxName].Controls[labelName].Visible = false; // Removes the Robot from the dimension picked in the previous turn
-			}
-			
-			turnsTaken++;
-			robotPosition = robotTeleport.Next(1, 12); // Choses the position (dimension) Robot will teleport to
-			timesVisited[robotPosition - 1]++;
-			groupBoxName = "gpb_dimension" + robotPosition; // Gets which GroupBox represents the dimension chosen by the robot
-			
 			if (robotPosition == 1) // If the Robot goes to dimension 1 (where the group "leader" is)
 			{
 				if (!personIsSaved[robotPosition - 1])
@@ -109,7 +99,7 @@ namespace MultiverseRescueRiddle
 					buttonPressed = true;
 					tmr_interval.Enabled = false;
 					lbl_buttonFinish.Text = "Home: Yes!";
-					lbl_buttonFinish.ForeColor = Color.Green; // Leder presses the button and the simulation ends
+					lbl_buttonFinish.ForeColor = Color.Green; // Leader presses the button and the simulation ends
 					btn_start.Text = "Restart Simulation";
 				}
 			}
@@ -117,14 +107,33 @@ namespace MultiverseRescueRiddle
 			{
 				if (!leftLever && !personIsSaved[robotPosition - 1]) // If the person is not saved AND the left lever is unflipped
 				{
-					leftLever = true; 
+					leftLever = true;
 					SaveCurrentPerson(); // Flip left lever and saves the person
 				}
 				else
 				{
-					rightLever = !rightLever; // Otherwise,. just send Robot onwards
+					rightLever = !rightLever; // Otherwise, just send Robot onwards
 				}
 			}
+		}
+		#endregion
+		
+		#region Run Simulation (Timer and Reset)
+		// Runs 1 iteration of the teleportation process on every tick of the timer
+		private void Tmr_intervalTick(object sender, EventArgs e)
+		{
+			if (turnsTaken > 0) // If this is not the first turn
+			{
+				labelName = "lbl_d" + robotPosition + "Robot";
+				this.Controls[groupBoxName].Controls[labelName].Visible = false; // Removes the Robot from the dimension picked in the previous turn
+			}
+			
+			turnsTaken++;
+			robotPosition = robotTeleport.Next(1, 12); // Chooses the position (dimension) Robot will teleport to
+			timesVisited[robotPosition - 1]++;
+			groupBoxName = "gpb_dimension" + robotPosition; // Gets which GroupBox represents the dimension chosen by the robot
+			
+			RobotVisitsDimension();
 			
 			UpdateCounters();
 		}
@@ -166,7 +175,9 @@ namespace MultiverseRescueRiddle
 				this.Controls[groupBoxName].Controls[labelName].Visible = false;
 			}
 		}
+		#endregion
 		
+		#region Control Actions (Button and ComboBox)
 		// Changes the delay of the time it takes for each iteration of the teleportation process
 		private void Cbb_delaySelectedIndexChanged(object sender, EventArgs e)
 		{
@@ -211,6 +222,7 @@ namespace MultiverseRescueRiddle
 			ResetSimulation();
 			btn_start.Text = "Start Simulation";
 		}
+		#endregion
 		
 		#region Explanations
 		// Explains the riddle this simulation is based on

@@ -904,7 +904,7 @@ namespace MultiverseRescueRiddle
 			this.Controls.Add(this.gpb_dimension2);
 			this.Controls.Add(this.gpb_dimension1);
 			this.Name = "MainForm";
-			this.Text = "MultiverseRescueRiddle";
+			this.Text = "Multiverse Rescue Riddle";
 			this.Load += new System.EventHandler(this.MainFormLoad);
 			this.gpb_dimension1.ResumeLayout(false);
 			this.gpb_dimension2.ResumeLayout(false);
