@@ -61,7 +61,7 @@ namespace MultiverseRescueRiddle
 			tbr_leftLever.Value = Convert.ToInt32(leftLever);
 			tbr_rightLever.Value = Convert.ToInt32(rightLever);
 			
-			lbl_peopleSaved.Text = "People Saved: " + peopleSaved.ToString();
+			lbl_peopleSavedLeftLever.Text = "People Saved: " + peopleSaved.ToString();
 			lbl_peopleCounted.Text = "People Counted: " + peopleCounted.ToString();
 			lbl_turns.Text = "Turns Taken: " + turnsTaken.ToString();
 			
@@ -147,7 +147,7 @@ namespace MultiverseRescueRiddle
 			tbr_leftLever.Value = 0;
 			tbr_rightLever.Value = 0;
 			lbl_turns.Text = "Turns Taken: 0";
-			lbl_peopleSaved.Text = "People Saved: 0";
+			lbl_peopleSavedLeftLever.Text = "People Saved: 0";
 			lbl_peopleCounted.Text = "People Counted: 0";
 			lbl_buttonFinish.Text = "Home: No";
 			lbl_buttonFinish.ForeColor = Color.Red;
@@ -181,14 +181,13 @@ namespace MultiverseRescueRiddle
 		// Changes the delay of the time it takes for each iteration of the teleportation process
 		private void Cbb_delaySelectedIndexChanged(object sender, EventArgs e)
 		{
-			delay = 1000 * float.Parse(cbb_delay.SelectedItem.ToString());
-			
-			if (delay == 0) // If the delay picked is 0, set the delay to the minimum value (since timer interval can't be 0)
+			if (cbb_delay.SelectedIndex == 0) // If the delay picked is 0, set the delay to the minimum value (since timer interval can't be 0)
 			{
 				tmr_interval.Interval = 1;
 			}
 			else // Otherwise, use the actual chosen delay in seconds
 			{
+				delay = 1000 * float.Parse(cbb_delay.SelectedItem.ToString());
 				tmr_interval.Interval = (int)delay;
 			}
 		}
@@ -199,6 +198,7 @@ namespace MultiverseRescueRiddle
 			if (buttonPressed) // If simulation has already been finished, resets it
 			{
 				ResetSimulation();
+				tmr_interval.Enabled = true;
 				btn_start.Text = "Pause Simulation";
 				return;
 			}
