@@ -14,9 +14,10 @@ namespace MultiverseRescueRiddle
 	public partial class MainForm : Form
 	{
 		private bool[] personIsSaved = new bool[11]; // Arrays for individual dimension states
+		private bool[] personIsSavedLeftLever = new bool[11];
 		private int[] timesVisited = new int[11];
 		
-		private int turnsTaken = 0, peopleSaved = 0, peopleCounted = 0, robotPosition = 0; // Control variables for the simulation
+		private int turnsTaken = 0, peopleSaved = 0, peopleSavedLeftLever = 0, peopleCounted = 0, robotPosition = 0; // Control variables for the simulation
 		private float delay;
 		
 		private bool rightLever = false, leftLever = false, buttonPressed = false; // Robot related variables
@@ -48,10 +49,28 @@ namespace MultiverseRescueRiddle
 			
 			labelName = "lbl_d" + robotPosition + "Saved";
 			this.Controls[groupBoxName].Controls[labelName].Text = "Saved: Yes";
-			this.Controls[groupBoxName].Controls[labelName].ForeColor = Color.Green; // Changes the label "saved" to Yes
+			this.Controls[groupBoxName].Controls[labelName].ForeColor = Color.Green; // Changes the label "saved" to Yes and makes it green
 			
 			labelName = "lbl_d" + robotPosition + "TurnSaved";
 			this.Controls[groupBoxName].Controls[labelName].Text = "On Turn: " + turnsTaken; // Records the turn the person was saved
+			
+			if (peopleSaved == 11)
+			{
+				lbl_turnSavedReality.Text = "All Saved Turn (Real): " + turnsTaken;
+			}
+		}
+		
+		private void SaveCurrentPersonLeftLever()
+		{
+			personIsSavedLeftLever[robotPosition - 1] = true;
+			peopleSavedLeftLever++;
+			
+			labelName = "lbl_d" + robotPosition + "LeftLever";
+			this.Controls[groupBoxName].Controls[labelName].Text = "Left Lever: Yes";
+			this.Controls[groupBoxName].Controls[labelName].ForeColor = Color.Green;
+			
+			labelName = "lbl_d" + robotPosition + "TurnLeftLever";
+			this.Controls[groupBoxName].Controls[labelName].Text = "On Turn: " + turnsTaken;
 		}
 		
 		// Updates all counters used by the form
@@ -61,8 +80,9 @@ namespace MultiverseRescueRiddle
 			tbr_leftLever.Value = Convert.ToInt32(leftLever);
 			tbr_rightLever.Value = Convert.ToInt32(rightLever);
 			
-			lbl_peopleSavedLeftLever.Text = "People Saved: " + peopleSaved.ToString();
-			lbl_peopleCounted.Text = "People Counted: " + peopleCounted.ToString();
+			lbl_peopleSavedReality.Text = "People Saved (Reality): " + peopleSaved;
+			lbl_peopleSavedLeftLever.Text = "People Saved (Left Lever): " + peopleSavedLeftLever.ToString();
+			lbl_peopleCounted.Text = "People Counted by leader: " + peopleCounted.ToString();
 			lbl_turns.Text = "Turns Taken: " + turnsTaken.ToString();
 			
 			labelName = "lbl_d" + robotPosition + "TimesVisited";
@@ -105,10 +125,15 @@ namespace MultiverseRescueRiddle
 			}
 			else // If not in the dimension of the leader
 			{
-				if (!leftLever && !personIsSaved[robotPosition - 1]) // If the person is not saved AND the left lever is unflipped
+				if (!personIsSaved[robotPosition - 1])
+				{
+					SaveCurrentPerson();
+				}
+				
+				if (!leftLever && !personIsSavedLeftLever[robotPosition - 1]) // If the person is not saved AND the left lever is unflipped
 				{
 					leftLever = true;
-					SaveCurrentPerson(); // Flip left lever and saves the person
+					SaveCurrentPersonLeftLever(); // Flip left lever and saves the person
 				}
 				else
 				{
@@ -141,14 +166,16 @@ namespace MultiverseRescueRiddle
 		// Resets all variables and all counters and states used by the form
 		private void ResetSimulation()
 		{
-			turnsTaken = peopleCounted = peopleSaved = robotPosition = 0;
+			turnsTaken = peopleCounted = peopleSaved = peopleSavedLeftLever = robotPosition = 0;
 			rightLever = leftLever = buttonPressed = false;
 			
 			tbr_leftLever.Value = 0;
 			tbr_rightLever.Value = 0;
 			lbl_turns.Text = "Turns Taken: 0";
-			lbl_peopleSavedLeftLever.Text = "People Saved: 0";
-			lbl_peopleCounted.Text = "People Counted: 0";
+			lbl_peopleSavedLeftLever.Text = "People Saved (Left Lever): 0";
+			lbl_peopleCounted.Text = "People Counted by leader: 0";
+			lbl_peopleSavedReality.Text = "People Saved (Reality): 0";
+			lbl_turnSavedReality.Text = "All Saved Turn (Real): 0";
 			lbl_buttonFinish.Text = "Home: No";
 			lbl_buttonFinish.ForeColor = Color.Red;
 			
@@ -157,6 +184,7 @@ namespace MultiverseRescueRiddle
 			for (int i = 1; i < 12; i++)
 			{
 				personIsSaved[i-1] = false;
+				personIsSavedLeftLever[i-1] = false;
 				timesVisited[i-1] = 0;
 				
 				groupBoxName = "gpb_dimension" + i;
@@ -173,6 +201,16 @@ namespace MultiverseRescueRiddle
 				
 				labelName = "lbl_d" + i + "Robot";
 				this.Controls[groupBoxName].Controls[labelName].Visible = false;
+				
+				if (i != 1)
+				{
+					labelName = "lbl_d" + i + "LeftLever";
+					this.Controls[groupBoxName].Controls[labelName].Text = "Left Lever: No";
+					this.Controls[groupBoxName].Controls[labelName].ForeColor = Color.Red;
+					
+					labelName = "lbl_d" + i + "TurnLeftLever";
+					this.Controls[groupBoxName].Controls[labelName].Text = "On Turn: 0";
+				}
 			}
 		}
 		#endregion

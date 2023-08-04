@@ -39,51 +39,71 @@ namespace MultiverseRescueRiddle
 			this.lbl_d1TimesVisited = new System.Windows.Forms.Label();
 			this.lbl_d1Saved = new System.Windows.Forms.Label();
 			this.gpb_dimension2 = new System.Windows.Forms.GroupBox();
+			this.lbl_d2TurnLeftLever = new System.Windows.Forms.Label();
+			this.lbl_d2LeftLever = new System.Windows.Forms.Label();
 			this.lbl_d2Robot = new System.Windows.Forms.Label();
 			this.lbl_d2TurnSaved = new System.Windows.Forms.Label();
 			this.lbl_d2TimesVisited = new System.Windows.Forms.Label();
 			this.lbl_d2Saved = new System.Windows.Forms.Label();
 			this.gpb_dimension4 = new System.Windows.Forms.GroupBox();
+			this.lbl_d4TurnLeftLever = new System.Windows.Forms.Label();
+			this.lbl_d4LeftLever = new System.Windows.Forms.Label();
 			this.lbl_d4Robot = new System.Windows.Forms.Label();
 			this.lbl_d4TurnSaved = new System.Windows.Forms.Label();
 			this.lbl_d4TimesVisited = new System.Windows.Forms.Label();
 			this.lbl_d4Saved = new System.Windows.Forms.Label();
 			this.gpb_dimension5 = new System.Windows.Forms.GroupBox();
+			this.lbl_d5TurnLeftLever = new System.Windows.Forms.Label();
+			this.lbl_d5LeftLever = new System.Windows.Forms.Label();
 			this.lbl_d5Robot = new System.Windows.Forms.Label();
 			this.lbl_d5TurnSaved = new System.Windows.Forms.Label();
 			this.lbl_d5TimesVisited = new System.Windows.Forms.Label();
 			this.lbl_d5Saved = new System.Windows.Forms.Label();
 			this.gpb_dimension6 = new System.Windows.Forms.GroupBox();
+			this.lbl_d6TurnLeftLever = new System.Windows.Forms.Label();
+			this.lbl_d6LeftLever = new System.Windows.Forms.Label();
 			this.lbl_d6Robot = new System.Windows.Forms.Label();
 			this.lbl_d6TurnSaved = new System.Windows.Forms.Label();
 			this.lbl_d6TimesVisited = new System.Windows.Forms.Label();
 			this.lbl_d6Saved = new System.Windows.Forms.Label();
 			this.gpb_dimension3 = new System.Windows.Forms.GroupBox();
+			this.lbl_d3TurnLeftLever = new System.Windows.Forms.Label();
+			this.lbl_d3LeftLever = new System.Windows.Forms.Label();
 			this.lbl_d3Robot = new System.Windows.Forms.Label();
 			this.lbl_d3TurnSaved = new System.Windows.Forms.Label();
 			this.lbl_d3TimesVisited = new System.Windows.Forms.Label();
 			this.lbl_d3Saved = new System.Windows.Forms.Label();
 			this.gpb_dimension7 = new System.Windows.Forms.GroupBox();
+			this.lbl_d7TurnLeftLever = new System.Windows.Forms.Label();
+			this.lbl_d7LeftLever = new System.Windows.Forms.Label();
 			this.lbl_d7Robot = new System.Windows.Forms.Label();
 			this.lbl_d7TurnSaved = new System.Windows.Forms.Label();
 			this.lbl_d7TimesVisited = new System.Windows.Forms.Label();
 			this.lbl_d7Saved = new System.Windows.Forms.Label();
 			this.gpb_dimension8 = new System.Windows.Forms.GroupBox();
+			this.lbl_d8TurnLeftLever = new System.Windows.Forms.Label();
+			this.lbl_d8LeftLever = new System.Windows.Forms.Label();
 			this.lbl_d8Robot = new System.Windows.Forms.Label();
 			this.lbl_d8TurnSaved = new System.Windows.Forms.Label();
 			this.lbl_d8TimesVisited = new System.Windows.Forms.Label();
 			this.lbl_d8Saved = new System.Windows.Forms.Label();
 			this.gpb_dimension9 = new System.Windows.Forms.GroupBox();
+			this.lbl_d9TurnLeftLever = new System.Windows.Forms.Label();
+			this.lbl_d9LeftLever = new System.Windows.Forms.Label();
 			this.lbl_d9Robot = new System.Windows.Forms.Label();
 			this.lbl_d9TurnSaved = new System.Windows.Forms.Label();
 			this.lbl_d9TimesVisited = new System.Windows.Forms.Label();
 			this.lbl_d9Saved = new System.Windows.Forms.Label();
 			this.gpb_dimension10 = new System.Windows.Forms.GroupBox();
+			this.lbl_d10TurnLeftLever = new System.Windows.Forms.Label();
+			this.lbl_d10LeftLever = new System.Windows.Forms.Label();
 			this.lbl_d10Robot = new System.Windows.Forms.Label();
 			this.lbl_d10TurnSaved = new System.Windows.Forms.Label();
 			this.lbl_d10TimesVisited = new System.Windows.Forms.Label();
 			this.lbl_d10Saved = new System.Windows.Forms.Label();
 			this.gpb_dimension11 = new System.Windows.Forms.GroupBox();
+			this.lbl_d11TurnLeftLever = new System.Windows.Forms.Label();
+			this.lbl_d11LeftLever = new System.Windows.Forms.Label();
 			this.lbl_d11Robot = new System.Windows.Forms.Label();
 			this.lbl_d11TurnSaved = new System.Windows.Forms.Label();
 			this.lbl_d11TimesVisited = new System.Windows.Forms.Label();
@@ -111,28 +131,6 @@ namespace MultiverseRescueRiddle
 			this.btn_answer = new System.Windows.Forms.Button();
 			this.tmr_interval = new System.Windows.Forms.Timer(this.components);
 			this.gpb_Explanations = new System.Windows.Forms.GroupBox();
-			this.lbl_d1LeftLever = new System.Windows.Forms.Label();
-			this.lbl_d1TurnLeftLever = new System.Windows.Forms.Label();
-			this.lbl_d2TurnLeftLever = new System.Windows.Forms.Label();
-			this.lbl_d2LeftLever = new System.Windows.Forms.Label();
-			this.lbl_d3TurnLeftLever = new System.Windows.Forms.Label();
-			this.lbl_d3LeftLever = new System.Windows.Forms.Label();
-			this.lbl_d4TurnLeftLever = new System.Windows.Forms.Label();
-			this.lbl_d4LeftLever = new System.Windows.Forms.Label();
-			this.lbl_d5TurnLeftLever = new System.Windows.Forms.Label();
-			this.lbl_d5LeftLever = new System.Windows.Forms.Label();
-			this.lbl_d6TurnLeftLever = new System.Windows.Forms.Label();
-			this.lbl_d6LeftLever = new System.Windows.Forms.Label();
-			this.lbl_d7TurnLeftLever = new System.Windows.Forms.Label();
-			this.lbl_d7LeftLever = new System.Windows.Forms.Label();
-			this.lbl_d8TurnLeftLever = new System.Windows.Forms.Label();
-			this.lbl_d8LeftLever = new System.Windows.Forms.Label();
-			this.lbl_d9TurnLeftLever = new System.Windows.Forms.Label();
-			this.lbl_d9LeftLever = new System.Windows.Forms.Label();
-			this.lbl_d10TurnLeftLever = new System.Windows.Forms.Label();
-			this.lbl_d10LeftLever = new System.Windows.Forms.Label();
-			this.lbl_d11TurnLeftLever = new System.Windows.Forms.Label();
-			this.lbl_d11LeftLever = new System.Windows.Forms.Label();
 			this.gpb_dimension1.SuspendLayout();
 			this.gpb_dimension2.SuspendLayout();
 			this.gpb_dimension4.SuspendLayout();
@@ -154,8 +152,6 @@ namespace MultiverseRescueRiddle
 			// 
 			// gpb_dimension1
 			// 
-			this.gpb_dimension1.Controls.Add(this.lbl_d1TurnLeftLever);
-			this.gpb_dimension1.Controls.Add(this.lbl_d1LeftLever);
 			this.gpb_dimension1.Controls.Add(this.lbl_d1Robot);
 			this.gpb_dimension1.Controls.Add(this.lbl_d1TurnSaved);
 			this.gpb_dimension1.Controls.Add(this.lbl_d1TimesVisited);
@@ -218,6 +214,23 @@ namespace MultiverseRescueRiddle
 			this.gpb_dimension2.TabStop = false;
 			this.gpb_dimension2.Text = "Dimension 2";
 			// 
+			// lbl_d2TurnLeftLever
+			// 
+			this.lbl_d2TurnLeftLever.Location = new System.Drawing.Point(95, 40);
+			this.lbl_d2TurnLeftLever.Name = "lbl_d2TurnLeftLever";
+			this.lbl_d2TurnLeftLever.Size = new System.Drawing.Size(70, 20);
+			this.lbl_d2TurnLeftLever.TabIndex = 12;
+			this.lbl_d2TurnLeftLever.Text = "On Turn: 0";
+			// 
+			// lbl_d2LeftLever
+			// 
+			this.lbl_d2LeftLever.ForeColor = System.Drawing.Color.Red;
+			this.lbl_d2LeftLever.Location = new System.Drawing.Point(5, 40);
+			this.lbl_d2LeftLever.Name = "lbl_d2LeftLever";
+			this.lbl_d2LeftLever.Size = new System.Drawing.Size(80, 20);
+			this.lbl_d2LeftLever.TabIndex = 11;
+			this.lbl_d2LeftLever.Text = "Left Lever: No";
+			// 
 			// lbl_d2Robot
 			// 
 			this.lbl_d2Robot.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -268,6 +281,23 @@ namespace MultiverseRescueRiddle
 			this.gpb_dimension4.TabIndex = 13;
 			this.gpb_dimension4.TabStop = false;
 			this.gpb_dimension4.Text = "Dimension 4";
+			// 
+			// lbl_d4TurnLeftLever
+			// 
+			this.lbl_d4TurnLeftLever.Location = new System.Drawing.Point(95, 40);
+			this.lbl_d4TurnLeftLever.Name = "lbl_d4TurnLeftLever";
+			this.lbl_d4TurnLeftLever.Size = new System.Drawing.Size(70, 20);
+			this.lbl_d4TurnLeftLever.TabIndex = 12;
+			this.lbl_d4TurnLeftLever.Text = "On Turn: 0";
+			// 
+			// lbl_d4LeftLever
+			// 
+			this.lbl_d4LeftLever.ForeColor = System.Drawing.Color.Red;
+			this.lbl_d4LeftLever.Location = new System.Drawing.Point(5, 40);
+			this.lbl_d4LeftLever.Name = "lbl_d4LeftLever";
+			this.lbl_d4LeftLever.Size = new System.Drawing.Size(80, 20);
+			this.lbl_d4LeftLever.TabIndex = 11;
+			this.lbl_d4LeftLever.Text = "Left Lever: No";
 			// 
 			// lbl_d4Robot
 			// 
@@ -320,6 +350,23 @@ namespace MultiverseRescueRiddle
 			this.gpb_dimension5.TabStop = false;
 			this.gpb_dimension5.Text = "Dimension 5";
 			// 
+			// lbl_d5TurnLeftLever
+			// 
+			this.lbl_d5TurnLeftLever.Location = new System.Drawing.Point(95, 40);
+			this.lbl_d5TurnLeftLever.Name = "lbl_d5TurnLeftLever";
+			this.lbl_d5TurnLeftLever.Size = new System.Drawing.Size(70, 20);
+			this.lbl_d5TurnLeftLever.TabIndex = 12;
+			this.lbl_d5TurnLeftLever.Text = "On Turn: 0";
+			// 
+			// lbl_d5LeftLever
+			// 
+			this.lbl_d5LeftLever.ForeColor = System.Drawing.Color.Red;
+			this.lbl_d5LeftLever.Location = new System.Drawing.Point(5, 40);
+			this.lbl_d5LeftLever.Name = "lbl_d5LeftLever";
+			this.lbl_d5LeftLever.Size = new System.Drawing.Size(80, 20);
+			this.lbl_d5LeftLever.TabIndex = 11;
+			this.lbl_d5LeftLever.Text = "Left Lever: No";
+			// 
 			// lbl_d5Robot
 			// 
 			this.lbl_d5Robot.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -370,6 +417,23 @@ namespace MultiverseRescueRiddle
 			this.gpb_dimension6.TabIndex = 15;
 			this.gpb_dimension6.TabStop = false;
 			this.gpb_dimension6.Text = "Dimension 6";
+			// 
+			// lbl_d6TurnLeftLever
+			// 
+			this.lbl_d6TurnLeftLever.Location = new System.Drawing.Point(95, 40);
+			this.lbl_d6TurnLeftLever.Name = "lbl_d6TurnLeftLever";
+			this.lbl_d6TurnLeftLever.Size = new System.Drawing.Size(70, 20);
+			this.lbl_d6TurnLeftLever.TabIndex = 12;
+			this.lbl_d6TurnLeftLever.Text = "On Turn: 0";
+			// 
+			// lbl_d6LeftLever
+			// 
+			this.lbl_d6LeftLever.ForeColor = System.Drawing.Color.Red;
+			this.lbl_d6LeftLever.Location = new System.Drawing.Point(5, 40);
+			this.lbl_d6LeftLever.Name = "lbl_d6LeftLever";
+			this.lbl_d6LeftLever.Size = new System.Drawing.Size(80, 20);
+			this.lbl_d6LeftLever.TabIndex = 11;
+			this.lbl_d6LeftLever.Text = "Left Lever: No";
 			// 
 			// lbl_d6Robot
 			// 
@@ -422,6 +486,23 @@ namespace MultiverseRescueRiddle
 			this.gpb_dimension3.TabStop = false;
 			this.gpb_dimension3.Text = "Dimension 3";
 			// 
+			// lbl_d3TurnLeftLever
+			// 
+			this.lbl_d3TurnLeftLever.Location = new System.Drawing.Point(95, 40);
+			this.lbl_d3TurnLeftLever.Name = "lbl_d3TurnLeftLever";
+			this.lbl_d3TurnLeftLever.Size = new System.Drawing.Size(70, 20);
+			this.lbl_d3TurnLeftLever.TabIndex = 12;
+			this.lbl_d3TurnLeftLever.Text = "On Turn: 0";
+			// 
+			// lbl_d3LeftLever
+			// 
+			this.lbl_d3LeftLever.ForeColor = System.Drawing.Color.Red;
+			this.lbl_d3LeftLever.Location = new System.Drawing.Point(5, 40);
+			this.lbl_d3LeftLever.Name = "lbl_d3LeftLever";
+			this.lbl_d3LeftLever.Size = new System.Drawing.Size(80, 20);
+			this.lbl_d3LeftLever.TabIndex = 11;
+			this.lbl_d3LeftLever.Text = "Left Lever: No";
+			// 
 			// lbl_d3Robot
 			// 
 			this.lbl_d3Robot.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -472,6 +553,23 @@ namespace MultiverseRescueRiddle
 			this.gpb_dimension7.TabIndex = 16;
 			this.gpb_dimension7.TabStop = false;
 			this.gpb_dimension7.Text = "Dimension 7";
+			// 
+			// lbl_d7TurnLeftLever
+			// 
+			this.lbl_d7TurnLeftLever.Location = new System.Drawing.Point(95, 40);
+			this.lbl_d7TurnLeftLever.Name = "lbl_d7TurnLeftLever";
+			this.lbl_d7TurnLeftLever.Size = new System.Drawing.Size(70, 20);
+			this.lbl_d7TurnLeftLever.TabIndex = 12;
+			this.lbl_d7TurnLeftLever.Text = "On Turn: 0";
+			// 
+			// lbl_d7LeftLever
+			// 
+			this.lbl_d7LeftLever.ForeColor = System.Drawing.Color.Red;
+			this.lbl_d7LeftLever.Location = new System.Drawing.Point(5, 40);
+			this.lbl_d7LeftLever.Name = "lbl_d7LeftLever";
+			this.lbl_d7LeftLever.Size = new System.Drawing.Size(80, 20);
+			this.lbl_d7LeftLever.TabIndex = 11;
+			this.lbl_d7LeftLever.Text = "Left Lever: No";
 			// 
 			// lbl_d7Robot
 			// 
@@ -524,6 +622,23 @@ namespace MultiverseRescueRiddle
 			this.gpb_dimension8.TabStop = false;
 			this.gpb_dimension8.Text = "Dimension 8";
 			// 
+			// lbl_d8TurnLeftLever
+			// 
+			this.lbl_d8TurnLeftLever.Location = new System.Drawing.Point(95, 40);
+			this.lbl_d8TurnLeftLever.Name = "lbl_d8TurnLeftLever";
+			this.lbl_d8TurnLeftLever.Size = new System.Drawing.Size(70, 20);
+			this.lbl_d8TurnLeftLever.TabIndex = 12;
+			this.lbl_d8TurnLeftLever.Text = "On Turn: 0";
+			// 
+			// lbl_d8LeftLever
+			// 
+			this.lbl_d8LeftLever.ForeColor = System.Drawing.Color.Red;
+			this.lbl_d8LeftLever.Location = new System.Drawing.Point(5, 40);
+			this.lbl_d8LeftLever.Name = "lbl_d8LeftLever";
+			this.lbl_d8LeftLever.Size = new System.Drawing.Size(80, 20);
+			this.lbl_d8LeftLever.TabIndex = 11;
+			this.lbl_d8LeftLever.Text = "Left Lever: No";
+			// 
 			// lbl_d8Robot
 			// 
 			this.lbl_d8Robot.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -574,6 +689,23 @@ namespace MultiverseRescueRiddle
 			this.gpb_dimension9.TabIndex = 18;
 			this.gpb_dimension9.TabStop = false;
 			this.gpb_dimension9.Text = "Dimension 9";
+			// 
+			// lbl_d9TurnLeftLever
+			// 
+			this.lbl_d9TurnLeftLever.Location = new System.Drawing.Point(95, 40);
+			this.lbl_d9TurnLeftLever.Name = "lbl_d9TurnLeftLever";
+			this.lbl_d9TurnLeftLever.Size = new System.Drawing.Size(70, 20);
+			this.lbl_d9TurnLeftLever.TabIndex = 12;
+			this.lbl_d9TurnLeftLever.Text = "On Turn: 0";
+			// 
+			// lbl_d9LeftLever
+			// 
+			this.lbl_d9LeftLever.ForeColor = System.Drawing.Color.Red;
+			this.lbl_d9LeftLever.Location = new System.Drawing.Point(5, 40);
+			this.lbl_d9LeftLever.Name = "lbl_d9LeftLever";
+			this.lbl_d9LeftLever.Size = new System.Drawing.Size(80, 20);
+			this.lbl_d9LeftLever.TabIndex = 11;
+			this.lbl_d9LeftLever.Text = "Left Lever: No";
 			// 
 			// lbl_d9Robot
 			// 
@@ -626,6 +758,23 @@ namespace MultiverseRescueRiddle
 			this.gpb_dimension10.TabStop = false;
 			this.gpb_dimension10.Text = "Dimension 10";
 			// 
+			// lbl_d10TurnLeftLever
+			// 
+			this.lbl_d10TurnLeftLever.Location = new System.Drawing.Point(95, 40);
+			this.lbl_d10TurnLeftLever.Name = "lbl_d10TurnLeftLever";
+			this.lbl_d10TurnLeftLever.Size = new System.Drawing.Size(70, 20);
+			this.lbl_d10TurnLeftLever.TabIndex = 12;
+			this.lbl_d10TurnLeftLever.Text = "On Turn: 0";
+			// 
+			// lbl_d10LeftLever
+			// 
+			this.lbl_d10LeftLever.ForeColor = System.Drawing.Color.Red;
+			this.lbl_d10LeftLever.Location = new System.Drawing.Point(5, 40);
+			this.lbl_d10LeftLever.Name = "lbl_d10LeftLever";
+			this.lbl_d10LeftLever.Size = new System.Drawing.Size(80, 20);
+			this.lbl_d10LeftLever.TabIndex = 11;
+			this.lbl_d10LeftLever.Text = "Left Lever: No";
+			// 
 			// lbl_d10Robot
 			// 
 			this.lbl_d10Robot.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -676,6 +825,23 @@ namespace MultiverseRescueRiddle
 			this.gpb_dimension11.TabIndex = 20;
 			this.gpb_dimension11.TabStop = false;
 			this.gpb_dimension11.Text = "Dimension 11";
+			// 
+			// lbl_d11TurnLeftLever
+			// 
+			this.lbl_d11TurnLeftLever.Location = new System.Drawing.Point(95, 40);
+			this.lbl_d11TurnLeftLever.Name = "lbl_d11TurnLeftLever";
+			this.lbl_d11TurnLeftLever.Size = new System.Drawing.Size(70, 20);
+			this.lbl_d11TurnLeftLever.TabIndex = 12;
+			this.lbl_d11TurnLeftLever.Text = "On Turn: 0";
+			// 
+			// lbl_d11LeftLever
+			// 
+			this.lbl_d11LeftLever.ForeColor = System.Drawing.Color.Red;
+			this.lbl_d11LeftLever.Location = new System.Drawing.Point(5, 40);
+			this.lbl_d11LeftLever.Name = "lbl_d11LeftLever";
+			this.lbl_d11LeftLever.Size = new System.Drawing.Size(80, 20);
+			this.lbl_d11LeftLever.TabIndex = 11;
+			this.lbl_d11LeftLever.Text = "Left Lever: No";
 			// 
 			// lbl_d11Robot
 			// 
@@ -947,193 +1113,6 @@ namespace MultiverseRescueRiddle
 			this.gpb_Explanations.TabStop = false;
 			this.gpb_Explanations.Text = "Explanations";
 			// 
-			// lbl_d1LeftLever
-			// 
-			this.lbl_d1LeftLever.ForeColor = System.Drawing.Color.Red;
-			this.lbl_d1LeftLever.Location = new System.Drawing.Point(5, 40);
-			this.lbl_d1LeftLever.Name = "lbl_d1LeftLever";
-			this.lbl_d1LeftLever.Size = new System.Drawing.Size(80, 20);
-			this.lbl_d1LeftLever.TabIndex = 9;
-			this.lbl_d1LeftLever.Text = "Left Lever: No";
-			// 
-			// lbl_d1TurnLeftLever
-			// 
-			this.lbl_d1TurnLeftLever.Location = new System.Drawing.Point(95, 40);
-			this.lbl_d1TurnLeftLever.Name = "lbl_d1TurnLeftLever";
-			this.lbl_d1TurnLeftLever.Size = new System.Drawing.Size(70, 20);
-			this.lbl_d1TurnLeftLever.TabIndex = 10;
-			this.lbl_d1TurnLeftLever.Text = "On Turn: 0";
-			// 
-			// lbl_d2TurnLeftLever
-			// 
-			this.lbl_d2TurnLeftLever.Location = new System.Drawing.Point(95, 40);
-			this.lbl_d2TurnLeftLever.Name = "lbl_d2TurnLeftLever";
-			this.lbl_d2TurnLeftLever.Size = new System.Drawing.Size(70, 20);
-			this.lbl_d2TurnLeftLever.TabIndex = 12;
-			this.lbl_d2TurnLeftLever.Text = "On Turn: 0";
-			// 
-			// lbl_d2LeftLever
-			// 
-			this.lbl_d2LeftLever.ForeColor = System.Drawing.Color.Red;
-			this.lbl_d2LeftLever.Location = new System.Drawing.Point(5, 40);
-			this.lbl_d2LeftLever.Name = "lbl_d2LeftLever";
-			this.lbl_d2LeftLever.Size = new System.Drawing.Size(80, 20);
-			this.lbl_d2LeftLever.TabIndex = 11;
-			this.lbl_d2LeftLever.Text = "Left Lever: No";
-			// 
-			// lbl_d3TurnLeftLever
-			// 
-			this.lbl_d3TurnLeftLever.Location = new System.Drawing.Point(95, 40);
-			this.lbl_d3TurnLeftLever.Name = "lbl_d3TurnLeftLever";
-			this.lbl_d3TurnLeftLever.Size = new System.Drawing.Size(70, 20);
-			this.lbl_d3TurnLeftLever.TabIndex = 12;
-			this.lbl_d3TurnLeftLever.Text = "On Turn: 0";
-			// 
-			// lbl_d3LeftLever
-			// 
-			this.lbl_d3LeftLever.ForeColor = System.Drawing.Color.Red;
-			this.lbl_d3LeftLever.Location = new System.Drawing.Point(5, 40);
-			this.lbl_d3LeftLever.Name = "lbl_d3LeftLever";
-			this.lbl_d3LeftLever.Size = new System.Drawing.Size(80, 20);
-			this.lbl_d3LeftLever.TabIndex = 11;
-			this.lbl_d3LeftLever.Text = "Left Lever: No";
-			// 
-			// lbl_d4TurnLeftLever
-			// 
-			this.lbl_d4TurnLeftLever.Location = new System.Drawing.Point(95, 40);
-			this.lbl_d4TurnLeftLever.Name = "lbl_d4TurnLeftLever";
-			this.lbl_d4TurnLeftLever.Size = new System.Drawing.Size(70, 20);
-			this.lbl_d4TurnLeftLever.TabIndex = 12;
-			this.lbl_d4TurnLeftLever.Text = "On Turn: 0";
-			// 
-			// lbl_d4LeftLever
-			// 
-			this.lbl_d4LeftLever.ForeColor = System.Drawing.Color.Red;
-			this.lbl_d4LeftLever.Location = new System.Drawing.Point(5, 40);
-			this.lbl_d4LeftLever.Name = "lbl_d4LeftLever";
-			this.lbl_d4LeftLever.Size = new System.Drawing.Size(80, 20);
-			this.lbl_d4LeftLever.TabIndex = 11;
-			this.lbl_d4LeftLever.Text = "Left Lever: No";
-			// 
-			// lbl_d5TurnLeftLever
-			// 
-			this.lbl_d5TurnLeftLever.Location = new System.Drawing.Point(95, 40);
-			this.lbl_d5TurnLeftLever.Name = "lbl_d5TurnLeftLever";
-			this.lbl_d5TurnLeftLever.Size = new System.Drawing.Size(70, 20);
-			this.lbl_d5TurnLeftLever.TabIndex = 12;
-			this.lbl_d5TurnLeftLever.Text = "On Turn: 0";
-			// 
-			// lbl_d5LeftLever
-			// 
-			this.lbl_d5LeftLever.ForeColor = System.Drawing.Color.Red;
-			this.lbl_d5LeftLever.Location = new System.Drawing.Point(5, 40);
-			this.lbl_d5LeftLever.Name = "lbl_d5LeftLever";
-			this.lbl_d5LeftLever.Size = new System.Drawing.Size(80, 20);
-			this.lbl_d5LeftLever.TabIndex = 11;
-			this.lbl_d5LeftLever.Text = "Left Lever: No";
-			// 
-			// lbl_d6TurnLeftLever
-			// 
-			this.lbl_d6TurnLeftLever.Location = new System.Drawing.Point(95, 40);
-			this.lbl_d6TurnLeftLever.Name = "lbl_d6TurnLeftLever";
-			this.lbl_d6TurnLeftLever.Size = new System.Drawing.Size(70, 20);
-			this.lbl_d6TurnLeftLever.TabIndex = 12;
-			this.lbl_d6TurnLeftLever.Text = "On Turn: 0";
-			// 
-			// lbl_d6LeftLever
-			// 
-			this.lbl_d6LeftLever.ForeColor = System.Drawing.Color.Red;
-			this.lbl_d6LeftLever.Location = new System.Drawing.Point(5, 40);
-			this.lbl_d6LeftLever.Name = "lbl_d6LeftLever";
-			this.lbl_d6LeftLever.Size = new System.Drawing.Size(80, 20);
-			this.lbl_d6LeftLever.TabIndex = 11;
-			this.lbl_d6LeftLever.Text = "Left Lever: No";
-			// 
-			// lbl_d7TurnLeftLever
-			// 
-			this.lbl_d7TurnLeftLever.Location = new System.Drawing.Point(95, 40);
-			this.lbl_d7TurnLeftLever.Name = "lbl_d7TurnLeftLever";
-			this.lbl_d7TurnLeftLever.Size = new System.Drawing.Size(70, 20);
-			this.lbl_d7TurnLeftLever.TabIndex = 12;
-			this.lbl_d7TurnLeftLever.Text = "On Turn: 0";
-			// 
-			// lbl_d7LeftLever
-			// 
-			this.lbl_d7LeftLever.ForeColor = System.Drawing.Color.Red;
-			this.lbl_d7LeftLever.Location = new System.Drawing.Point(5, 40);
-			this.lbl_d7LeftLever.Name = "lbl_d7LeftLever";
-			this.lbl_d7LeftLever.Size = new System.Drawing.Size(80, 20);
-			this.lbl_d7LeftLever.TabIndex = 11;
-			this.lbl_d7LeftLever.Text = "Left Lever: No";
-			// 
-			// lbl_d8TurnLeftLever
-			// 
-			this.lbl_d8TurnLeftLever.Location = new System.Drawing.Point(95, 40);
-			this.lbl_d8TurnLeftLever.Name = "lbl_d8TurnLeftLever";
-			this.lbl_d8TurnLeftLever.Size = new System.Drawing.Size(70, 20);
-			this.lbl_d8TurnLeftLever.TabIndex = 12;
-			this.lbl_d8TurnLeftLever.Text = "On Turn: 0";
-			// 
-			// lbl_d8LeftLever
-			// 
-			this.lbl_d8LeftLever.ForeColor = System.Drawing.Color.Red;
-			this.lbl_d8LeftLever.Location = new System.Drawing.Point(5, 40);
-			this.lbl_d8LeftLever.Name = "lbl_d8LeftLever";
-			this.lbl_d8LeftLever.Size = new System.Drawing.Size(80, 20);
-			this.lbl_d8LeftLever.TabIndex = 11;
-			this.lbl_d8LeftLever.Text = "Left Lever: No";
-			// 
-			// lbl_d9TurnLeftLever
-			// 
-			this.lbl_d9TurnLeftLever.Location = new System.Drawing.Point(95, 40);
-			this.lbl_d9TurnLeftLever.Name = "lbl_d9TurnLeftLever";
-			this.lbl_d9TurnLeftLever.Size = new System.Drawing.Size(70, 20);
-			this.lbl_d9TurnLeftLever.TabIndex = 12;
-			this.lbl_d9TurnLeftLever.Text = "On Turn: 0";
-			// 
-			// lbl_d9LeftLever
-			// 
-			this.lbl_d9LeftLever.ForeColor = System.Drawing.Color.Red;
-			this.lbl_d9LeftLever.Location = new System.Drawing.Point(5, 40);
-			this.lbl_d9LeftLever.Name = "lbl_d9LeftLever";
-			this.lbl_d9LeftLever.Size = new System.Drawing.Size(80, 20);
-			this.lbl_d9LeftLever.TabIndex = 11;
-			this.lbl_d9LeftLever.Text = "Left Lever: No";
-			// 
-			// lbl_d10TurnLeftLever
-			// 
-			this.lbl_d10TurnLeftLever.Location = new System.Drawing.Point(95, 40);
-			this.lbl_d10TurnLeftLever.Name = "lbl_d10TurnLeftLever";
-			this.lbl_d10TurnLeftLever.Size = new System.Drawing.Size(70, 20);
-			this.lbl_d10TurnLeftLever.TabIndex = 12;
-			this.lbl_d10TurnLeftLever.Text = "On Turn: 0";
-			// 
-			// lbl_d10LeftLever
-			// 
-			this.lbl_d10LeftLever.ForeColor = System.Drawing.Color.Red;
-			this.lbl_d10LeftLever.Location = new System.Drawing.Point(5, 40);
-			this.lbl_d10LeftLever.Name = "lbl_d10LeftLever";
-			this.lbl_d10LeftLever.Size = new System.Drawing.Size(80, 20);
-			this.lbl_d10LeftLever.TabIndex = 11;
-			this.lbl_d10LeftLever.Text = "Left Lever: No";
-			// 
-			// lbl_d11TurnLeftLever
-			// 
-			this.lbl_d11TurnLeftLever.Location = new System.Drawing.Point(95, 40);
-			this.lbl_d11TurnLeftLever.Name = "lbl_d11TurnLeftLever";
-			this.lbl_d11TurnLeftLever.Size = new System.Drawing.Size(70, 20);
-			this.lbl_d11TurnLeftLever.TabIndex = 12;
-			this.lbl_d11TurnLeftLever.Text = "On Turn: 0";
-			// 
-			// lbl_d11LeftLever
-			// 
-			this.lbl_d11LeftLever.ForeColor = System.Drawing.Color.Red;
-			this.lbl_d11LeftLever.Location = new System.Drawing.Point(5, 40);
-			this.lbl_d11LeftLever.Name = "lbl_d11LeftLever";
-			this.lbl_d11LeftLever.Size = new System.Drawing.Size(80, 20);
-			this.lbl_d11LeftLever.TabIndex = 11;
-			this.lbl_d11LeftLever.Text = "Left Lever: No";
-			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1197,8 +1176,6 @@ namespace MultiverseRescueRiddle
 		private System.Windows.Forms.Label lbl_d4TurnLeftLever;
 		private System.Windows.Forms.Label lbl_d2LeftLever;
 		private System.Windows.Forms.Label lbl_d2TurnLeftLever;
-		private System.Windows.Forms.Label lbl_d1LeftLever;
-		private System.Windows.Forms.Label lbl_d1TurnLeftLever;
 		private System.Windows.Forms.Label lbl_peopleSavedReality;
 		private System.Windows.Forms.Label lbl_turnSavedReality;
 		private System.Windows.Forms.GroupBox gpb_Explanations;
