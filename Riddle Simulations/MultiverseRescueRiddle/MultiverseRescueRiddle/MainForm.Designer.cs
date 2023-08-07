@@ -131,6 +131,7 @@ namespace MultiverseRescueRiddle
 			this.btn_answer = new System.Windows.Forms.Button();
 			this.tmr_interval = new System.Windows.Forms.Timer(this.components);
 			this.gpb_Explanations = new System.Windows.Forms.GroupBox();
+			this.tip_controls = new System.Windows.Forms.ToolTip(this.components);
 			this.gpb_dimension1.SuspendLayout();
 			this.gpb_dimension2.SuspendLayout();
 			this.gpb_dimension4.SuspendLayout();
@@ -198,6 +199,8 @@ namespace MultiverseRescueRiddle
 			this.lbl_d1Saved.Size = new System.Drawing.Size(65, 20);
 			this.lbl_d1Saved.TabIndex = 5;
 			this.lbl_d1Saved.Text = "Saved: No";
+			this.tip_controls.SetToolTip(this.lbl_d1Saved, "Whether the person has been saved by flipping a lever on the robot (happens on th" +
+						"e robot\'s first visit)");
 			// 
 			// gpb_dimension2
 			// 
@@ -230,6 +233,8 @@ namespace MultiverseRescueRiddle
 			this.lbl_d2LeftLever.Size = new System.Drawing.Size(80, 20);
 			this.lbl_d2LeftLever.TabIndex = 11;
 			this.lbl_d2LeftLever.Text = "Left Lever: No";
+			this.tip_controls.SetToolTip(this.lbl_d2LeftLever, "Whether the person has flipped the left lever (which allows them to be counted as" +
+						" saved by the leader)");
 			// 
 			// lbl_d2Robot
 			// 
@@ -266,6 +271,8 @@ namespace MultiverseRescueRiddle
 			this.lbl_d2Saved.Size = new System.Drawing.Size(65, 20);
 			this.lbl_d2Saved.TabIndex = 5;
 			this.lbl_d2Saved.Text = "Saved: No";
+			this.tip_controls.SetToolTip(this.lbl_d2Saved, "Whether the person has been saved by flipping a lever on the robot (happens on th" +
+						"e robot\'s first visit)");
 			// 
 			// gpb_dimension4
 			// 
@@ -298,6 +305,8 @@ namespace MultiverseRescueRiddle
 			this.lbl_d4LeftLever.Size = new System.Drawing.Size(80, 20);
 			this.lbl_d4LeftLever.TabIndex = 11;
 			this.lbl_d4LeftLever.Text = "Left Lever: No";
+			this.tip_controls.SetToolTip(this.lbl_d4LeftLever, "Whether the person has flipped the left lever (which allows them to be counted as" +
+						" saved by the leader)");
 			// 
 			// lbl_d4Robot
 			// 
@@ -334,6 +343,8 @@ namespace MultiverseRescueRiddle
 			this.lbl_d4Saved.Size = new System.Drawing.Size(65, 20);
 			this.lbl_d4Saved.TabIndex = 5;
 			this.lbl_d4Saved.Text = "Saved: No";
+			this.tip_controls.SetToolTip(this.lbl_d4Saved, "Whether the person has been saved by flipping a lever on the robot (happens on th" +
+						"e robot\'s first visit)");
 			// 
 			// gpb_dimension5
 			// 
@@ -366,6 +377,8 @@ namespace MultiverseRescueRiddle
 			this.lbl_d5LeftLever.Size = new System.Drawing.Size(80, 20);
 			this.lbl_d5LeftLever.TabIndex = 11;
 			this.lbl_d5LeftLever.Text = "Left Lever: No";
+			this.tip_controls.SetToolTip(this.lbl_d5LeftLever, "Whether the person has flipped the left lever (which allows them to be counted as" +
+						" saved by the leader)");
 			// 
 			// lbl_d5Robot
 			// 
@@ -402,6 +415,8 @@ namespace MultiverseRescueRiddle
 			this.lbl_d5Saved.Size = new System.Drawing.Size(65, 20);
 			this.lbl_d5Saved.TabIndex = 5;
 			this.lbl_d5Saved.Text = "Saved: No";
+			this.tip_controls.SetToolTip(this.lbl_d5Saved, "Whether the person has been saved by flipping a lever on the robot (happens on th" +
+						"e robot\'s first visit)");
 			// 
 			// gpb_dimension6
 			// 
@@ -434,6 +449,8 @@ namespace MultiverseRescueRiddle
 			this.lbl_d6LeftLever.Size = new System.Drawing.Size(80, 20);
 			this.lbl_d6LeftLever.TabIndex = 11;
 			this.lbl_d6LeftLever.Text = "Left Lever: No";
+			this.tip_controls.SetToolTip(this.lbl_d6LeftLever, "Whether the person has flipped the left lever (which allows them to be counted as" +
+						" saved by the leader)");
 			// 
 			// lbl_d6Robot
 			// 
@@ -470,6 +487,8 @@ namespace MultiverseRescueRiddle
 			this.lbl_d6Saved.Size = new System.Drawing.Size(65, 20);
 			this.lbl_d6Saved.TabIndex = 5;
 			this.lbl_d6Saved.Text = "Saved: No";
+			this.tip_controls.SetToolTip(this.lbl_d6Saved, "Whether the person has been saved by flipping a lever on the robot (happens on th" +
+						"e robot\'s first visit)");
 			// 
 			// gpb_dimension3
 			// 
@@ -502,6 +521,8 @@ namespace MultiverseRescueRiddle
 			this.lbl_d3LeftLever.Size = new System.Drawing.Size(80, 20);
 			this.lbl_d3LeftLever.TabIndex = 11;
 			this.lbl_d3LeftLever.Text = "Left Lever: No";
+			this.tip_controls.SetToolTip(this.lbl_d3LeftLever, "Whether the person has flipped the left lever (which allows them to be counted as" +
+						" saved by the leader)");
 			// 
 			// lbl_d3Robot
 			// 
@@ -538,6 +559,8 @@ namespace MultiverseRescueRiddle
 			this.lbl_d3Saved.Size = new System.Drawing.Size(65, 20);
 			this.lbl_d3Saved.TabIndex = 5;
 			this.lbl_d3Saved.Text = "Saved: No";
+			this.tip_controls.SetToolTip(this.lbl_d3Saved, "Whether the person has been saved by flipping a lever on the robot (happens on th" +
+						"e robot\'s first visit)");
 			// 
 			// gpb_dimension7
 			// 
@@ -570,6 +593,8 @@ namespace MultiverseRescueRiddle
 			this.lbl_d7LeftLever.Size = new System.Drawing.Size(80, 20);
 			this.lbl_d7LeftLever.TabIndex = 11;
 			this.lbl_d7LeftLever.Text = "Left Lever: No";
+			this.tip_controls.SetToolTip(this.lbl_d7LeftLever, "Whether the person has flipped the left lever (which allows them to be counted as" +
+						" saved by the leader)");
 			// 
 			// lbl_d7Robot
 			// 
@@ -606,6 +631,8 @@ namespace MultiverseRescueRiddle
 			this.lbl_d7Saved.Size = new System.Drawing.Size(65, 20);
 			this.lbl_d7Saved.TabIndex = 5;
 			this.lbl_d7Saved.Text = "Saved: No";
+			this.tip_controls.SetToolTip(this.lbl_d7Saved, "Whether the person has been saved by flipping a lever on the robot (happens on th" +
+						"e robot\'s first visit)");
 			// 
 			// gpb_dimension8
 			// 
@@ -638,6 +665,8 @@ namespace MultiverseRescueRiddle
 			this.lbl_d8LeftLever.Size = new System.Drawing.Size(80, 20);
 			this.lbl_d8LeftLever.TabIndex = 11;
 			this.lbl_d8LeftLever.Text = "Left Lever: No";
+			this.tip_controls.SetToolTip(this.lbl_d8LeftLever, "Whether the person has flipped the left lever (which allows them to be counted as" +
+						" saved by the leader)");
 			// 
 			// lbl_d8Robot
 			// 
@@ -674,6 +703,8 @@ namespace MultiverseRescueRiddle
 			this.lbl_d8Saved.Size = new System.Drawing.Size(65, 20);
 			this.lbl_d8Saved.TabIndex = 5;
 			this.lbl_d8Saved.Text = "Saved: No";
+			this.tip_controls.SetToolTip(this.lbl_d8Saved, "Whether the person has been saved by flipping a lever on the robot (happens on th" +
+						"e robot\'s first visit)");
 			// 
 			// gpb_dimension9
 			// 
@@ -706,6 +737,8 @@ namespace MultiverseRescueRiddle
 			this.lbl_d9LeftLever.Size = new System.Drawing.Size(80, 20);
 			this.lbl_d9LeftLever.TabIndex = 11;
 			this.lbl_d9LeftLever.Text = "Left Lever: No";
+			this.tip_controls.SetToolTip(this.lbl_d9LeftLever, "Whether the person has flipped the left lever (which allows them to be counted as" +
+						" saved by the leader)");
 			// 
 			// lbl_d9Robot
 			// 
@@ -742,6 +775,8 @@ namespace MultiverseRescueRiddle
 			this.lbl_d9Saved.Size = new System.Drawing.Size(65, 20);
 			this.lbl_d9Saved.TabIndex = 5;
 			this.lbl_d9Saved.Text = "Saved: No";
+			this.tip_controls.SetToolTip(this.lbl_d9Saved, "Whether the person has been saved by flipping a lever on the robot (happens on th" +
+						"e robot\'s first visit)");
 			// 
 			// gpb_dimension10
 			// 
@@ -774,6 +809,8 @@ namespace MultiverseRescueRiddle
 			this.lbl_d10LeftLever.Size = new System.Drawing.Size(80, 20);
 			this.lbl_d10LeftLever.TabIndex = 11;
 			this.lbl_d10LeftLever.Text = "Left Lever: No";
+			this.tip_controls.SetToolTip(this.lbl_d10LeftLever, "Whether the person has flipped the left lever (which allows them to be counted as" +
+						" saved by the leader)");
 			// 
 			// lbl_d10Robot
 			// 
@@ -810,6 +847,8 @@ namespace MultiverseRescueRiddle
 			this.lbl_d10Saved.Size = new System.Drawing.Size(65, 20);
 			this.lbl_d10Saved.TabIndex = 5;
 			this.lbl_d10Saved.Text = "Saved: No";
+			this.tip_controls.SetToolTip(this.lbl_d10Saved, "Whether the person has been saved by flipping a lever on the robot (happens on th" +
+						"e robot\'s first visit)");
 			// 
 			// gpb_dimension11
 			// 
@@ -842,6 +881,8 @@ namespace MultiverseRescueRiddle
 			this.lbl_d11LeftLever.Size = new System.Drawing.Size(80, 20);
 			this.lbl_d11LeftLever.TabIndex = 11;
 			this.lbl_d11LeftLever.Text = "Left Lever: No";
+			this.tip_controls.SetToolTip(this.lbl_d11LeftLever, "Whether the person has flipped the left lever (which allows them to be counted as" +
+						" saved by the leader)");
 			// 
 			// lbl_d11Robot
 			// 
@@ -878,6 +919,8 @@ namespace MultiverseRescueRiddle
 			this.lbl_d11Saved.Size = new System.Drawing.Size(65, 20);
 			this.lbl_d11Saved.TabIndex = 5;
 			this.lbl_d11Saved.Text = "Saved: No";
+			this.tip_controls.SetToolTip(this.lbl_d11Saved, "Whether the person has been saved by flipping a lever on the robot (happens on th" +
+						"e robot\'s first visit)");
 			// 
 			// gpb_Robot
 			// 
@@ -981,11 +1024,13 @@ namespace MultiverseRescueRiddle
 			// 
 			// lbl_turnSavedReality
 			// 
-			this.lbl_turnSavedReality.Location = new System.Drawing.Point(20, 95);
+			this.lbl_turnSavedReality.Location = new System.Drawing.Point(10, 95);
 			this.lbl_turnSavedReality.Name = "lbl_turnSavedReality";
-			this.lbl_turnSavedReality.Size = new System.Drawing.Size(140, 20);
+			this.lbl_turnSavedReality.Size = new System.Drawing.Size(160, 20);
 			this.lbl_turnSavedReality.TabIndex = 4;
-			this.lbl_turnSavedReality.Text = "All Saved Turn (Real): 0";
+			this.lbl_turnSavedReality.Text = "Turn All were Saved (Real): 0";
+			this.tip_controls.SetToolTip(this.lbl_turnSavedReality, "Shows the turn when all 11 people have been saved in reality (Once they have all " +
+						"been visited by the robot at least once)");
 			// 
 			// lbl_peopleSavedReality
 			// 
@@ -994,6 +1039,7 @@ namespace MultiverseRescueRiddle
 			this.lbl_peopleSavedReality.Size = new System.Drawing.Size(140, 20);
 			this.lbl_peopleSavedReality.TabIndex = 3;
 			this.lbl_peopleSavedReality.Text = "People Saved (Reality): 0";
+			this.tip_controls.SetToolTip(this.lbl_peopleSavedReality, "Amount of people saved by fliping any lever in the robot");
 			// 
 			// lbl_peopleCounted
 			// 
@@ -1001,7 +1047,9 @@ namespace MultiverseRescueRiddle
 			this.lbl_peopleCounted.Name = "lbl_peopleCounted";
 			this.lbl_peopleCounted.Size = new System.Drawing.Size(160, 20);
 			this.lbl_peopleCounted.TabIndex = 2;
-			this.lbl_peopleCounted.Text = "People Counted by leader: 0";
+			this.lbl_peopleCounted.Text = "People Counted by Leader: 0";
+			this.tip_controls.SetToolTip(this.lbl_peopleCounted, "Amount of people counted as saved by the leader (happens once the robot visits th" +
+						"e leader after someone flips the left lever)");
 			// 
 			// lbl_peopleSavedLeftLever
 			// 
@@ -1010,6 +1058,8 @@ namespace MultiverseRescueRiddle
 			this.lbl_peopleSavedLeftLever.Size = new System.Drawing.Size(160, 20);
 			this.lbl_peopleSavedLeftLever.TabIndex = 1;
 			this.lbl_peopleSavedLeftLever.Text = "People Saved (Left Lever): 0";
+			this.tip_controls.SetToolTip(this.lbl_peopleSavedLeftLever, "Amount of people saved by flipping the left lever (as this is the only way they c" +
+						"an be counted as \"saved\" by the leader)");
 			// 
 			// lbl_turns
 			// 
@@ -1018,6 +1068,7 @@ namespace MultiverseRescueRiddle
 			this.lbl_turns.Size = new System.Drawing.Size(100, 20);
 			this.lbl_turns.TabIndex = 0;
 			this.lbl_turns.Text = "Turns Taken: 0";
+			this.tip_controls.SetToolTip(this.lbl_turns, "Total amount of turns passed in the simulation");
 			// 
 			// gpb_settings
 			// 
@@ -1049,6 +1100,7 @@ namespace MultiverseRescueRiddle
 			this.lbl_interval.Size = new System.Drawing.Size(120, 15);
 			this.lbl_interval.TabIndex = 4;
 			this.lbl_interval.Text = "Time Interval (Seconds)";
+			this.tip_controls.SetToolTip(this.lbl_interval, "Amount of seconds to wait between each teleportation of the robot");
 			// 
 			// cbb_delay
 			// 
@@ -1113,6 +1165,12 @@ namespace MultiverseRescueRiddle
 			this.gpb_Explanations.TabStop = false;
 			this.gpb_Explanations.Text = "Explanations";
 			// 
+			// tip_controls
+			// 
+			this.tip_controls.AutoPopDelay = 10000;
+			this.tip_controls.InitialDelay = 500;
+			this.tip_controls.ReshowDelay = 100;
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1156,6 +1214,7 @@ namespace MultiverseRescueRiddle
 			this.gpb_Explanations.ResumeLayout(false);
 			this.ResumeLayout(false);
 		}
+		private System.Windows.Forms.ToolTip tip_controls;
 		private System.Windows.Forms.Label lbl_d11LeftLever;
 		private System.Windows.Forms.Label lbl_d11TurnLeftLever;
 		private System.Windows.Forms.Label lbl_d10LeftLever;

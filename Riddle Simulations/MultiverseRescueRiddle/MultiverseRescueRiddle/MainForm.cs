@@ -41,13 +41,15 @@ namespace MultiverseRescueRiddle
 		
 		#region Simulation Methods
 		// Saves the current person, if they haven't already been saved
-		// Also changes the labels related to that dimension by building their names with the number of the robot position
+		// This is the person's first visit, so whichever lever the person flips will save them
+		// However, the person won't be properly counted as "saved" until they use the left lever (since the leader won't be able to know this person was visited)
 		private void SaveCurrentPerson()
 		{
 			personIsSaved[robotPosition - 1] = true; // Marks person as saved
 			peopleSaved++;
 			
-			labelName = "lbl_d" + robotPosition + "Saved";
+			labelName = "lbl_d" + robotPosition + "Saved"; // Changes the labels related to the current dimension by building their names with the number of the robot position
+		
 			this.Controls[groupBoxName].Controls[labelName].Text = "Saved: Yes";
 			this.Controls[groupBoxName].Controls[labelName].ForeColor = Color.Green; // Changes the label "saved" to Yes and makes it green
 			
@@ -56,10 +58,12 @@ namespace MultiverseRescueRiddle
 			
 			if (peopleSaved == 11)
 			{
-				lbl_turnSavedReality.Text = "All Saved Turn (Real): " + turnsTaken;
+				lbl_turnSavedReality.Text = "Turn All were Saved (Real): " + turnsTaken;
 			}
 		}
 		
+		// Saves current person by using the left lever
+		// This is the "proper" way a person is saved based on the riddle rules
 		private void SaveCurrentPersonLeftLever()
 		{
 			personIsSavedLeftLever[robotPosition - 1] = true;
@@ -82,7 +86,7 @@ namespace MultiverseRescueRiddle
 			
 			lbl_peopleSavedReality.Text = "People Saved (Reality): " + peopleSaved;
 			lbl_peopleSavedLeftLever.Text = "People Saved (Left Lever): " + peopleSavedLeftLever.ToString();
-			lbl_peopleCounted.Text = "People Counted by leader: " + peopleCounted.ToString();
+			lbl_peopleCounted.Text = "People Counted by Leader: " + peopleCounted.ToString();
 			lbl_turns.Text = "Turns Taken: " + turnsTaken.ToString();
 			
 			labelName = "lbl_d" + robotPosition + "TimesVisited";
@@ -99,7 +103,7 @@ namespace MultiverseRescueRiddle
 		{
 			if (robotPosition == 1) // If the Robot goes to dimension 1 (where the group "leader" is)
 			{
-				if (!personIsSaved[robotPosition - 1])
+				if (!personIsSaved[robotPosition - 1]) // Saves leader if not already saved
 				{
 					SaveCurrentPerson();
 				}
@@ -125,12 +129,12 @@ namespace MultiverseRescueRiddle
 			}
 			else // If not in the dimension of the leader
 			{
-				if (!personIsSaved[robotPosition - 1])
+				if (!personIsSaved[robotPosition - 1]) // Saves person on their first visit
 				{
 					SaveCurrentPerson();
 				}
 				
-				if (!leftLever && !personIsSavedLeftLever[robotPosition - 1]) // If the person is not saved AND the left lever is unflipped
+				if (!leftLever && !personIsSavedLeftLever[robotPosition - 1]) // Saves the person by using the left lever (only if the left lever isn't flipped)
 				{
 					leftLever = true;
 					SaveCurrentPersonLeftLever(); // Flip left lever and saves the person
@@ -173,9 +177,9 @@ namespace MultiverseRescueRiddle
 			tbr_rightLever.Value = 0;
 			lbl_turns.Text = "Turns Taken: 0";
 			lbl_peopleSavedLeftLever.Text = "People Saved (Left Lever): 0";
-			lbl_peopleCounted.Text = "People Counted by leader: 0";
+			lbl_peopleCounted.Text = "People Counted by Leader: 0";
 			lbl_peopleSavedReality.Text = "People Saved (Reality): 0";
-			lbl_turnSavedReality.Text = "All Saved Turn (Real): 0";
+			lbl_turnSavedReality.Text = "Turn All were Saved (Real): 0";
 			lbl_buttonFinish.Text = "Home: No";
 			lbl_buttonFinish.ForeColor = Color.Red;
 			
@@ -219,7 +223,7 @@ namespace MultiverseRescueRiddle
 		// Changes the delay of the time it takes for each iteration of the teleportation process
 		private void Cbb_delaySelectedIndexChanged(object sender, EventArgs e)
 		{
-			if (cbb_delay.SelectedIndex == 0) // If the delay picked is 0, set the delay to the minimum value (since timer interval can't be 0)
+			if (cbb_delay.SelectedIndex == 0) // If delay is the first value, set the time interval to minimum
 			{
 				tmr_interval.Interval = 1;
 			}
